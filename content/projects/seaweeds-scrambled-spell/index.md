@@ -82,7 +82,7 @@ With no native AR library available for marker detection in our specific WebGL c
 
 To improve tracking stability and reliability, we designed special backgrounds for our QR codes. These patterns provided more unique feature points for OpenCV to lock onto, making the tracking far less prone to jitter or loss. Furthermore, we implemented a simple crosshair in the UI. This small addition was crucial for user guidance, as it showed them precisely where to point their camera, ensuring the tracking marker was in focus and helping them understand what the application was "looking" for.
 
-### Chapter 3: Performance is Paramount – Optimizing for the Mobile Web
+### Chapter 3: Performance is Paramount – Optimising for the Mobile Web
 
 A Web AR experience lives or dies on its loading time. Users on mobile data connections will not wait minutes for a large download. We tackled performance with a three-pronged approach.
 

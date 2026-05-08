@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volumetric Clouds – Local Preview</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { overflow: hidden; background: #000; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+  <!--
+    Shader by Inigo Quilez (https://iquilezles.org/) – educational/local use only.
+    See copyright notice in the fragment shader source.
+  -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+
+    // --- Renderer ---
+    const renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+    // --- Noise textures ---
+    function createNoiseTexture(size, linear) {
+      const data = new Uint8Array(size * size * 4);
+      for (let i = 0; i < data.length; i++) {
+        data[i] = (Math.random() * 256) | 0;
+      }
+      const tex = new THREE.DataTexture(data, size, size, THREE.RGBAFormat);
+      tex.wrapS = THREE.RepeatWrapping;
+      tex.wrapT = THREE.RepeatWrapping;
+      tex.magFilter = linear ? THREE.LinearFilter : THREE.NearestFilter;
+      tex.minFilter = linear ? THREE.LinearFilter : THREE.NearestFilter;
+      tex.needsUpdate = true;
+      return tex;
+    }
+
+    const iChannel0 = createNoiseTexture(256, true);   // noise LUT – linear filtered
+    const iChannel1 = createNoiseTexture(256, false);   // dither – nearest
+
+    // --- Mouse state ---
+    const mouse = new THREE.Vector4(0, 0, 0, 0);
+    let mouseDown = false;
+
+    renderer.domElement.addEventListener('mousemove', (e) => {
+      if (mouseDown) {
+        mouse.x = e.clientX;
+        mouse.y = window.innerHeight - e.clientY;
+      }
+    });
+    renderer.domElement.addEventListener('mousedown', (e) => {
+      mouseDown = true;
+      mouse.x = e.clientX;
+      mouse.y = window.innerHeight - e.clientY;
+      mouse.z = e.clientX;
+      mouse.w = window.innerHeight - e.clientY;
+    });
+    renderer.domElement.addEventListener('mouseup', () => {
+      mouseDown = false;
+    });
+
+    // --- Fragment shader ---
+    const fragmentShader = `#version 300 es
+precision highp float;
+
+uniform vec3  iResolution;
+uniform float iTime;
+uniform vec4  iMouse;
+uniform sampler2D iChannel0;
+uniform sampler2D iChannel1;
+
+out vec4 outColor;
+
+// Copyright Inigo Quilez, 2013 - https://iquilezles.org/
+// Educational / local preview only. See full license in source.
+
+#define LOOK 1
+#define NOISE_METHOD 1
+#define USE_LOD 1
+#define TURBULENCE 0
+
+mat3 setCamera( in vec3 ro, in vec3 ta, float cr )
+{
+    vec3 cw = normalize(ta-ro);
+    vec3 cp = vec3(sin(cr), cos(cr),0.0);
+    vec3 cu = normalize( cross(cw,cp) );
+    vec3 cv = normalize( cross(cu,cw) );
+    return mat3( cu, cv, cw );
+}
+
+float noise( in vec3 x )
+{
+#if TURBULENCE==1
+    x *= 0.5;
+#endif
+
+    vec3 p = floor(x);
+    vec3 f = fract(x);
+    f = f*f*(3.0-2.0*f);
+
+#if NOISE_METHOD==0
+    x = p + f;
+    float n = textureLod(iChannel2,(x+0.5)/32.0,0.0).x*2.0-1.0;
+#endif
+#if NOISE_METHOD==1
+    vec2 uv = (p.xy+vec2(37.0,239.0)*p.z) + f.xy;
+    vec2 rg = textureLod(iChannel0,(uv+0.5)/256.0,0.0).yx;
+    float n = mix( rg.x, rg.y, f.z )*2.0-1.0;
+#endif
+#if NOISE_METHOD==2
+    ivec3 q = ivec3(p);
+    ivec2 uv = q.xy + ivec2(37,239)*q.z;
+    vec2 rg = mix(mix(texelFetch(iChannel0,(uv           )&255,0),
+                      texelFetch(iChannel0,(uv+ivec2(1,0))&255,0),f.x),
+                  mix(texelFetch(iChannel0,(uv+ivec2(0,1))&255,0),
+                      texelFetch(iChannel0,(uv+ivec2(1,1))&255,0),f.x),f.y).yx;
+    float n = mix( rg.x, rg.y, f.z )*2.0-1.0;
+#endif
+
+#if TURBULENCE==0
+    return n;
+#else
+    return 2.0*abs(n)-1.0;
+#endif
+}
+
+#if LOOK==0
+float map( in vec3 p, int oct )
+{
+    vec3 q = p - vec3(0.0,0.1,1.0)*iTime;
+    float g = 0.5+0.5*noise( q*0.3 );
+
+    float f;
+    f  = 0.50000*noise( q ); q = q*2.02;
+    #if USE_LOD==1
+    if( oct>=2 )
+    #endif
+    f += 0.25000*noise( q ); q = q*2.23;
+    #if USE_LOD==1
+    if( oct>=3 )
+    #endif
+    f += 0.12500*noise( q ); q = q*2.41;
+    #if USE_LOD==1
+    if( oct>=4 )
+    #endif
+    f += 0.06250*noise( q ); q = q*2.62;
+    #if USE_LOD==1
+    if( oct>=5 )
+    #endif
+    f += 0.03125*noise( q );
+
+    f = mix( f*0.1-0.5, f, g*g );
+
+    return 1.5*f - 0.5 - p.y;
+}
+
+const int kDiv = 1;
+const vec3 sundir = normalize( vec3(1.0,0.0,-1.0) );
+
+vec4 raymarch( in vec3 ro, in vec3 rd, in vec3 bgcol, in ivec2 px )
+{
+    const float yb = -3.0;
+    const float yt =  0.6;
+    float tb = (yb-ro.y)/rd.y;
+    float tt = (yt-ro.y)/rd.t;
+
+    float tmin, tmax;
+    if( ro.y>yt )
+    {
+        if( tt<0.0 ) return vec4(0.0);
+        tmin = tt;
+        tmax = tb;
+    }
+    else
+    {
+        tmin = 0.0;
+        tmax = 60.0;
+        if( tt>0.0 ) tmax = min( tmax, tt );
+        if( tb>0.0 ) tmax = min( tmax, tb );
+    }
+
+    float t = tmin + 0.1*texelFetch( iChannel1, px&1023, 0 ).x;
+
+    vec4 sum = vec4(0.0);
+    for( int i=0; i<190*kDiv; i++ )
+    {
+       float dt = max(0.05,0.02*t/float(kDiv));
+
+       #if USE_LOD==0
+       const int oct = 5;
+       #else
+       int oct = 5 - int( log2(1.0+t*0.5) );
+       #endif
+
+       vec3 pos = ro + t*rd;
+       float den = map( pos,oct );
+       if( den>0.01 )
+       {
+           float dif = clamp((den - map(pos+0.3*sundir,oct))/0.25, 0.0, 1.0 );
+           vec3  lin = vec3(0.65,0.65,0.75)*1.1 + 0.8*vec3(1.0,0.6,0.3)*dif;
+           vec4  col = vec4( mix( vec3(1.0,0.93,0.84), vec3(0.25,0.3,0.4), den ), den );
+           col.xyz *= lin;
+           col.xyz = mix(col.xyz,bgcol, 1.0-exp2(-0.1*t));
+           col.w    = min(col.w*8.0*dt,1.0);
+           col.rgb *= col.a;
+           sum += col*(1.0-sum.a);
+       }
+       t += dt;
+       if( t>tmax || sum.a>0.99 ) break;
+    }
+
+    return clamp( sum, 0.0, 1.0 );
+}
+
+vec4 render( in vec3 ro, in vec3 rd, in ivec2 px )
+{
+    float sun = clamp( dot(sundir,rd), 0.0, 1.0 );
+
+    vec3 col = vec3(0.76,0.75,0.95);
+    col -= 0.6*vec3(0.90,0.75,0.95)*rd.y;
+    col += 0.2*vec3(1.00,0.60,0.10)*pow( sun, 8.0 );
+
+    vec4 res = raymarch( ro, rd, col, px );
+    col = col*(1.0-res.w) + res.xyz;
+
+    col += 0.2*vec3(1.0,0.4,0.2)*pow( sun, 3.0 );
+
+    col = smoothstep(0.15,1.1,col);
+
+    return vec4( col, 1.0 );
+}
+
+#else
+
+float map5( in vec3 p )
+{
+    vec3 q = p - vec3(0.0,0.1,1.0)*iTime;
+    float f;
+    float a = 0.5;
+    f  = a*noise( q ); q = q*2.02; a = a*0.5;
+    f += a*noise( q ); q = q*2.03; a = a*0.5;
+    f += a*noise( q ); q = q*2.01; a = a*0.5;
+    f += a*noise( q ); q = q*2.02; a = a*0.5;
+    f += a*noise( q );
+    return clamp( 1.5 - p.y - 2.0 + 1.75*f, 0.0, 1.0 );
+}
+float map4( in vec3 p )
+{
+    vec3 q = p - vec3(0.0,0.1,1.0)*iTime;
+    float f;
+    float a = 0.5;
+    f  = a*noise( q ); q = q*2.02; a = a*0.5;
+    f += a*noise( q ); q = q*2.03; a = a*0.5;
+    f += a*noise( q ); q = q*2.01; a = a*0.5;
+    f += a*noise( q );
+    return clamp( 1.5 - p.y - 2.0 + 1.75*f, 0.0, 1.0 );
+}
+float map3( in vec3 p )
+{
+    vec3 q = p - vec3(0.0,0.1,1.0)*iTime;
+    float f;
+    float a = 0.5;
+    f  = a*noise( q ); q = q*2.02; a = a*0.5;
+    f += a*noise( q ); q = q*2.03; a = a*0.5;
+    f += a*noise( q );
+    return clamp( 1.5 - p.y - 2.0 + 1.75*f, 0.0, 1.0 );
+}
+float map2( in vec3 p )
+{
+    vec3 q = p - vec3(0.0,0.1,1.0)*iTime;
+    float f;
+    float a = 0.5;
+    f  = a*noise( q ); q = q*2.02; a = a*0.5;
+    f += a*noise( q );
+    return clamp( 1.5 - p.y - 2.0 + 1.75*f, 0.0, 1.0 );
+}
+
+const vec3 sundir = vec3(-0.7071,0.0,-0.7071);
+
+#define MARCH(STEPS,MAPLOD) for(int i=0; i<STEPS; i++) { vec3 pos = ro + t*rd; if( pos.y<-3.0 || pos.y>2.0 || sum.a>0.99 ) break; float den = MAPLOD( pos ); if( den>0.01 ) { float dif = clamp((den - MAPLOD(pos+0.3*sundir))/0.6, 0.0, 1.0 ); vec3  lin = vec3(1.0,0.6,0.3)*dif+vec3(0.91,0.98,1.05); vec4  col = vec4( mix( vec3(1.0,0.95,0.8), vec3(0.25,0.3,0.35), den ), den ); col.xyz *= lin; col.xyz = mix( col.xyz, bgcol, 1.0-exp(-0.003*t*t) ); col.w *= 0.4; col.rgb *= col.a; sum += col*(1.0-sum.a); } t += max(0.06,0.05*t); }
+
+vec4 raymarch( in vec3 ro, in vec3 rd, in vec3 bgcol, in ivec2 px )
+{
+    vec4 sum = vec4(0.0);
+    float t = 0.05*texelFetch( iChannel1, px&255, 0 ).x;
+    MARCH(40,map5);
+    MARCH(40,map4);
+    MARCH(30,map3);
+    MARCH(30,map2);
+    return clamp( sum, 0.0, 1.0 );
+}
+
+vec4 render( in vec3 ro, in vec3 rd, in ivec2 px )
+{
+    float sun = clamp( dot(sundir,rd), 0.0, 1.0 );
+    vec3 col = vec3(0.6,0.71,0.75) - rd.y*0.2*vec3(1.0,0.5,1.0) + 0.15*0.5;
+    col += 0.2*vec3(1.0,.6,0.1)*pow( sun, 8.0 );
+    vec4 res = raymarch( ro, rd, col, px );
+    col = col*(1.0-res.w) + res.xyz;
+    col += vec3(0.2,0.08,0.04)*pow( sun, 3.0 );
+    return vec4( col, 1.0 );
+}
+
+#endif
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{
+    vec2 p = (2.0*fragCoord-iResolution.xy)/iResolution.y;
+    vec2 m =                iMouse.xy      /iResolution.xy;
+
+    vec3 ro = 4.0*normalize(vec3(sin(3.0*m.x), 0.8*m.y, cos(3.0*m.x))) - vec3(0.0,0.1,0.0);
+    vec3 ta = vec3(0.0, -1.0, 0.0);
+    mat3 ca = setCamera( ro, ta, 0.07*cos(0.25*iTime) );
+    vec3 rd = ca * normalize( vec3(p.xy,1.5));
+
+    outColor = render( ro, rd, ivec2(fragCoord-0.5) );
+}
+
+void main() {
+    mainImage(outColor, gl_FragCoord.xy);
+}
+`;
+
+    // --- Material & mesh ---
+    const material = new THREE.RawShaderMaterial({
+      uniforms: {
+        iResolution: { value: new THREE.Vector3(window.innerWidth, window.innerHeight, 1) },
+        iTime: { value: 0 },
+        iMouse: { value: mouse },
+        iChannel0: { value: iChannel0 },
+        iChannel1: { value: iChannel1 },
+      },
+      vertexShader: `#version 300 es
+        in vec3 position;
+        void main() {
+          gl_Position = vec4(position, 1.0);
+        }
+      `,
+      fragmentShader,
+      glslVersion: null,  // we handle the #version directive ourselves
+    });
+
+    const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material);
+    scene.add(mesh);
+
+    // --- Animate ---
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      material.uniforms.iTime.value = clock.getElapsedTime();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // --- Resize ---
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      material.uniforms.iResolution.value.set(window.innerWidth, window.innerHeight, 1);
+    });
+  </script>
+</body>
+</html>

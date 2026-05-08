@@ -63,4 +63,4 @@ This allows the project to display findings from the dive in realtime, as the su
 
 ## Evaluation
 
-The project opens a space for meaningful collaboration between science, research and software. Through the creation of a digital twin, it allows for effective and engaging ways to learn about the environment, revolutionizing research as immersive and accessible. We aim to develop the tools to make data analysis more efficient, whilst creating opportunities for education and conservation of both physical and virtual environments.
+The project opens a space for meaningful collaboration between science, research and software. Through the creation of a digital twin, it allows for effective and engaging ways to learn about the environment, revolutionising research as immersive and accessible. We aim to develop the tools to make data analysis more efficient, whilst creating opportunities for education and conservation of both physical and virtual environments.

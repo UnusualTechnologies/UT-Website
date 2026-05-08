@@ -32,7 +32,7 @@ Unusual Technologies adopted a basic virtual reality (VR) project built by stude
 
 ![](/images/projects/BlueprintGrasp-768x432.webp)
 
-## Adding Our Special Touch
+## Adding our Special Touch
 
 We didn't just want to create a working VR project – we wanted to create an experience. In doing so, we realised we needed to venture outside the confines of blueprints. This led us to native C++, a powerful tool in our tech arsenal. Utilising C++, we were able to implement more complex logic and design patterns that the blueprint system could not accommodate. This allowed us to take the project to a whole new level, customising it to our specific needs and goals, allowing the client to meet its wider research goals.
 

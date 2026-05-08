@@ -26,7 +26,7 @@ technologies: ["VFX", "Lighting", "Shaders", "Particles"]
 ![](/images/projects/interior-2-1024x531.webp)
 {{% /carousel %}}
 
-## Surreal environments
+## Surreal Environments
 
 <div class="gallery gallery-2col">
 

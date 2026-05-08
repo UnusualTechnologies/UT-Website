@@ -416,6 +416,7 @@ ul {
 .subtitle {
   font-size: var(--text-body-lg);
   color: var(--color-white);
+  margin-bottom: 24px;
 }
 
 .section h1,
@@ -1530,7 +1531,7 @@ ul {
 .carousel {
   position: relative;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin: 24px 0;
 }
 
 .carousel-track {
@@ -1594,6 +1595,55 @@ ul {
   }
 }
 
+/* Lightbox */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.carousel .project-figure img {
+  cursor: zoom-in;
+}
+
 /* Three column layout (image / text / images) */
 
 .project-content .three-col-layout {
@@ -1605,7 +1655,7 @@ ul {
 }
 
 .project-content .three-col-layout p {
-  text-align: center;
+  text-align: left;
   margin-bottom: 16px;
 }
 
@@ -1727,7 +1777,7 @@ ul {
 }
 
 .project-content li {
-  color: var(--color-white);
+  color: rgba(255,255,255,0.85);
   font-size: var(--text-body-lg);
   margin-bottom: 8px;
   line-height: 24px;

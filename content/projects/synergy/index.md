@@ -43,7 +43,7 @@ We explored many different art styles. We found a representation of the player t
 ![](/images/projects/IJM-Character-Ideas-01.jpg)
 {{% /carousel %}}
 
-## Early video concept
+## Early Video Concept
 
 <div class="video-embed">
 <iframe src="https://www.youtube.com/embed/BStg2utYbx0" frameborder="0" allowfullscreen loading="lazy"></iframe>

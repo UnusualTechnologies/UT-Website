@@ -17,7 +17,7 @@ overview_image:
   src: "/images/projects/AI_ProjectCard.webp"
 ---
 
-## Image Generation With DALL·E 3
+## Image Generation with DALL·E 3
 
 We experimented with AI image generation to create illustrations, accompanied by questions for enhanced readability. For instance, a question like "Have you had a fall recently?" could be illustrated with a person slipping over. However, challenges arose in illustrating abstract questions like "Are you satisfied with your life?"
 

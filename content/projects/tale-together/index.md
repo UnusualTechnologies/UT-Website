@@ -33,7 +33,7 @@ For the first game, we wanted to have the players work together to create and te
 
 ## Interface Design
 
-We aimed at creating a colorful and simple interface, ensuring it was intuitive with high accessibility for users of all ages. This design prioritizes ease of use, allowing both children and seniors to navigate the platform effortlessly. The interface is divided between the two core components: video chat & games, each one taking half of the screen.
+We aimed at creating a colourful and simple interface, ensuring it was intuitive with high accessibility for users of all ages. This design prioritises ease of use, allowing both children and seniors to navigate the platform effortlessly. The interface is divided between the two core components: video chat & games, each one taking half of the screen.
 
 ![](/images/projects/wireframe-1024x177.webp)
 

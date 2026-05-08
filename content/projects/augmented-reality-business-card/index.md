@@ -51,7 +51,7 @@ As an in-house project, we developed the AR business card to both show and tell 
 
 This has been an ongoing project with multiple iterations as we experimented with different Web AR technologies. In the earliest prototypes, we explored common AR frameworks like AR.js and WebXR. However, each had its limitations, ranging from requiring markers for tracking to having limited browser support and functionality.
 
-## From design to production
+## From Design to Production
 
 Our first public prototype was built using Model Viewer, which allowed us to create a simple experience with a 3D model, animation, and audio. However, it offered limited customization options and didn't deliver the look and feel we envisioned for the experience.
 
@@ -65,7 +65,7 @@ After several iterations and extensive testing, we chose to use Lens Studio, whi
 
 </div>
 
-## We do it all!
+## We Do It All!
 
 In the end, we opted for videos instead of 3D models and produced a series of films to be featured in the experience. Recorded in front of a green screen, these videos were then chroma-keyed and edited to showcase our range of software capabilities, from education and training to games, installations, and attractions!
 

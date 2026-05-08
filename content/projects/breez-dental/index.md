@@ -39,7 +39,6 @@ testimonial:
 ![](/images/projects/Screenshot-2025-11-12-145319-768x793.png)
 ![Dental notes and recordings are stored securely](/images/projects/Screenshot-2025-11-12-152814-768x546.png)
 ![](/images/projects/Screenshot-2025-11-12-145448-768x789.png)
-![Navigation widget](/images/projects/Screenshot-2025-11-12-150322.png)
 {{% /carousel %}}
 
 ## Secure & Compliant Medical Apps

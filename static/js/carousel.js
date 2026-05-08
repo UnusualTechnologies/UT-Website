@@ -46,5 +46,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
     update();
     window.addEventListener('resize', update);
+
+    // Lightbox: click image to view at native size
+    items.forEach(function (item) {
+      var img = item.querySelector('img');
+      if (!img) return;
+      img.addEventListener('click', function () {
+        var overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+        var close = document.createElement('button');
+        close.className = 'lightbox-close';
+        close.setAttribute('aria-label', 'Close');
+        close.innerHTML = '&times;';
+        var fullImg = document.createElement('img');
+        fullImg.src = img.src;
+        fullImg.alt = img.alt;
+        overlay.appendChild(close);
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+        requestAnimationFrame(function () { overlay.classList.add('active'); });
+
+        function dismiss() {
+          overlay.classList.remove('active');
+          overlay.addEventListener('transitionend', function () { overlay.remove(); });
+        }
+        overlay.addEventListener('click', dismiss);
+        close.addEventListener('click', dismiss);
+        document.addEventListener('keydown', function onKey(e) {
+          if (e.key === 'Escape') { dismiss(); document.removeEventListener('keydown', onKey); }
+        });
+      });
+    });
   });
 });
