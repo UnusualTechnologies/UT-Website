@@ -35,6 +35,9 @@
   --text-sm: 0.9rem;
   --text-xs: 0.85rem;
   --text-xxs: 0.75rem;
+
+  /* Text measure (max line width for readability) */
+  --text-max-width: 800px;
 }
 
 /* --- Reset & Base --- */
@@ -151,8 +154,8 @@ ul {
 }
 
 .site-header.scrolled .header-inner {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 /* --- Logo --- */
@@ -428,20 +431,10 @@ ul {
 /* --- About Intro --- */
 
 .about-intro {
-  max-width: 800px;
+  max-width: var(--text-max-width);
   margin-left: 0;
   margin-right: auto;
   padding-bottom: 20px;
-}
-
-.about-eyebrow {
-  font-family: 'DM Sans', sans-serif;
-  font-size: var(--text-xs);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--color-primary);
-  margin-bottom: 16px;
 }
 
 .about-headline {
@@ -449,6 +442,7 @@ ul {
   font-size: clamp(2rem, 4vw + 0.5rem, 2.75rem);
   font-weight: 400;
   line-height: 1.27;
+  margin-top: 16px;
   letter-spacing: -0.01em;
   color: var(--color-white);
   margin-bottom: 24px;
@@ -467,7 +461,7 @@ ul {
 }
 
 .about-section {
-  max-width: 800px;
+  max-width: var(--text-max-width);
   margin-left: 0;
   margin-right: auto;
 }
@@ -884,7 +878,7 @@ ul {
 
 .step-image img {
   width: 100%;
-  max-width: 700px;
+  max-width: 560px;
   border-radius: 4px;
 }
 
@@ -1609,6 +1603,7 @@ ul {
   font-size: var(--text-body-lg);
   letter-spacing: 0.5px;
   text-align: left;
+  max-width: var(--text-max-width);
 }
 
 .project-try-it {
@@ -1782,6 +1777,7 @@ ul {
   font-size: var(--text-h2);
   font-weight: 500;
   letter-spacing: 1px;
+  max-width: var(--text-max-width);
 }
 
 .project-content h2.case-study-heading {
@@ -1798,6 +1794,7 @@ ul {
   color: var(--color-white);
   margin-top: 24px;
   margin-bottom: 12px;
+  max-width: var(--text-max-width);
 }
 
 .project-content p {
@@ -1806,6 +1803,7 @@ ul {
   line-height: 1.8;
   margin-bottom: 24px;
   text-align: left;
+  max-width: var(--text-max-width);
 }
 
 .project-content img {
@@ -1814,7 +1812,7 @@ ul {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 24px auto;
+  margin: 24px 0;
 }
 
 .project-content video {
@@ -1823,14 +1821,14 @@ ul {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 24px auto;
+  margin: 24px 0;
 }
 
 .project-content audio {
   display: block;
   max-width: 768px;
   width: 100%;
-  margin: 16px auto;
+  margin: 16px 0;
 }
 
 .project-content .gallery {
@@ -2114,6 +2112,7 @@ ul {
 .project-content ol {
   margin: 16px 0;
   padding-left: 24px;
+  max-width: var(--text-max-width);
 }
 
 .project-content ul {
@@ -2146,6 +2145,7 @@ ul {
   margin: 24px 0;
   background: rgba(157, 235, 174, 0.05);
   border-radius: 0 8px 8px 0;
+  max-width: var(--text-max-width);
 }
 
 .project-content blockquote p {
@@ -2326,7 +2326,7 @@ ul {
 /* --- Team Profile Page --- */
 
 .team-profile {
-  max-width: 800px;
+  max-width: var(--text-max-width);
   margin: 0 auto;
 }
 
@@ -2475,7 +2475,7 @@ ul {
 /* --- Careers Job Listing Page --- */
 
 .careers-job-single {
-  max-width: 800px;
+  max-width: var(--text-max-width);
   color: var(--color-white);
   padding-top: 20px;
 }
