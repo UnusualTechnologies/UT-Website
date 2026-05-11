@@ -20,6 +20,10 @@
   --logo-height: 49px;
   --logo-offset-y: 8px;
 
+  /* Container */
+  --container-padding: min(7.8vw, 6.25rem);
+  --container-width: calc(min(84.375vw, 75rem) + 2 * var(--container-padding));
+
   /* Typography Scale */
   --text-display: 5rem;
   --text-h1: 4rem;
@@ -58,6 +62,13 @@ body {
   background: var(--color-black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.site-container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -132,8 +143,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px min(7.8vw, 6.25rem) 0;
-  max-width: 1200px;
+  padding: 70px var(--container-padding);
+  max-width: var(--container-width);
   margin: 0 auto;
   min-height: 80px;
 }
@@ -172,7 +183,7 @@ ul {
   display: block;
   padding: 0 20px;
   font-family: 'DM Sans', sans-serif;
-  font-size: var(--text-body);
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 80px;
   color: var(--color-gray);
@@ -258,9 +269,9 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
-  max-width: 1920px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 0 35px;
+  padding: 0 var(--container-padding);
   gap: 0;
 }
 
@@ -384,14 +395,15 @@ ul {
 .page-gradient {
   background: transparent;
   position: relative;
-  padding-top: 80px; /* account for fixed header */
+  padding-top: 220px; /* account for fixed header */
   min-height: 100vh;
 }
 
 .section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 35px;
+  padding: 60px 0;
+}
+.section.about-intro {
+  padding-top: 0;
 }
 
 .hero-text {
@@ -439,9 +451,7 @@ ul {
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 35px;
+  padding: 40px 0;
   color: var(--color-white);
 }
 
@@ -458,7 +468,8 @@ ul {
 
 .about-intro {
   max-width: 800px;
-  padding-top: 100px;
+  margin-left: 0;
+  margin-right: auto;
   padding-bottom: 20px;
 }
 
@@ -496,6 +507,8 @@ ul {
 
 .about-section {
   max-width: 800px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* --- Section Headings (left-aligned, editorial) --- */
@@ -1246,22 +1259,13 @@ ul {
   }
 
   .header-inner {
-    padding: 0;
+    padding: 20px 20px 0;
     min-height: 60px;
   }
 
-  .section,
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
   .hero-text {
     padding-top: 40px;
-  }
-
-  .about-intro {
-    padding-top: 60px;
   }
 
   .team-grid {
@@ -1305,8 +1309,6 @@ ul {
    ========================================================================== */
 
 .project-single {
-  max-width: 1140px;
-  margin: 0 auto;
 }
 
 /* --- Hero Banner --- */
@@ -1326,8 +1328,8 @@ ul {
   max-width: none;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   min-height: calc(var(--text-display) + 60px);
   display: flex;
   align-items: center;
