@@ -8,6 +8,7 @@ tags:
   - "science-and-research"
   - "unreal-engine"
   - "vr"
+description: "A VR experience for the University of Hamburg that lets users paint with sound, blending music and visual art in real time."
 prominence: 52
 featured_image: "/images/projects/abstract-painters.webp"
 banner_image: "/images/projects/banners/abstract-painters.webp"

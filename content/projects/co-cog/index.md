@@ -9,6 +9,7 @@ tags:
   - "ios"
   - "science-and-research"
   - "unity"
+description: "A mobile app developed with NHS researchers to monitor cognitive health and wellbeing in people living with early-stage dementia."
 prominence: 80
 featured_image: "/images/projects/co-cog.png"
 banner_image: "/images/projects/banners/co-cog.png"

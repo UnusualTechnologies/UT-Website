@@ -6,6 +6,7 @@ tags:
   - "game"
   - "unity"
   - "webgl"
+description: "A family-friendly Christmas escape room game played together on a single screen, with puzzles to unlock each room."
 prominence: 5
 featured_image: "/images/projects/north-pole-escape.webp"
 banner_image: "/images/projects/banners/the-north-pole-escape.webp"

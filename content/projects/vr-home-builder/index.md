@@ -9,6 +9,7 @@ tags:
   - "nfts"
   - "unity"
   - "vr"
+description: "A VR/AR application that lets users trace their real-world environment and build 3D architectural models on the Oculus headset."
 prominence: 28
 featured_image: "/images/projects/vr-home-builder.png"
 banner_image: "/images/projects/banners/vr-home-builder.webp"

@@ -9,6 +9,7 @@ tags:
   - "ios"
   - "unity"
   - "webgl"
+description: "A Halloween-themed AR adventure trail where children scan real-world posters to play minigames and collect hidden letters."
 prominence: 32
 featured_image: "/images/projects/seaweeds.png"
 banner_image: "/images/projects/banners/seeweeds-scrambled-spell.png"

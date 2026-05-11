@@ -11,6 +11,7 @@ tags:
   - "gamification"
   - "ios"
   - "unity"
+description: "An AR outdoor adventure app that turns green spaces into interactive trails with characters, stories, and learning objectives."
 prominence: 55
 featured_image: "/images/projects/friendly-fox.webp"
 banner_image: "/images/projects/banners/friendly-fox-adventures.webp"

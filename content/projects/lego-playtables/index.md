@@ -8,6 +8,7 @@ tags:
   - "motion-sensor"
   - "projection-mapping"
   - "unity"
+description: "Interactive projection-mapped LEGO tables using depth sensors, installed across five Discovery Centers worldwide."
 prominence: 100
 featured_image: "/images/projects/lego-playtables.webp"
 banner_image: "/images/projects/banners/lego-playtables.webp"

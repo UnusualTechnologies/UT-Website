@@ -4,6 +4,7 @@ type: "projects"
 project_type: "Prototype"
 tags:
   - "blockchain"
+description: "A prototype cryptocurrency lottery built with smart contracts on the Polygon testnet to explore Web3 fundamentals."
 prominence: 2
 featured_image: "/images/projects/blockchain-lottery.png"
 banner_image: "/images/projects/banners/blockchain-lottery.jpg"

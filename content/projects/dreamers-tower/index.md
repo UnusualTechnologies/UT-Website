@@ -5,6 +5,7 @@ project_type: "Prototype"
 tags:
   - "game"
   - "unity"
+description: "A Cuphead-style 2D boss rush platformer built in a week for the 2021 Boss Rush Game Jam."
 prominence: 8
 featured_image: "/images/projects/dreamers-tower.webp"
 banner_image: "/images/projects/banners/dreamers-tower.webp"

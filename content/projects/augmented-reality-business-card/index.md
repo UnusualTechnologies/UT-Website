@@ -6,6 +6,7 @@ tags:
   - "ar"
   - "publicity-stunt"
   - "web"
+description: "A business card that comes to life through AR, playing a video reel of our capabilities when scanned with a phone."
 prominence: 12
 featured_image: "/images/projects/ar-business-card.png"
 banner_image: "/images/projects/banners/augmented-reality-business-card.webp"

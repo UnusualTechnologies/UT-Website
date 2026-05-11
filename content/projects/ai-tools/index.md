@@ -5,6 +5,7 @@ project_type: "Prototype"
 tags:
   - "ai"
   - "productivity"
+description: "Lessons learned from creatively applying ChatGPT and DALL·E 3 across real client projects."
 prominence: 20
 featured_image: "/images/projects/ai-tools.webp"
 banner_image: "/images/projects/banners/ai-tools.webp"

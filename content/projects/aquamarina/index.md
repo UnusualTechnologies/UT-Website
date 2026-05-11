@@ -6,6 +6,7 @@ tags:
   - "game"
   - "unity"
   - "vfx"
+description: "A shader-driven underwater demo exploring realistic water distortion, fog, fish animation, and collectible mechanics in Unity."
 prominence: 25
 featured_image: "/images/projects/aquamarina.png"
 banner_image: "/images/projects/banners/aquamarina.png"

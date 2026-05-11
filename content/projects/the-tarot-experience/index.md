@@ -8,6 +8,7 @@ tags:
   - "steam"
   - "unity"
   - "vr"
+description: "An immersive VR storytelling experience for the Oculus Quest, available on Steam and the Meta Store."
 prominence: 65
 featured_image: "/images/projects/tarot-vr.webp"
 banner_image: "/images/projects/banners/the-tarot-experience.webp"

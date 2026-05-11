@@ -6,6 +6,7 @@ tags:
   - "data-visualisation"
   - "science-and-research"
   - "unity"
+description: "A real-time digital twin of the ocean, letting scientists explore marine biodiversity data in an immersive 3D environment."
 prominence: 95
 featured_image: "/images/projects/oceanx.webp"
 banner_image: "/images/projects/banners/oceanx.webp"

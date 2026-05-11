@@ -8,6 +8,7 @@ tags:
   - "procedural-generation"
   - "unity"
   - "webgl"
+description: "A procedural generation prototype exploring Perlin noise, biome creation, river systems, and village placement for open-world games."
 prominence: 18
 featured_image: "/images/projects/isles-of-generation.webp"
 banner_image: "/images/projects/banners/isles-of-generation.webp"

@@ -6,6 +6,7 @@ tags:
   - "ai"
   - "health"
   - "windows"
+description: "An AI-powered note-taking tool that listens to dental consultations and automates admin, cutting errors by 20%."
 prominence: 70
 featured_image: "/images/projects/breez-dental.png"
 banner_image: "/images/projects/banners/breez-dental.webp"

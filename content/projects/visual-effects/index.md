@@ -7,6 +7,7 @@ tags:
   - "art"
   - "immersive"
   - "vfx"
+description: "Lighting, shaders, and particle effects that bring digital environments to life with a realistic or stylised finish."
 prominence: 75
 featured_image: "/images/projects/visual-effects.webp"
 banner_image: "/images/projects/banners/visual-effects.webp"

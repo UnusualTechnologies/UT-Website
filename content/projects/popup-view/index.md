@@ -8,6 +8,7 @@ tags:
   - "art"
   - "ios"
   - "unity"
+description: "A YouTube-style platform for augmented reality, where creators upload AR experiences and consumers discover them on mobile."
 prominence: 30
 featured_image: "/images/projects/popup-view.webp"
 banner_image: "/images/projects/banners/popup-view.webp"

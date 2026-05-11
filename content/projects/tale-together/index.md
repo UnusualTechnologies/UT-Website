@@ -7,6 +7,7 @@ tags:
   - "gamification"
   - "science-and-research"
   - "web"
+description: "An online platform connecting children and elderly residents through collaborative storytelling, with AI-generated book covers."
 prominence: 35
 featured_image: "/images/projects/tale-together.webp"
 banner_image: "/images/projects/banners/tale-together.webp"

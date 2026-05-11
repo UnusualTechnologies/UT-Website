@@ -6,6 +6,7 @@ tags:
   - "game"
   - "port"
   - "web"
+description: "A web port of Lovemore, the relationship-focused RPG from the creator of the most-played dating sim of all time."
 prominence: 22
 featured_image: "/images/projects/lovemore.webp"
 banner_image: "/images/projects/banners/lovemore.webp"

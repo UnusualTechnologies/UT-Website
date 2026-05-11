@@ -8,6 +8,7 @@ tags:
   - unity
   - web
   - webgl
+description: "A Vampire Survivors-inspired bullet heaven game built for WebGL, with full art, sound, and a reusable game engine."
 prominence: 45
 featured_image: /images/projects/mere-mortals.webp
 banner_image: "/images/projects/banners/mere-mortals.png"

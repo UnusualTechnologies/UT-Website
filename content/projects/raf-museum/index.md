@@ -7,6 +7,7 @@ tags:
   - "installation"
   - "projection-mapping"
   - "unity"
+description: "A multi-projector interactive debate table for school groups at the RAF Museum, driven by touch foils and a custom CMS."
 prominence: 90
 featured_image: "/images/projects/raf-museum.webp"
 banner_image: "/images/projects/banners/raf-museum.webp"

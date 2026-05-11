@@ -9,6 +9,7 @@ tags:
   - "music"
   - "unity"
   - "vr"
+description: "A virtual reality digital twin of a Bristol music venue, bringing live events into a global VR space."
 prominence: 58
 featured_image: "/images/projects/lost-horizon.webp"
 banner_image: "/images/projects/banners/lost-horizon.webp"

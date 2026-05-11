@@ -5,6 +5,7 @@ project_type: "Client"
 tags:
   - "ai"
   - "web"
+description: "An AI-powered web app that delivers personalised tarot readings through procedurally generated storytelling."
 prominence: 40
 featured_image: "/images/projects/tarot-web.png"
 banner_image: "/images/projects/banners/the-tarot-experience-web-reading.jpg"

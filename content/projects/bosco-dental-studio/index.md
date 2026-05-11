@@ -5,6 +5,7 @@ project_type: "Client"
 tags:
   - "health"
   - "productivity"
+description: "A bespoke triage tool for dental receptionists that assesses urgency, estimates appointment length, and feeds notes into existing systems."
 prominence: 42
 featured_image: "/images/projects/bosco-dental.webp"
 banner_image: "/images/projects/banners/bosco-dental-studio.webp"

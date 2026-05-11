@@ -6,6 +6,7 @@ tags:
   - "ai"
   - "aws"
   - "productivity"
+description: "Our AI-augmented Discord bot that handles annual leave, task scheduling, company lunches, and day-to-day office admin."
 prominence: 15
 featured_image: "/images/projects/botsworth.webp"
 banner_image: "/images/projects/banners/botsworth.webp"

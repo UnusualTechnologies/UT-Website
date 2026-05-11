@@ -3,6 +3,7 @@ title: "Scheduler"
 type: "projects"
 project_type: "In-house"
 tags: ["web", "ai", "real-time", "multi-tenant"]
+description: "An in-house project management tool with real-time collaboration, built in Laravel and deployed on AWS."
 prominence: 3
 featured_image: "/images/projects/scheduler.jpg"
 banner_image: "/images/projects/banners/scheduler.jpg"

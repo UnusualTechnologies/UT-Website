@@ -9,6 +9,7 @@ tags:
   - "music"
   - "unity"
   - "vr"
+description: "A 360-degree VR relaxation experience that transforms psychedelic visuals into an immersive harmonisation session."
 prominence: 38
 featured_image: "/images/projects/f-effect.webp"
 banner_image: "/images/projects/banners/f-effect.webp"

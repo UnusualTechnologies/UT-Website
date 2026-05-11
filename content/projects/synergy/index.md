@@ -9,6 +9,7 @@ tags:
   - "gamification"
   - "unity"
   - "webgl"
+description: "An environmental puzzle-platformer about balancing resource use with restoration, playable in the browser."
 prominence: 1
 featured_image: "/images/projects/synergy.webp"
 banner_image: "/images/projects/banners/synergy.png"

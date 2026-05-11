@@ -6,6 +6,7 @@ tags:
   - "aaa-games"
   - "art"
   - "immersive"
+description: "Character design and animation ranging from hyper-realistic to uniquely stylised, for games, VR, and mobile."
 prominence: 85
 featured_image: "/images/projects/characters-animation.webp"
 banner_image: "/images/projects/banners/characters-animation.webp"
