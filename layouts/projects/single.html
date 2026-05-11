@@ -6,7 +6,7 @@
     <!-- Hero Banner -->
     {{ $bannerImg := .Params.banner_image | default .Params.featured_image }}
     <section class="project-hero{{ with $bannerImg }} has-banner{{ end }}{{ if .Params.banner_contain }} banner-contain{{ end }}"
-      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(29,29,31,0.8), rgba(29,29,31,0.8)), url('{{ . | absURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
+      {{ with $bannerImg }}style="background-image: linear-gradient(rgba(29,29,31,0.8), rgba(29,29,31,0.8)), url('{{ . | strings.TrimLeft "/" | relURL }}'){{ with $.Params.banner_position }}; background-position: {{ . }}{{ end }}"{{ end }}>
       <h1{{ if gt (len .Title) 25 }} class="long-title"{{ end }}>{{ .Title }}</h1>
     </section>
 
@@ -68,7 +68,7 @@
       {{ with .Params.overview_image }}
       <div class="project-overview-image">
         <figure class="project-figure">
-          <img src="{{ .src | absURL }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
+          <img src="{{ .src | strings.TrimLeft "/" | relURL }}" alt="{{ with .caption }}{{ . }}{{ end }}" loading="lazy">
           {{ with .caption }}
           <figcaption>{{ . }}</figcaption>
           {{ end }}
@@ -106,7 +106,7 @@
         {{ else }}
         {{ with .thumbnail }}
         <div class="testimonial-thumbnail">
-          <img src="{{ . | absURL }}" alt="Testimonial" loading="lazy">
+          <img src="{{ . | strings.TrimLeft "/" | relURL }}" alt="Testimonial" loading="lazy">
         </div>
         {{ end }}
         {{ end }}
@@ -128,7 +128,7 @@
 
     <!-- Back to projects -->
     <section class="section project-footer-nav">
-      <a href="{{ "projects/" | absURL }}" class="back-link">← Back to Work</a>
+      <a href="{{ "projects/" | strings.TrimLeft "/" | relURL }}" class="back-link">← Back to Work</a>
     </section>
   </article>
 

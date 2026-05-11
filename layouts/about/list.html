@@ -14,14 +14,14 @@
     <div class="team-cards">
       {{ range .Site.Data.team.items }}
       {{ if .url }}
-      <a href="{{ .url | absURL }}" class="team-card">
-        <img src="{{ .photo | absURL }}" alt="{{ .name }}" class="team-photo">
+      <a href="{{ .url | strings.TrimLeft "/" | relURL }}" class="team-card">
+        <img src="{{ .photo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
         <p>{{ .role }}</p>
       </a>
       {{ else }}
       <div class="team-card">
-        <img src="{{ .photo | absURL }}" alt="{{ .name }}" class="team-photo">
+        <img src="{{ .photo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}" class="team-photo">
         <h3>{{ .name }}</h3>
         <p>{{ .role }}</p>
       </div>
@@ -35,7 +35,7 @@
     <h2>Who We've Worked With</h2>
     <div class="client-logos">
       {{ range .Site.Data.clients.items }}
-      <img src="{{ .logo | absURL }}" alt="{{ .name }}">
+      <img src="{{ .logo | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
   </section>
@@ -48,7 +48,7 @@
       {{ $videoID := replaceRE `.*youtu\.be/` "" .video }}
       <div class="testimonial-card" data-video-id="{{ $videoID }}">
         <div class="testimonial-card-thumb">
-          <img src="{{ .image | absURL }}" alt="{{ .name }}'s Testimonial">
+          <img src="{{ .image | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}'s Testimonial">
           <div class="testimonial-play-btn">&#9654;</div>
         </div>
         <div class="testimonial-caption">
@@ -65,7 +65,7 @@
     <h2>Awards</h2>
     <div class="awards-grid">
       {{ range .Site.Data.awards.items }}
-      <img src="{{ .image | absURL }}" alt="{{ .name }}">
+      <img src="{{ .image | strings.TrimLeft "/" | relURL }}" alt="{{ .name }}">
       {{ end }}
     </div>
   </section>
@@ -88,7 +88,7 @@
   <!-- Location + CTA -->
   <section class="section">
     <h2>Based in Brighton, United Kingdom</h2>
-    <img src="{{ "images/brighton-map.png" | absURL }}" alt="Brighton, United Kingdom" class="map-image">
+    <img src="{{ "images/brighton-map.png" | strings.TrimLeft "/" | relURL }}" alt="Brighton, United Kingdom" class="map-image">
 
     {{ partial "flip-box.html" (dict
       "url" .Site.Params.questionnaireURL

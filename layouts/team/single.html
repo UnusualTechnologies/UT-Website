@@ -5,7 +5,7 @@
     <a href="{{ "about/" | relURL }}" class="back-link">&larr; About Us</a>
 
     <div class="team-profile-header">
-      <img src="{{ .Params.photo | absURL }}" alt="{{ .Title }}" class="team-profile-photo">
+      <img src="{{ .Params.photo | strings.TrimLeft "/" | relURL }}" alt="{{ .Title }}" class="team-profile-photo">
       <div class="team-profile-meta">
         <h1>{{ .Title }}</h1>
         <p class="team-profile-role">{{ .Params.role }}</p>

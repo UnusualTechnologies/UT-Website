@@ -26,7 +26,7 @@
         <div class="project-card-container" data-tags="{{ $tagsCsv }}" data-prominence="{{ .Params.prominence }}">
           <a href="{{ .RelPermalink }}" class="project-card">
             <div class="project-cover">
-              <img src="{{ .Params.featured_image | absURL }}" alt="{{ .Title }}" class="project-cover-img" loading="lazy">
+              <img src="{{ .Params.featured_image | strings.TrimLeft "/" | relURL }}" alt="{{ .Title }}" class="project-cover-img" loading="lazy">
               {{ with .Params.tags }}
                 <span class="project-label">{{ index . 0 | replaceRE "-" " " | title }}</span>
               {{ end }}
