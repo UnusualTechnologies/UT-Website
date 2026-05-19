@@ -12,6 +12,9 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  {{ if not hugo.IsServer }}
+  <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
+  {{ end }}
 </head>
 <body class="{{ with .Params.bodyClass }}{{ . }}{{ end }}{{ if .IsHome }} home{{ end }}" data-base-path="{{ "" | relURL }}">
   <a class="skip-link" href="#content">Skip to content</a>
