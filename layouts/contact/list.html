@@ -7,7 +7,7 @@
 
     <div class="contact-details">
       <h3><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></h3>
-      <h3><a href="mailto:{{ .Site.Params.email }}" target="_blank">Email: {{ .Site.Params.email }}</a></h3>
+      <h3>Email: {{ partial "email-link.html" (dict "email" .Site.Params.email "text" "click to reveal" "mode" "text") }}</h3>
     </div>
 
     <div class="flip-boxes">

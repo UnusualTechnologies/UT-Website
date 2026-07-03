@@ -54,3 +54,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Email protection: the address is base64-encoded in a data attribute and
+// assembled only on click, so it never sits in the raw HTML for scrapers.
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.email-protect').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var enc = el.getAttribute('data-e');
+      if (!enc) return;
+      var addr;
+      try { addr = atob(enc); } catch (err) { return; }
+      var mode = el.getAttribute('data-mode') || 'text';
+      var revealed = el.getAttribute('data-revealed') === 'true';
+      if (!revealed) {
+        el.setAttribute('href', 'mailto:' + addr);
+        el.setAttribute('data-revealed', 'true');
+        // "text" mode shows the address first; a second click opens the client.
+        if (mode === 'text') {
+          el.textContent = addr;
+          return;
+        }
+      }
+      window.location.href = 'mailto:' + addr;
+    });
+  });
+});

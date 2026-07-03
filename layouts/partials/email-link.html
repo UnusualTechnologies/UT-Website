@@ -1,0 +1,21 @@
+{{- /*
+  Renders a spam-resistant email link. The address is base64-encoded into a
+  data attribute so it never appears as plain text or a `mailto:` in the raw
+  HTML — basic scrapers find nothing. js/main.js assembles it only on click.
+
+  Params:
+    email (required) — the address, e.g. "hello@unusualtechnologies.com"
+    text            — label shown before reveal (default "click to reveal email")
+    class           — extra CSS classes (e.g. "btn careers-apply-btn")
+    mode            — "text": first click reveals the address, second opens the
+                       mail client. "action": a single click opens the mail
+                       client without showing the address (default "text").
+*/ -}}
+{{- $email := .email -}}
+{{- if $email -}}
+  {{- $text := .text | default "click to reveal email" -}}
+  {{- $mode := .mode | default "text" -}}
+  {{- $class := .class | default "" -}}
+  {{- $enc := $email | base64Encode -}}
+<a href="#" class="email-protect{{ with $class }} {{ . }}{{ end }}" data-e="{{ $enc }}" data-mode="{{ $mode }}" rel="nofollow" aria-label="Reveal email address">{{ $text }}</a>
+{{- end -}}
