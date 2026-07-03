@@ -13,7 +13,7 @@
     <div class="flip-boxes">
       {{ range .Site.Data.contact_ctas.items }}
         {{ $url := .url }}
-        {{ if .url_param }}
+        {{ if and .url_param (not .url) }}
           {{ $url = index $.Site.Params (lower .url_param) }}
         {{ end }}
         {{ partial "flip-box.html" (dict
