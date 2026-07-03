@@ -1,7 +1,7 @@
 ---
 title: Junior Full-Stack Web Developer
 is_listing: true
-status: live
+status: draft
 ---
 
 ## About Us
