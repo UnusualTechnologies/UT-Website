@@ -33,7 +33,8 @@
       <h2 class="section-heading matching-heading hidden" id="matching-heading">Projects selected for your interests</h2>
       <div class="project-grid" id="project-grid">
 
-        {{ range where (sort .Pages "Params.prominence" "desc") ".Params.unlisted" "ne" true }}
+        {{ $sorted := sort .Pages "Params.prominence" "desc" }}
+        {{ range where (where $sorted ".Params.status" "ne" "draft") ".Params.status" "ne" "unlisted" }}
         {{ $tagsCsv := delimit .Params.tags "," }}
         <div class="project-card-container" data-tags="{{ $tagsCsv }}" data-prominence="{{ .Params.prominence }}">
           <a href="{{ .RelPermalink }}" class="project-card">

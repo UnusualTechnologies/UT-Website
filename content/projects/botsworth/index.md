@@ -1,6 +1,7 @@
 ---
 title: "Botsworth"
 type: "projects"
+status: live
 project_type: "In-house"
 tags:
   - "ai"

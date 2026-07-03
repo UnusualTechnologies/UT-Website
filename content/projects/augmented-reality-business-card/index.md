@@ -1,6 +1,7 @@
 ---
 title: "AR Business Card"
 type: "projects"
+status: live
 project_type: "In-house"
 tags:
   - "ar"

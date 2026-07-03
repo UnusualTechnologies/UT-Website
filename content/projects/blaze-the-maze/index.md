@@ -1,6 +1,7 @@
 ---
 title: Blaze The Maze
 type: projects
+status: live
 project_type: In-house
 tags:
   - game

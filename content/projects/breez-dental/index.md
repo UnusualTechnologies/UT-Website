@@ -1,6 +1,7 @@
 ---
 title: "Breez Dental"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "ai"

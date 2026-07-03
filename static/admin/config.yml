@@ -20,8 +20,15 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: type, label: Type (Hugo), widget: hidden, default: projects }
-      - { name: draft, label: "Draft (hide everywhere)", widget: boolean, default: true, hint: "ON = not published at all; the page does not exist on the live site and cannot be reached by any link. Turn OFF to make it live." }
-      - { name: unlisted, label: "Unlisted (hide from grid only)", widget: boolean, default: false, required: false, hint: "ON = the project page stays live and reachable by direct link, but is hidden from the projects grid. Leave OFF to show it in the grid." }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        hint: "Draft = hidden and not viewable (work in progress). Unlisted = viewable by direct link but hidden from the grid. Live = visible and listed."
+        options:
+          - { label: "Draft — hidden, not viewable", value: draft }
+          - { label: "Unlisted — direct link only, hidden from grid", value: unlisted }
+          - { label: "Live — visible and listed", value: live }
       - name: project_type
         label: Project Type
         widget: select
@@ -141,8 +148,15 @@ collections:
     fields:
       - { name: title, label: Job Title, widget: string }
       - { name: is_listing, label: Is Listing, widget: hidden, default: true }
-      - { name: draft, label: "Draft (hide everywhere)", widget: boolean, default: true, hint: "ON = not published at all; the page does not exist on the live site and cannot be reached by any link. Turn OFF to make it live." }
-      - { name: unlisted, label: "Unlisted (hide from list only)", widget: boolean, default: false, required: false, hint: "ON = the job page stays live and reachable by direct link, but is hidden from the Open Positions list. Leave OFF to show it in the list." }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        hint: "Draft = hidden and not viewable (work in progress). Unlisted = viewable by direct link but hidden from the Open Positions list. Live = visible and listed."
+        options:
+          - { label: "Draft — hidden, not viewable", value: draft }
+          - { label: "Unlisted — direct link only, hidden from list", value: unlisted }
+          - { label: "Live — visible and listed", value: live }
       - { name: body, label: Job Description, widget: markdown }
 
   # ── Careers Page ─────────────────────────────────────────────────────

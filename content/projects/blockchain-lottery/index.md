@@ -1,6 +1,7 @@
 ---
 title: "Blockchain Lottery"
 type: "projects"
+status: live
 project_type: "Prototype"
 tags:
   - "blockchain"

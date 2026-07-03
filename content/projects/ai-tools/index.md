@@ -1,6 +1,7 @@
 ---
 title: "AI Tools"
 type: "projects"
+status: live
 project_type: "Prototype"
 tags:
   - "ai"

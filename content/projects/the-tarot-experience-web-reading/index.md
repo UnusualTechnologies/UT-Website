@@ -1,6 +1,7 @@
 ---
 title: "The Tarot Experience Web Reading"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "ai"

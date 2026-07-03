@@ -1,6 +1,7 @@
 ---
 title: "Characters & Animation"
 type: "projects"
+status: live
 project_type: "In-house"
 tags:
   - "aaa-games"

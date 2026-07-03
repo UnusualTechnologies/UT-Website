@@ -1,6 +1,7 @@
 ---
 title: "RAF Debate Table"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "cms"

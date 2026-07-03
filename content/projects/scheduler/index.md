@@ -1,6 +1,7 @@
 ---
 title: "Scheduler"
 type: "projects"
+status: live
 project_type: "In-house"
 tags: ["web", "ai", "real-time", "multi-tenant"]
 prominence: 3

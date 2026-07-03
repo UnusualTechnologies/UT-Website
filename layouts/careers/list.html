@@ -7,7 +7,7 @@
   ) }}
 
   <!-- Open Positions -->
-  {{ $listed := where .Pages ".Params.unlisted" "ne" true }}
+  {{ $listed := where (where .Pages ".Params.status" "ne" "draft") ".Params.status" "ne" "unlisted" }}
   {{ with $listed }}
   <section class="section careers-positions">
     <div class="careers-job-list">

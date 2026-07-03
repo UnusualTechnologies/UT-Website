@@ -1,6 +1,7 @@
 ---
 title: "Moving Sound Pictures: The Abstract Painters"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "art"

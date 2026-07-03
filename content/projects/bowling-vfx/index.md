@@ -8,7 +8,7 @@ tags:
   - "unity"
   - "vfx"
 description: "Technical art and VFX for a Middle Eastern bowling attraction themed around environmental super heroes."
-unlisted: true
+status: unlisted
 prominence: 0
 featured_image: "/images/projects/bowling-vfx.webp"
 

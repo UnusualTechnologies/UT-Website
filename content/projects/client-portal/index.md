@@ -1,6 +1,7 @@
 ---
 title: "Client Portal"
 type: "projects"
+status: live
 project_type: "In-house"
 tags: ["web", "multi-tenant", "real-time"]
 prominence: 4

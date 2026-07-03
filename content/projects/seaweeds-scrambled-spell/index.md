@@ -1,6 +1,7 @@
 ---
 title: "Seaweeds' Scrambled Spell"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "android"
