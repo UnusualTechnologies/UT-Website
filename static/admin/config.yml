@@ -143,7 +143,6 @@ collections:
       - { name: is_listing, label: Is Listing, widget: hidden, default: true }
       - { name: draft, label: "Draft (hide everywhere)", widget: boolean, default: true, hint: "ON = not published at all; the page does not exist on the live site and cannot be reached by any link. Turn OFF to make it live." }
       - { name: unlisted, label: "Unlisted (hide from list only)", widget: boolean, default: false, required: false, hint: "ON = the job page stays live and reachable by direct link, but is hidden from the Open Positions list. Leave OFF to show it in the list." }
-      - { name: apply_url, label: Apply URL, widget: string, hint: "e.g. mailto:careers@unusualtechnologies.com or a link to a form" }
       - { name: body, label: Job Description, widget: markdown }
 
   # ── Careers Page ─────────────────────────────────────────────────────

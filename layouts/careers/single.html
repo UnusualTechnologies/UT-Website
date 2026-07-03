@@ -10,9 +10,7 @@
       {{ .Content }}
     </div>
 
-    {{ with .Params.apply_url }}
-    <a href="{{ . }}" class="btn careers-apply-btn">Apply Now</a>
-    {{ end }}
+    {{ partial "email-link.html" (dict "email" "careers@unusualtechnologies.com" "text" "Apply Now" "class" "btn careers-apply-btn" "mode" "action") }}
 
   </section>
 
