@@ -1,7 +1,7 @@
 ---
 title: Indie Game Marketer
 is_listing: true
-status: draft
+status: live
 ---
 
 **Location:** Fully Remote / Flexible Hours
