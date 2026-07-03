@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: UnusualTechnologies/ut-hugo-site
+  repo: UnusualTechnologies/UT-Website
   branch: main
   base_url: https://sveltia-cms-auth.douglas-kelly.workers.dev
 

@@ -26,7 +26,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --baseURL "https://unusualtechnologies.github.io/ut-hugo-site/"
+        run: hugo --minify --baseURL "https://unusualtechnologies.github.io/UT-Website/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
