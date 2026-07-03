@@ -20,6 +20,7 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: type, label: Type (Hugo), widget: hidden, default: projects }
+      - { name: draft, label: Draft (hide from live site), widget: boolean, default: true, hint: "Turn OFF to publish this project on the projects page" }
       - name: project_type
         label: Project Type
         widget: select
