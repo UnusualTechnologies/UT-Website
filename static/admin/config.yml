@@ -154,6 +154,11 @@ collections:
         label: Careers Settings
         file: content/careers/_index.md
         fields:
+          - name: manage_jobs
+            label: "Job Postings"
+            widget: compute
+            value: "Job postings are managed in their own collection, not on this page."
+            hint: "**[➕ Add or edit jobs via Job Listings →](/admin/#/collections/job-listings)**"
           - { name: title, label: Title, widget: string }
           - name: internship_fields
             label: Internship Fields
