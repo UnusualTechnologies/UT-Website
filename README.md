@@ -7,7 +7,7 @@ The site is a collection of files — text, images, and configuration — that H
 ## How the site is structured
 
 ```
-ut-website/
+UT-Website/
 ├── content/            Pages and project case studies (Markdown files)
 │   ├── _index.md       Homepage
 │   ├── about/          About page
@@ -62,7 +62,7 @@ The site includes [Sveltia CMS](https://github.com/sveltia/sveltia-cms), a visua
    hugo server
    ```
 3. Open **http://localhost:1313/admin/** in **Chrome** or **Edge** (other browsers won't work for local editing)
-4. The CMS will ask for permission to access your project folder — grant it and point it to the `ut-website` directory
+4. The CMS will ask for permission to access your project folder — grant it and point it to the `UT-Website` directory
 5. You'll see a dashboard with all editable content
 
 ### How to open the CMS on the live site
@@ -73,7 +73,7 @@ Once the site is deployed (see [Deployment](#deployment)), go to:
 https://www.unusualtechnologies.com/admin/
 ```
 
-You'll be asked to sign in with GitHub. Your GitHub account needs write access to the `UnusualTechnologies/ut-website` repository. When you save changes in the CMS, it creates a commit on the `main` branch, which triggers a rebuild and deploy automatically.
+You'll be asked to sign in with GitHub. Your GitHub account needs write access to the `UnusualTechnologies/UT-Website` repository. When you save changes in the CMS, it creates a commit on the `main` branch, which triggers a rebuild and deploy automatically.
 
 ### What you can edit in the CMS
 
@@ -137,7 +137,7 @@ The AI will edit the relevant files and you can preview the changes with `hugo s
 
 The site repository has Claude wired into GitHub Actions. The way to request a code change — a new feature, a layout tweak, a new field on project pages — is to write a GitHub issue and tag `@claude` in a comment. Claude reads the codebase, makes the change, and opens a pull request for a human to review.
 
-New issue URL: https://github.com/UnusualTechnologies/ut-website/issues/new
+New issue URL: https://github.com/UnusualTechnologies/UT-Website/issues/new
 
 ### Step 1: Open a new issue
 
@@ -275,8 +275,8 @@ brew install hugo git
 ### Running locally
 
 ```
-git clone git@github.com:UnusualTechnologies/ut-website.git
-cd ut-website
+git clone git@github.com:UnusualTechnologies/UT-Website.git
+cd UT-Website
 hugo server
 ```
 
@@ -301,12 +301,12 @@ The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml
 
 **First-time setup:**
 
-1. Push the repository to GitHub at `UnusualTechnologies/ut-website`
+1. Push the repository to GitHub at `UnusualTechnologies/UT-Website`
 2. Go to the repository on GitHub > **Settings** > **Pages**
 3. Under "Build and deployment", set Source to **GitHub Actions**
 4. That's it — the next push to `main` will trigger a build and deploy
 
-The site will be live at `https://unusualtechnologies.github.io/ut-website/` (or your custom domain — see below).
+The site will be live at `https://unusualtechnologies.github.io/UT-Website/` (or your custom domain — see below).
 
 Every push to `main` triggers an automatic rebuild. This means CMS edits (which create Git commits via the GitHub API) automatically publish within a minute or two.
 
@@ -317,7 +317,7 @@ If you prefer a different host:
 **Netlify:**
 1. Go to [netlify.com](https://www.netlify.com/) and sign in with GitHub
 2. Click "Add new site" > "Import an existing project"
-3. Select the `UnusualTechnologies/ut-website` repository
+3. Select the `UnusualTechnologies/UT-Website` repository
 4. Set the build command to `hugo` and the publish directory to `public`
 5. Deploy
 
