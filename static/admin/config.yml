@@ -139,6 +139,7 @@ collections:
     fields:
       - { name: title, label: Job Title, widget: string }
       - { name: is_listing, label: Is Listing, widget: hidden, default: true }
+      - { name: draft, label: Draft (hide from live site), widget: boolean, default: true, hint: "Turn OFF to publish this job on the careers page" }
       - { name: apply_url, label: Apply URL, widget: string, hint: "e.g. mailto:careers@unusualtechnologies.com or a link to a form" }
       - { name: body, label: Job Description, widget: markdown }
 
