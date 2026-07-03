@@ -53,5 +53,5 @@
 
 </div>
 
-<script src="{{ "js/projects-filter.js" | relURL }}"></script>
+<script src="{{ "js/projects-filter.js" | relURL }}?v={{ readFile "static/js/projects-filter.js" | crypto.MD5 }}"></script>
 {{ end }}

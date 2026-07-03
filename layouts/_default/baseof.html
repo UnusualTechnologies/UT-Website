@@ -14,9 +14,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ readFile "static/css/style.css" | crypto.MD5 }}">
   {{ if eq .Section "health-science" }}
-  <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}?v={{ readFile "static/css/health-science.css" | crypto.MD5 }}">
   {{ end }}
   {{ if not hugo.IsServer }}
   <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
@@ -34,10 +34,10 @@
   {{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
 
   <div id="shader-bg"></div>
-  <script src="{{ "js/main.js" | relURL }}"></script>
-  <script src="{{ "js/carousel.js" | relURL }}"></script>
+  <script src="{{ "js/main.js" | relURL }}?v={{ readFile "static/js/main.js" | crypto.MD5 }}"></script>
+  <script src="{{ "js/carousel.js" | relURL }}?v={{ readFile "static/js/carousel.js" | crypto.MD5 }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="{{ "js/shader-bg.js" | relURL }}"></script>
-  <script src="{{ "js/theme.js" | relURL }}"></script>
+  <script src="{{ "js/shader-bg.js" | relURL }}?v={{ readFile "static/js/shader-bg.js" | crypto.MD5 }}"></script>
+  <script src="{{ "js/theme.js" | relURL }}?v={{ readFile "static/js/theme.js" | crypto.MD5 }}"></script>
 </body>
 </html>
