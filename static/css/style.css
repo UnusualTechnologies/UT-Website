@@ -2074,6 +2074,8 @@ ul {
 
 .careers-positions {
   text-align: center;
+  padding-top: 8px;
+  padding-bottom: 16px;
 }
 
 .careers-job-list {
@@ -2081,7 +2083,13 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 0;
+}
+
+/* Only tighten the gap above Internships when a job list precedes it.
+   In the empty state (no jobs), Internships keeps its normal spacing. */
+.careers-positions + .careers-internships {
+  padding-top: 24px;
 }
 
 .careers-job-link {

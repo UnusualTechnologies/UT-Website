@@ -10,7 +10,6 @@
   {{ $listed := where .Pages ".Params.unlisted" "ne" true }}
   {{ with $listed }}
   <section class="section careers-positions">
-    <h2>Open Positions</h2>
     <div class="careers-job-list">
       {{ range . }}
       <a href="{{ .Permalink }}" class="careers-job-link">{{ .Title }}</a>
