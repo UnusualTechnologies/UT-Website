@@ -58,6 +58,16 @@ document.addEventListener('DOMContentLoaded', function () {
 // Email protection: the address is base64-encoded in a data attribute and
 // assembled only on click, so it never sits in the raw HTML for scrapers.
 document.addEventListener('DOMContentLoaded', function () {
+  function showNote(el, addr, copied) {
+    var note = el.parentNode ? el.parentNode.querySelector('.email-reveal-note') : null;
+    if (!note) {
+      note = document.createElement('p');
+      note.className = 'email-reveal-note';
+      el.insertAdjacentElement('afterend', note);
+    }
+    note.textContent = copied ? (addr + ' — copied to clipboard') : addr;
+  }
+
   document.querySelectorAll('.email-protect').forEach(function (el) {
     el.addEventListener('click', function (e) {
       e.preventDefault();
@@ -66,9 +76,26 @@ document.addEventListener('DOMContentLoaded', function () {
       var addr;
       try { addr = atob(enc); } catch (err) { return; }
       var mode = el.getAttribute('data-mode') || 'text';
+      var mailto = 'mailto:' + addr;
+      el.setAttribute('href', mailto);
+
+      // "copy" mode: copy the address to the clipboard and show it (so users
+      // without a mail client still get it), then try to open the mail client.
+      if (mode === 'copy') {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(addr).then(
+            function () { showNote(el, addr, true); },
+            function () { showNote(el, addr, false); }
+          );
+        } else {
+          showNote(el, addr, false);
+        }
+        window.location.href = mailto;
+        return;
+      }
+
       var revealed = el.getAttribute('data-revealed') === 'true';
       if (!revealed) {
-        el.setAttribute('href', 'mailto:' + addr);
         el.setAttribute('data-revealed', 'true');
         // "text" mode shows the address first; a second click opens the client.
         if (mode === 'text') {
@@ -76,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
         }
       }
-      window.location.href = 'mailto:' + addr;
+      window.location.href = mailto;
     });
   });
 });

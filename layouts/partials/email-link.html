@@ -9,7 +9,10 @@
     class           — extra CSS classes (e.g. "btn careers-apply-btn")
     mode            — "text": first click reveals the address, second opens the
                        mail client. "action": a single click opens the mail
-                       client without showing the address (default "text").
+                       client without showing the address. "copy": copies the
+                       address to the clipboard and shows it below (fallback for
+                       users with no mail client), then opens the mail client.
+                       (default "text").
 */ -}}
 {{- $email := .email -}}
 {{- if $email -}}
