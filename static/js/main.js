@@ -58,14 +58,28 @@ document.addEventListener('DOMContentLoaded', function () {
 // Email protection: the address is base64-encoded in a data attribute and
 // assembled only on click, so it never sits in the raw HTML for scrapers.
 document.addEventListener('DOMContentLoaded', function () {
-  function showNote(el, addr, copied) {
+  // Builds the note shown under a "copy" button: the address (with a copied
+  // confirmation) plus an optional link to open the mail client. We never
+  // auto-navigate to mailto here — that would trigger the OS "choose an app"
+  // dialog for users with no mail client. The mail app only opens if they
+  // deliberately click the link below.
+  function showCopyNote(el, addr, copied) {
     var note = el.parentNode ? el.parentNode.querySelector('.email-reveal-note') : null;
     if (!note) {
       note = document.createElement('p');
       note.className = 'email-reveal-note';
       el.insertAdjacentElement('afterend', note);
     }
-    note.textContent = copied ? (addr + ' — copied to clipboard') : addr;
+    note.textContent = '';
+    var label = document.createElement('span');
+    label.textContent = (copied ? 'Copied to clipboard: ' : 'Email us at: ') + addr;
+    note.appendChild(label);
+    note.appendChild(document.createElement('br'));
+    var link = document.createElement('a');
+    link.href = 'mailto:' + addr;
+    link.className = 'email-reveal-mailto';
+    link.textContent = 'Open in your email app';
+    note.appendChild(link);
   }
 
   document.querySelectorAll('.email-protect').forEach(function (el) {
@@ -79,18 +93,17 @@ document.addEventListener('DOMContentLoaded', function () {
       var mailto = 'mailto:' + addr;
       el.setAttribute('href', mailto);
 
-      // "copy" mode: copy the address to the clipboard and show it (so users
-      // without a mail client still get it), then try to open the mail client.
+      // "copy" mode: copy the address to the clipboard and show it, without
+      // opening the mail client (avoids the OS dialog when none is set up).
       if (mode === 'copy') {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(addr).then(
-            function () { showNote(el, addr, true); },
-            function () { showNote(el, addr, false); }
+            function () { showCopyNote(el, addr, true); },
+            function () { showCopyNote(el, addr, false); }
           );
         } else {
-          showNote(el, addr, false);
+          showCopyNote(el, addr, false);
         }
-        window.location.href = mailto;
         return;
       }
 

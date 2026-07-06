@@ -2214,6 +2214,13 @@ ul {
   word-break: break-word;
 }
 
+.email-reveal-mailto {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .careers-video-grid {
     grid-template-columns: 1fr;

@@ -10,9 +10,10 @@
     mode            — "text": first click reveals the address, second opens the
                        mail client. "action": a single click opens the mail
                        client without showing the address. "copy": copies the
-                       address to the clipboard and shows it below (fallback for
-                       users with no mail client), then opens the mail client.
-                       (default "text").
+                       address to the clipboard and shows it below with an
+                       optional "open in your email app" link. Does not
+                       auto-open the mail client (avoids the OS handler dialog
+                       when none is configured). (default "text").
 */ -}}
 {{- $email := .email -}}
 {{- if $email -}}
