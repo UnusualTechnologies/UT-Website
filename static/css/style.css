@@ -1047,11 +1047,11 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100dvh;
     background: var(--color-black);
     z-index: 999;
-    align-items: center;
+    justify-content: center;
     overflow-y: auto;
   }
 
