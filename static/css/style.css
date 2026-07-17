@@ -1052,7 +1052,7 @@ ul {
     background: var(--color-black);
     z-index: 999;
     align-items: center;
-    justify-content: center;
+    overflow-y: auto;
   }
 
   .main-nav.open {
@@ -1071,6 +1071,7 @@ ul {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    margin: auto 0;
   }
 
   .nav-menu .menu-link {
