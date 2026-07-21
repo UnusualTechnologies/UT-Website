@@ -10,10 +10,10 @@
   <meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{- $description := or .Description .Params.overview .Site.Params.description }}
+  <meta name="description" content="{{ $description }}">
   <link rel="canonical" href="{{ .Permalink }}">
   {{- $title := cond .IsHome .Site.Title (printf "%s - %s" .Title .Site.Title) }}
-  {{- $description := or .Description .Site.Params.description }}
   {{- $image := "" }}
   {{- with .Params.featured_image }}{{ $image = . | absURL }}{{ end }}
   {{- if eq $image "" }}{{ $image = "images/logo.png" | absURL }}{{ end }}
