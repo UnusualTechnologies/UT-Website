@@ -34,6 +34,7 @@
   {{ if eq .Section "health-science" }}
   <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}?v={{ readFile "static/css/health-science.css" | crypto.MD5 }}">
   {{ end }}
+  {{ partial "structured-data.html" . }}
   {{ if not hugo.IsServer }}
   <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
   {{ end }}

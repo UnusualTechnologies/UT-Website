@@ -1,0 +1,57 @@
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ "images/logo.png" | absURL }}",
+  "description": "{{ .Site.Params.description }}",
+  "email": "{{ .Site.Params.email }}",
+  "telephone": "{{ .Site.Params.phone }}",
+  "sameAs": [
+    "{{ .Site.Params.linkedinURL }}",
+    "{{ .Site.Params.youtubeURL }}"
+  ]
+}
+</script>
+{{- end }}
+{{- if and (eq .Section "projects") .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ .Title }}",
+  "description": "{{ with .Params.overview }}{{ . }}{{ else }}{{ .Description }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  {{- with .Params.featured_image }}
+  "image": "{{ . | absURL }}",
+  {{- end }}
+  {{- with .Params.client }}
+  "creator": {
+    "@type": "Organization",
+    "name": "{{ .name }}"
+  },
+  {{- end }}
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ $.Site.Title }}",
+    "url": "{{ $.Site.BaseURL }}"
+  }
+}
+</script>
+{{- end }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+  "url": "{{ .Permalink }}",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "url": "{{ .Site.BaseURL }}"
+  }
+}
+</script>
