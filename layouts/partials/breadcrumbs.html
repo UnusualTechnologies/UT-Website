@@ -1,0 +1,37 @@
+{{- if not .IsHome }}
+{{- $items := slice (dict "name" "Home" "url" (.Site.Home.Permalink)) }}
+{{- if and .Parent (not .Parent.IsHome) }}
+  {{- $items = $items | append (dict "name" .Parent.Title "url" .Parent.Permalink) }}
+{{- end }}
+{{- $items = $items | append (dict "name" .Title "url" .Permalink) }}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {{- range $i, $item := $items }}
+    <li>
+      {{- if eq $i (sub (len $items) 1) }}
+      <span aria-current="page">{{ $item.name }}</span>
+      {{- else }}
+      <a href="{{ $item.url }}">{{ $item.name }}</a>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ol>
+</nav>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{- range $i, $item := $items }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "name": "{{ $item.name }}",
+      "item": "{{ $item.url }}"
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
