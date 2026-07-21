@@ -7,6 +7,14 @@
   "url": "{{ .Site.BaseURL }}",
   "logo": "{{ "images/logo.png" | absURL }}",
   "description": "{{ .Site.Params.description }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "67 Crespin Way",
+    "addressLocality": "Brighton",
+    "addressRegion": "England",
+    "postalCode": "BN1 7FG",
+    "addressCountry": "GB"
+  },
   "email": "{{ .Site.Params.email }}",
   "telephone": "{{ .Site.Params.phone }}",
   "contactPoint": {

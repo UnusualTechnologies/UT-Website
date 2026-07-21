@@ -9,6 +9,7 @@
       <p class="contact-detail"><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></p>
       <p class="contact-detail">Email: {{ partial "email-link.html" (dict "email" .Site.Params.email "text" "click to reveal" "mode" "text") }}</p>
       <noscript><p class="contact-detail">Email: <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p></noscript>
+      <p class="contact-detail">Brighton, England, United Kingdom</p>
     </div>
 
     <div class="flip-boxes">
