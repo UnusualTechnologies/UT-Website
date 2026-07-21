@@ -56,5 +56,14 @@ enableRobotsTXT = true
   changefreq = 'monthly'
   priority = 0.5
 
+[outputFormats.markdown]
+  mediaType = 'text/markdown'
+  baseName = 'index'
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  page = ['html', 'markdown']
+
 [markup.goldmark.renderer]
   unsafe = true
