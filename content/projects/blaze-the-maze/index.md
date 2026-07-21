@@ -26,4 +26,4 @@ testimonial: null
 
 Blaze the Maze is the culmination of a 14-year development journey that began during a childhood obsession with the Maze Race mini-game from 24 Games for Windows 95. Over the last decade, the project consistently evolved, migrating from Adobe Flash through XNA and Unity, before settling on its current high-performance custom web stack. 
 
-During this transition, the game’s thematic identity shifted dramatically; early prototypes experimented with satirical concepts like caricatures of world leaders (including Obama and Putin and a dinosaur-themed version), before the team ultimately landed on the neon theme of Blaze The Maze in 2026.
+During this transition, the game’s thematic identity shifted dramatically; early prototypes experimented with satirical concepts like caricatures of world leaders (including Obama, Putin and a dinosaur-themed version), before the team ultimately landed on the neon theme of Blaze The Maze in 2026.
