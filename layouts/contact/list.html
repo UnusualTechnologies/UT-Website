@@ -6,8 +6,8 @@
     <p class="body-large">We thrive on collaboration, creativity, and connecting with like-minded individuals and businesses who share our passion. Click on one of the buttons below to tell us about your project, book a meeting, or discover exciting career prospects.</p>
 
     <div class="contact-details">
-      <h3><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></h3>
-      <h3>Email: {{ partial "email-link.html" (dict "email" .Site.Params.email "text" "click to reveal" "mode" "text") }}</h3>
+      <p class="contact-detail"><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></p>
+      <p class="contact-detail">Email: {{ partial "email-link.html" (dict "email" .Site.Params.email "text" "click to reveal" "mode" "text") }}</p>
     </div>
 
     <div class="flip-boxes">

@@ -1,5 +1,6 @@
 {{ define "main" }}
 <section class="hero">
+  <h1 class="sr-only">{{ .Site.Title }}</h1>
   <video src="{{ .Site.Params.showreelVideo }}" autoplay muted loop playsinline></video>
 </section>
 {{ end }}
