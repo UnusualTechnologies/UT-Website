@@ -1,5 +1,6 @@
 ---
 title: Careers
+description: "Join Unusual Technologies. We offer internships and roles in games programming, digital art and creative technology at our Brighton studio."
 internship_fields:
   - Games Programming
   - Digital Art

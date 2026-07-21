@@ -43,7 +43,7 @@ enableRobotsTXT = true
     weight = 50
 
 [params]
-  description = 'Developing Digital Dreams'
+  description = 'Creative technology studio in Brighton, UK. We build games, apps, VR/AR experiences, interactive installations and web platforms for clients across entertainment, education, health and commerce.'
   email = 'hello@unusualtechnologies.com'
   phone = '+44 79398 34948'
   linkedinURL = 'https://www.linkedin.com/company/unusualtechnologies/'
