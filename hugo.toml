@@ -1,6 +1,7 @@
 baseURL = 'https://unusualtechnologies.com/'
 languageCode = 'en-gb'
 title = 'Unusual Technologies'
+enableRobotsTXT = true
 
 [menus]
   [[menus.main]]
