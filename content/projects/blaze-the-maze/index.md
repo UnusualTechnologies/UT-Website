@@ -12,7 +12,7 @@ banner_image: /images/projects/libraryhero_sm_english.png
 overview: |-
   Blaze the Maze is a game created by Unusual Technologies. It is a 2D top down maze race featuring an array of high velocity rounds where every split-second decision counts. 
 
-  Blaze The Maze is a flexible multiplayer, supporting local play, online servers, or a hybrid mix (up to 8 players sharing keyboard and controllers on a single computer). It has seamless integration across game controllers, keyboard sharing, mouse steering, and responsive mobile touch.
+  It is a flexible multiplayer, supporting local play, online servers, or a hybrid mix (up to 8 players sharing keyboard and controllers on a single computer). It has seamless integration across game controllers, keyboard sharing, mouse steering, and responsive mobile touch.
 overview_video_id: bw9onAxY66U
 technologies:
   - Unity
