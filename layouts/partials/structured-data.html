@@ -9,6 +9,12 @@
   "description": "{{ .Site.Params.description }}",
   "email": "{{ .Site.Params.email }}",
   "telephone": "{{ .Site.Params.phone }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "{{ .Site.Params.email }}",
+    "telephone": "{{ .Site.Params.phone }}",
+    "contactType": "customer service"
+  },
   "sameAs": [
     "{{ .Site.Params.linkedinURL }}",
     "{{ .Site.Params.youtubeURL }}"
