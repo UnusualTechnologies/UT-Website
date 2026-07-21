@@ -9,6 +9,21 @@
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{- $title := cond .IsHome .Site.Title (printf "%s - %s" .Title .Site.Title) }}
+  {{- $description := or .Description .Site.Params.description }}
+  {{- $image := "" }}
+  {{- with .Params.featured_image }}{{ $image = . | absURL }}{{ end }}
+  {{- if eq $image "" }}{{ $image = "images/logo.png" | absURL }}{{ end }}
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:image" content="{{ $image }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ $image }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
