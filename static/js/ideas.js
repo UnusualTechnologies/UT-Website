@@ -4,9 +4,6 @@
   var form = document.getElementById('ideas-form');
   var theirDetails = document.getElementById('their-details');
   var radios = form.querySelectorAll('input[name="submission_type"]');
-  var leaderboardToggle = document.getElementById('leaderboard-toggle');
-  var leaderboard = document.getElementById('leaderboard');
-  var leaderboardFilter = document.getElementById('leaderboard-filter');
   var submitBtn = document.getElementById('ideas-submit-btn');
   var statusEl = document.getElementById('ideas-status');
   var actionURL = form.getAttribute('data-action');
@@ -21,23 +18,6 @@
     radio.addEventListener('change', updateTheirDetails);
   });
   updateTheirDetails();
-
-  // --- Leaderboard toggle ---
-  leaderboardToggle.addEventListener('click', function () {
-    var isHidden = leaderboard.hidden;
-    leaderboard.hidden = !isHidden;
-    leaderboardToggle.textContent = isHidden ? 'Hide leaderboard' : 'See leaderboard';
-  });
-
-  // --- Leaderboard filter ---
-  leaderboardFilter.addEventListener('input', function () {
-    var query = this.value.toLowerCase();
-    var rows = leaderboard.querySelectorAll('tbody tr');
-    rows.forEach(function (row) {
-      var name = row.getAttribute('data-name') || '';
-      row.hidden = query && name.indexOf(query) === -1;
-    });
-  });
 
   // --- Form submission ---
   form.addEventListener('submit', function (e) {
