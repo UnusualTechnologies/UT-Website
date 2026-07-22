@@ -1,0 +1,156 @@
+{{ define "main" }}
+<div class="page-gradient">
+
+  <section class="section ideas-page">
+    <h1>Submit ideas</h1>
+    <p class="body-large ideas-intro">If you know of a company, charity or someone you know who can make use of creative technologists, put your suggestion below to win a UT shirt!</p>
+
+    <div class="ideas-leaderboard-toggle">
+      <button type="button" class="btn-link" id="leaderboard-toggle">See leaderboard</button>
+    </div>
+
+    <div id="leaderboard" class="leaderboard" hidden>
+      <input type="text" class="ideas-input" placeholder="Filter by name..." id="leaderboard-filter">
+      <table class="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Site.Data.leaderboard.items }}
+          <tr data-name="{{ lower .name }}">
+            <td>{{ .rank }}</td>
+            <td>{{ .name }}</td>
+            <td>{{ .date }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+
+    <form id="ideas-form" class="ideas-form" novalidate data-action="{{ .Site.Params.ideasFormURL }}">
+      <!-- Honeypot -->
+      <div style="position:absolute;left:-9999px" aria-hidden="true">
+        <input type="text" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <!-- Submission type -->
+      <fieldset class="ideas-fieldset ideas-type-select">
+        <label class="ideas-radio">
+          <input type="radio" name="submission_type" value="matchmake" checked>
+          <span>I know someone you could help</span>
+        </label>
+        <label class="ideas-radio">
+          <input type="radio" name="submission_type" value="own_idea">
+          <span>I have an idea I need help with</span>
+        </label>
+      </fieldset>
+
+      <!-- Your contact details -->
+      <fieldset class="ideas-fieldset">
+        <legend class="ideas-legend">Your contact details</legend>
+        <div class="ideas-fields">
+          <div class="ideas-field">
+            <label for="your-name">Name <span class="required">*</span></label>
+            <input type="text" id="your-name" name="your_name" required class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="your-email">Email <span class="required">*</span></label>
+            <input type="email" id="your-email" name="your_email" required class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="your-phone">Phone number (optional)</label>
+            <input type="tel" id="your-phone" name="your_phone" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="your-company">Company (optional)</label>
+            <input type="text" id="your-company" name="your_company" class="ideas-input">
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Their contact details (matchmaking only) -->
+      <fieldset class="ideas-fieldset" id="their-details">
+        <legend class="ideas-legend">Their contact details <span class="ideas-legend-note">(if selected match making)</span></legend>
+        <div class="ideas-fields">
+          <div class="ideas-field">
+            <label for="their-name">Name (optional)</label>
+            <input type="text" id="their-name" name="their_name" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="their-email">Email (optional)</label>
+            <input type="email" id="their-email" name="their_email" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="their-phone">Phone number (optional)</label>
+            <input type="tel" id="their-phone" name="their_phone" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="their-company">Company (optional)</label>
+            <input type="text" id="their-company" name="their_company" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="their-linkedin">LinkedIn (optional)</label>
+            <input type="url" id="their-linkedin" name="their_linkedin" class="ideas-input" placeholder="https://linkedin.com/in/...">
+          </div>
+          <div class="ideas-field ideas-field-full">
+            <label for="their-description">Description of who to reach out to (optional)</label>
+            <textarea id="their-description" name="their_description" rows="3" class="ideas-input"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- The idea -->
+      <fieldset class="ideas-fieldset">
+        <div class="ideas-idea-row">
+          <div class="ideas-idea-main">
+            <legend class="ideas-legend">The idea</legend>
+            <textarea id="idea-text" name="idea" rows="8" required class="ideas-input" placeholder="Tell us about the idea..."></textarea>
+          </div>
+          <div class="ideas-ai-feedback">
+            <p class="ideas-ai-label">AI feedback</p>
+            <div class="ideas-ai-box">
+              <p class="ideas-ai-placeholder">Coming soon</p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Optional details -->
+      <details class="ideas-optional">
+        <summary class="ideas-legend">Optional details</summary>
+        <div class="ideas-fields ideas-optional-fields">
+          <div class="ideas-field">
+            <label for="idea-cost">Cost</label>
+            <input type="text" id="idea-cost" name="cost" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="idea-market">Target Market</label>
+            <input type="text" id="idea-market" name="target_market" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="idea-platform">Platform (app, website, etc)</label>
+            <input type="text" id="idea-platform" name="platform" class="ideas-input">
+          </div>
+          <div class="ideas-field">
+            <label for="idea-deadline">Deadline (NA or a set end or start date)</label>
+            <input type="text" id="idea-deadline" name="deadline" class="ideas-input">
+          </div>
+        </div>
+      </details>
+
+      <div class="ideas-submit">
+        <button type="submit" class="btn" id="ideas-submit-btn">Submit</button>
+      </div>
+
+      <div id="ideas-status" class="ideas-status" hidden></div>
+    </form>
+  </section>
+
+</div>
+
+<script src="{{ "js/ideas.js" | relURL }}?v={{ readFile "static/js/ideas.js" | crypto.MD5 }}"></script>
+{{ end }}

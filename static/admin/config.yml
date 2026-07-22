@@ -274,6 +274,19 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: description, label: Description, widget: text }
 
+      - name: leaderboard
+        label: Ideas Leaderboard
+        file: data/leaderboard.yaml
+        fields:
+          - name: items
+            label: Entries
+            label_singular: Entry
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: rank, label: Rank, widget: number }
+              - { name: date, label: Date, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+
       - name: contact_ctas
         label: Contact CTAs
         file: data/contact_ctas.yaml

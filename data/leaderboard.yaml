@@ -1,0 +1,7 @@
+items:
+  - name: "Jane Smith"
+    rank: 1
+    date: "2026-07-15"
+  - name: "John Doe"
+    rank: 2
+    date: "2026-07-10"

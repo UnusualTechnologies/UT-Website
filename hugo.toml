@@ -51,6 +51,7 @@ enableRobotsTXT = true
   showreelVideo = 'https://website-media.unusualtechnologies.com/Unusual_Technologies_Showreel_NoAudio.webm'
   questionnaireURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeQdTbZ_H0zAr8Fbc4r2cGnPO2OciFczXPQcM-RUyxI_CufGw/viewform'
   koalendarURL = 'https://koalendar.com/e/Online-Douglas-Unusual-Technologies'
+  ideasFormURL = 'https://script.google.com/macros/s/AKfycbxmpWWPqvXaUQnZ2CgWO88cU1ROZ_D3LGnmkDFoWySePw2tQmAL7CjpCsAxThAlN6P96Q/exec'
 
 [taxonomies]
   tag = 'tags'
