@@ -7,7 +7,7 @@ tags:
   - "bluetooth"
   - "ios"
 description: "A Bluetooth beacon app for East Sussex College that alerts users when they enter a new area and displays the department's website."
-unlisted: true
+status: unlisted
 prominence: 0
 featured_image: "/images/projects/escg-beacons-1.webp"
 banner_image: "/images/projects/escg-beacons-banner.webp"

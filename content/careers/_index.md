@@ -1,9 +1,10 @@
 ---
 title: Careers
+description: "Join Unusual Technologies. We offer internships and roles in games programming, digital art and creative technology at our Brighton studio."
 internship_fields:
-  - Programming
+  - Games Programming
   - Digital Art
-  - Marketing
+  - Indie Game Marketer
 internship_testimonials:
   - name: Ryan
     video_id: JXG32bzD2eo
@@ -17,4 +18,4 @@ internship_testimonials:
 
 Are you a student looking for an internship in a tech start-up? You have come to the right place!
 
-We provide short-term internships (3 to 6 months) to students in the following fields.
+We provide short-term (6 to 8 weeks) internships for Sussex students in the following fields.

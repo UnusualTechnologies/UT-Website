@@ -6,14 +6,16 @@
     <p class="body-large">We thrive on collaboration, creativity, and connecting with like-minded individuals and businesses who share our passion. Click on one of the buttons below to tell us about your project, book a meeting, or discover exciting career prospects.</p>
 
     <div class="contact-details">
-      <h3><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></h3>
-      <h3><a href="mailto:{{ .Site.Params.email }}" target="_blank">Email: {{ .Site.Params.email }}</a></h3>
+      <p class="contact-detail"><a href="tel:{{ .Site.Params.phone | replaceRE `\s` `` }}" target="_blank">Phone: {{ .Site.Params.phone }}</a></p>
+      <p class="contact-detail">Email: {{ partial "email-link.html" (dict "email" .Site.Params.email "text" "click to reveal" "mode" "text") }}</p>
+      <noscript><p class="contact-detail">Email: <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p></noscript>
+      <p class="contact-detail">Brighton, England, United Kingdom</p>
     </div>
 
     <div class="flip-boxes">
       {{ range .Site.Data.contact_ctas.items }}
         {{ $url := .url }}
-        {{ if .url_param }}
+        {{ if and .url_param (not .url) }}
           {{ $url = index $.Site.Params (lower .url_param) }}
         {{ end }}
         {{ partial "flip-box.html" (dict

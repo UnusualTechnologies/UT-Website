@@ -1,6 +1,7 @@
 ---
 title: "Popup View"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "android"

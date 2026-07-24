@@ -1,6 +1,7 @@
 baseURL = 'https://unusualtechnologies.com/'
 languageCode = 'en-gb'
 title = 'Unusual Technologies'
+enableRobotsTXT = true
 
 [menus]
   [[menus.main]]
@@ -42,7 +43,7 @@ title = 'Unusual Technologies'
     weight = 50
 
 [params]
-  description = 'Developing Digital Dreams'
+  description = 'Creative technology studio in Brighton, UK. We build games, apps, VR/AR experiences, interactive installations and web platforms for clients across entertainment, education, health and commerce.'
   email = 'hello@unusualtechnologies.com'
   phone = '+44 79398 34948'
   linkedinURL = 'https://www.linkedin.com/company/unusualtechnologies/'
@@ -50,6 +51,23 @@ title = 'Unusual Technologies'
   showreelVideo = 'https://website-media.unusualtechnologies.com/Unusual_Technologies_Showreel_NoAudio.webm'
   questionnaireURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeQdTbZ_H0zAr8Fbc4r2cGnPO2OciFczXPQcM-RUyxI_CufGw/viewform'
   koalendarURL = 'https://koalendar.com/e/Online-Douglas-Unusual-Technologies'
+  ideasFormURL = 'https://script.google.com/macros/s/AKfycbxmpWWPqvXaUQnZ2CgWO88cU1ROZ_D3LGnmkDFoWySePw2tQmAL7CjpCsAxThAlN6P96Q/exec'
+
+[taxonomies]
+  tag = 'tags'
+
+[sitemap]
+  changefreq = 'monthly'
+  priority = 0.5
+
+[outputFormats.markdown]
+  mediaType = 'text/markdown'
+  baseName = 'index'
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  page = ['html', 'markdown']
 
 [markup.goldmark.renderer]
   unsafe = true

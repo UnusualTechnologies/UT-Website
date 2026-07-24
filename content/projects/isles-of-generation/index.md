@@ -1,6 +1,7 @@
 ---
 title: "Isles of Generation"
 type: "projects"
+status: live
 project_type: "Prototype"
 tags:
   - "ai"

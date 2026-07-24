@@ -1,6 +1,7 @@
 ---
 title: "The North Pole Escape"
 type: "projects"
+status: live
 project_type: "In-house"
 tags:
   - "game"

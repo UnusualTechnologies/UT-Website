@@ -1,6 +1,7 @@
 ---
 title: "Dreamers Tower"
 type: "projects"
+status: live
 project_type: "Prototype"
 tags:
   - "game"

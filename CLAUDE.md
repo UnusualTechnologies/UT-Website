@@ -32,7 +32,11 @@ Hugo static site for [Unusual Technologies](https://unusualtechnologies.com/). N
 
 **CMS:** Sveltia CMS (`static/admin/`). Config in `static/admin/config.yml` defines the editable collections and maps them to content/data files. On the live site the CMS authenticates via GitHub and commits directly to `main`.
 
-**Deployment:** Cloudflare Pages, connected to the GitHub repo. Builds automatically on every push to `main` using `hugo --minify` with output directory `public`. The site serves from `https://unusualtechnologies.com/`.
+**Deployment (two targets):**
+- **Production (Cloudflare Pages):** Builds automatically on every push to `main` using `hugo --minify` with output directory `public`. Serves from `https://unusualtechnologies.com/`.
+- **Health/staging (GitHub Pages):** The `health-science` branch deploys to GitHub Pages via `.github/workflows/gh-pages.yml`. Builds with `--baseURL "https://unusualtechnologies.github.io/UT-Website/"`. Serves from `https://unusualtechnologies.github.io/UT-Website/`.
+
+**GitHub repo:** `UnusualTechnologies/UT-Website`
 
 ## Project front matter fields
 

@@ -1,6 +1,7 @@
 ---
 title: The Tarot Experience VR Marketing
 type: projects
+status: live
 project_type: Client
 tags:
   - game

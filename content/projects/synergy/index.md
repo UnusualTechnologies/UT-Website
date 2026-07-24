@@ -1,6 +1,7 @@
 ---
 title: "Synergy"
 type: "projects"
+status: live
 project_type: "Prototype"
 tags:
   - "art"

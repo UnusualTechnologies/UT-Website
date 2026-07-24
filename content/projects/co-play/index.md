@@ -1,6 +1,7 @@
 ---
 title: "Co-Play"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "computer-vision"

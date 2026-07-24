@@ -1,7 +1,7 @@
 ---
 title: Junior Full-Stack Web Developer
-apply_url: mailto:careers@unusualtechnologies.com
-draft: true
+is_listing: true
+status: draft
 ---
 
 ## About Us

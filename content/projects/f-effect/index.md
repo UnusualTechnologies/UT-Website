@@ -1,6 +1,7 @@
 ---
 title: "F-Effect"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "360-video"

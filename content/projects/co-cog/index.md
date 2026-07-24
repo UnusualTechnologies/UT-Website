@@ -1,6 +1,7 @@
 ---
 title: "Co-Cog"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "android"

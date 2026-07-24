@@ -1,4 +1,12 @@
 {{ define "main" }}
+{{ if eq .Params.status "draft" }}
+<div class="page-gradient">
+  <section class="section careers-job-single">
+    <p>This position isn’t available.</p>
+  </section>
+</div>
+<script>window.location.replace("{{ "careers/" | relURL }}");</script>
+{{ else }}
 <div class="page-gradient">
 
   <section class="section careers-job-single">
@@ -10,11 +18,10 @@
       {{ .Content }}
     </div>
 
-    {{ with .Params.apply_url }}
-    <a href="{{ . }}" class="btn careers-apply-btn">Apply Now</a>
-    {{ end }}
+    {{ partial "email-link.html" (dict "email" "careers@unusualtechnologies.com" "text" "Email application" "class" "btn careers-apply-btn" "mode" "copy") }}
 
   </section>
 
 </div>
+{{ end }}
 {{ end }}

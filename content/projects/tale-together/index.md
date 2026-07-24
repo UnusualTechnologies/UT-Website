@@ -1,6 +1,7 @@
 ---
 title: "Tale Together"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "education"

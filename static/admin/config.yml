@@ -20,6 +20,15 @@ collections:
     fields:
       - { name: title, label: Title, widget: string }
       - { name: type, label: Type (Hugo), widget: hidden, default: projects }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        hint: "Draft = hidden and not viewable (work in progress). Unlisted = viewable by direct link but hidden from the grid. Live = visible and listed."
+        options:
+          - { label: "Draft — hidden, not viewable", value: draft }
+          - { label: "Unlisted — direct link only, hidden from grid", value: unlisted }
+          - { label: "Live — visible and listed", value: live }
       - name: project_type
         label: Project Type
         widget: select
@@ -139,29 +148,16 @@ collections:
     fields:
       - { name: title, label: Job Title, widget: string }
       - { name: is_listing, label: Is Listing, widget: hidden, default: true }
-      - { name: apply_url, label: Apply URL, widget: string, hint: "e.g. mailto:careers@unusualtechnologies.com or a link to a form" }
+      - name: status
+        label: Status
+        widget: select
+        default: draft
+        hint: "Draft = hidden and not viewable (work in progress). Unlisted = viewable by direct link but hidden from the Open Positions list. Live = visible and listed."
+        options:
+          - { label: "Draft — hidden, not viewable", value: draft }
+          - { label: "Unlisted — direct link only, hidden from list", value: unlisted }
+          - { label: "Live — visible and listed", value: live }
       - { name: body, label: Job Description, widget: markdown }
-
-  # ── Careers Page ─────────────────────────────────────────────────────
-  - name: careers-page
-    label: Careers Page
-    files:
-      - name: careers
-        label: Careers Settings
-        file: content/careers/_index.md
-        fields:
-          - { name: title, label: Title, widget: string }
-          - name: internship_fields
-            label: Internship Fields
-            widget: list
-            field: { name: field, label: Field, widget: string }
-          - name: internship_testimonials
-            label: Internship Testimonials
-            widget: list
-            fields:
-              - { name: name, label: Name, widget: string }
-              - { name: video_id, label: YouTube Video ID, widget: string }
-          - { name: body, label: Internship Intro Text, widget: markdown }
 
   # ── Team Members (page bundles) ──────────────────────────────────────
   - name: team-members
@@ -278,6 +274,19 @@ collections:
               - { name: title, label: Title, widget: string }
               - { name: description, label: Description, widget: text }
 
+      - name: leaderboard
+        label: Ideas Leaderboard
+        file: data/leaderboard.yaml
+        fields:
+          - name: items
+            label: Entries
+            label_singular: Entry
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: rank, label: Rank, widget: number }
+              - { name: date, label: Date, widget: datetime, date_format: YYYY-MM-DD, time_format: false }
+
       - name: contact_ctas
         label: Contact CTAs
         file: data/contact_ctas.yaml
@@ -292,3 +301,25 @@ collections:
               - { name: url_param, label: URL Parameter, widget: string, required: false, hint: "Config key (e.g. questionnaireURL)" }
               - { name: url, label: URL, widget: string, required: false, hint: "Direct URL (used if no url_param)" }
               - { name: icon, label: Icon SVG, widget: text, required: false }
+
+      - name: careers
+        label: Careers Page
+        file: content/careers/_index.md
+        fields:
+          - name: manage_jobs
+            label: "Job Postings"
+            widget: compute
+            value: "Job postings are managed in their own collection, not on this page."
+            hint: "**[➕ Add or edit jobs via Job Listings →](/admin/#/collections/job-listings)**"
+          - { name: title, label: Title, widget: string }
+          - name: internship_fields
+            label: Internship Fields
+            widget: list
+            field: { name: field, label: Field, widget: string }
+          - name: internship_testimonials
+            label: Internship Testimonials
+            widget: list
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: video_id, label: YouTube Video ID, widget: string }
+          - { name: body, label: Internship Intro Text, widget: markdown }

@@ -1,6 +1,7 @@
 ---
 title: "Aquamarina"
 type: "projects"
+status: live
 project_type: "Prototype"
 tags:
   - "game"

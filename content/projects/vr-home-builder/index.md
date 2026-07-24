@@ -1,6 +1,7 @@
 ---
 title: "VR Home Builder"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "blockchain"

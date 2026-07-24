@@ -1,6 +1,6 @@
 ---
 title: James Alvarez
-role: Senior Developer
+role: Lead Engineer
 photo: /images/team/james-alvarez.webp
 linkedin: https://uk.linkedin.com/in/james-alvarez-974aaab4
 website: https://jamesalvarez.co.uk

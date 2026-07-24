@@ -3,14 +3,14 @@
     <div class="footer-bar">
       <div class="footer-identity">
         <span class="footer-meta">
-          <a href="mailto:{{ .Site.Params.email }}">Email</a>
+          {{ partial "email-link.html" (dict "email" .Site.Params.email "text" "Email" "mode" "action") }}
           <a href="tel:{{ .Site.Params.phone }}">Phone</a>
           <a href="{{ .Site.Params.linkedinURL }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="{{ .Site.Params.youtubeURL }}" target="_blank" rel="noopener noreferrer">YouTube</a>
         </span>
       </div>
       <div class="footer-legal">
-        <span>&copy; {{ now.Year }} Unusual Technologies</span>
+        <span>&copy; {{ now.Year }} Unusual Technologies &middot; Brighton, UK</span>
         <a href="{{ "privacy-policy/" | relURL }}">Privacy Policy</a>
         <a href="{{ "terms-and-conditions/" | relURL }}">Terms</a>
         <button type="button" id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to light theme">

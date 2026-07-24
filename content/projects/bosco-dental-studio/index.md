@@ -1,6 +1,7 @@
 ---
 title: "Bosco Dental Studio"
 type: "projects"
+status: live
 project_type: "Client"
 tags:
   - "health"

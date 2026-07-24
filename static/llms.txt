@@ -1,0 +1,48 @@
+# Unusual Technologies
+
+> Creative technology studio based in Brighton, UK. We specialise in immersive, interactive and high-tech solutions across academic, entertainment, arts and commercial sectors.
+
+## Company
+
+- Founded in 2018
+- Based in Brighton, United Kingdom
+- Website: https://unusualtechnologies.com/
+- Email: hello@unusualtechnologies.com
+- LinkedIn: https://www.linkedin.com/company/unusualtechnologies/
+
+## Leadership
+
+- Douglas Kelly, Director
+- Matt West, Technical Director
+- James Alvarez, Lead Engineer
+
+## What We Do
+
+We develop creative digital products including games, apps, VR/AR experiences, interactive installations, visual effects, and web platforms. Our work spans client projects and internal R&D across these areas:
+
+- Game development (Unity, Unreal Engine)
+- Virtual reality and augmented reality
+- Mobile apps (iOS, Android)
+- Web applications and platforms
+- Visual effects and animation
+- Interactive installations and experiences
+- AI tools and integrations
+- Health and science research applications
+
+## Key Pages
+
+- [About Us](https://unusualtechnologies.com/about/): Team, clients, testimonials, awards, and values
+- [Projects](https://unusualtechnologies.com/projects/): Portfolio of case studies across all disciplines
+- [Concept & Design](https://unusualtechnologies.com/concept-and-design/): Our process from ideas to delivery
+- [Contact](https://unusualtechnologies.com/contact/): Get in touch
+- [Careers](https://unusualtechnologies.com/careers/): Open positions
+
+## Selected Projects
+
+- Co-Cog: Cognitive monitoring app for early-stage dementia, developed with NHS and university researchers
+- LEGO Playtables: Interactive play experiences for LEGO
+- RAF Museum: Digital experience for the Royal Air Force Museum
+- OceanX: Marine exploration interactive experience
+- Lost Horizon: Virtual festival experience
+- The Tarot Experience: VR tarot reading experience
+- Botsworth: AI-powered conversational bot

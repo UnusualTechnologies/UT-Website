@@ -1,4 +1,12 @@
 {{ define "main" }}
+{{ if eq .Params.status "draft" }}
+<div class="page-gradient">
+  <section class="section" style="text-align:center; color:var(--color-white)">
+    <p>This project isn’t available.</p>
+  </section>
+</div>
+<script>window.location.replace("{{ "projects/" | relURL }}");</script>
+{{ else }}
 <div class="page-gradient">
 
   <article class="project-single">
@@ -133,4 +141,5 @@
   </article>
 
 </div>
+{{ end }}
 {{ end }}

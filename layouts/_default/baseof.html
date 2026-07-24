@@ -6,21 +6,43 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{- $description := or .Description .Params.overview .Site.Params.description }}
+  <meta name="description" content="{{ $description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{- $title := cond .IsHome .Site.Title (printf "%s - %s" .Title .Site.Title) }}
+  {{- $image := "" }}
+  {{- with .Params.featured_image }}{{ $image = . | absURL }}{{ end }}
+  {{- if eq $image "" }}{{ $image = "images/logo.png" | absURL }}{{ end }}
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:image" content="{{ $image }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:type" content="{{ cond .IsHome "website" "article" }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  <meta name="twitter:image" content="{{ $image }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} RSS Feed" href="{{ "index.xml" | absURL }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ readFile "static/css/style.css" | crypto.MD5 }}">
   {{ if eq .Section "health-science" }}
-  <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}?v={{ readFile "static/css/health-science.css" | crypto.MD5 }}">
   {{ end }}
   {{ if eq .Section "health" }}
   <link rel="stylesheet" href="{{ "css/health-guidea.css" | relURL }}">
   {{ end }}
+  {{ partial "structured-data.html" . }}
   {{ if not hugo.IsServer }}
   <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
   {{ end }}
@@ -30,6 +52,8 @@
 
   {{ partial "header.html" . }}
 
+  {{ partial "breadcrumbs.html" . }}
+
   <main id="content">
     {{ block "main" . }}{{ end }}
   </main>
@@ -37,10 +61,10 @@
   {{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
 
   <div id="shader-bg"></div>
-  <script src="{{ "js/main.js" | relURL }}"></script>
-  <script src="{{ "js/carousel.js" | relURL }}"></script>
+  <script src="{{ "js/main.js" | relURL }}?v={{ readFile "static/js/main.js" | crypto.MD5 }}"></script>
+  <script src="{{ "js/carousel.js" | relURL }}?v={{ readFile "static/js/carousel.js" | crypto.MD5 }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="{{ "js/shader-bg.js" | relURL }}"></script>
-  <script src="{{ "js/theme.js" | relURL }}"></script>
+  <script src="{{ "js/shader-bg.js" | relURL }}?v={{ readFile "static/js/shader-bg.js" | crypto.MD5 }}"></script>
+  <script src="{{ "js/theme.js" | relURL }}?v={{ readFile "static/js/theme.js" | crypto.MD5 }}"></script>
 </body>
 </html>
