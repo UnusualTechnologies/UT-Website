@@ -69,7 +69,7 @@
         updateTheirDetails();
       })
       .catch(function () {
-        showStatus('Something went wrong. Please try again or email marketing@unusualtechnologies.com directly.', 'error');
+        showStatus('Something went wrong. Please try again or email m.p@unusualtechnologies.com directly.', 'error');
       })
       .finally(function () {
         submitBtn.disabled = false;
