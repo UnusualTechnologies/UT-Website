@@ -38,7 +38,7 @@ function doPost(e) {
   }
 
   MailApp.sendEmail({
-    to: 'marketing@unusualtechnologies.com',
+    to: 'm.p@unusualtechnologies.com',
     cc: 'james.alvarez@unusualtechnologies.com',
     subject: subject,
     body: lines.join('\n'),
