@@ -15,7 +15,7 @@
       </label>
       <input type="checkbox" id="filter-checkbox" class="filter-checkbox-toggle" hidden>
       <ul class="tag-list" id="toggleList">
-        {{ $tags := slice "Android" "Education" "Game" "iOS" "VR" "AR" "Installation" "360 video" "AAA Games" "Construction" "Health" "Motion sensor" "Music" "Web" "AI" "Arduino" "Art" "AWS" "Biometrics" "Blockchain" "Bluetooth" "CMS" "Computer Vision" "Console" "Data Visualisation" "Eco" "Gamification" "Immersive" "IoT" "LiDAR" "NFT's" "Port" "Procedural Generation" "Productivity" "Projection mapping" "Publicity Stunt" "Raspberry Pi" "RFID" "Science and Research" "Steam" "Unity" "Unreal Engine" "VFX" "WebGL" "Windows" }}
+        {{ $tags := slice "Health" "Android" "Education" "Game" "iOS" "VR" "AR" "Installation" "360 video" "AAA Games" "Construction" "Motion sensor" "Music" "Web" "AI" "Arduino" "Art" "AWS" "Biometrics" "Blockchain" "Bluetooth" "CMS" "Computer Vision" "Console" "Data Visualisation" "Eco" "Gamification" "Immersive" "IoT" "LiDAR" "NFT's" "Port" "Procedural Generation" "Productivity" "Projection mapping" "Publicity Stunt" "Raspberry Pi" "RFID" "Science and Research" "Steam" "Unity" "Unreal Engine" "VFX" "WebGL" "Windows" }}
         {{ range $tags }}
         {{ $slug := . | urlize }}
         <li>
