@@ -1,7 +1,6 @@
 /**
  * Theme switcher
  * - Dark is the default theme
- * - Health-science pages default to light if no stored preference
  * - User preference is saved to localStorage and persists across pages
  */
 (function () {
@@ -30,16 +29,21 @@
     apply(next);
   }
 
+  // Forced theme (e.g. health page is always light)
+  var forced = document.documentElement.getAttribute('data-force-theme');
+  if (forced) {
+    apply(forced);
+    window.toggleTheme = function () {};
+    return;
+  }
+
   // Determine initial theme
   var stored = getPreferred();
   if (stored) {
     apply(stored);
   } else {
-    // No stored preference: health-science pages default to light
-    var isHealthScience = document.body && document.body.classList.contains('health-science');
-    var defaultTheme = isHealthScience ? 'light' : 'dark';
-    localStorage.setItem(STORAGE_KEY, defaultTheme);
-    apply(defaultTheme);
+    localStorage.setItem(STORAGE_KEY, 'dark');
+    apply('dark');
   }
 
   // Expose toggle globally for the footer button

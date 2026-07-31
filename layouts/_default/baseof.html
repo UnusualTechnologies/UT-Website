@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}"{{ if eq .Section "health-science" }} data-default-theme="light"{{ end }}>
+<html lang="{{ .Site.LanguageCode }}"{{ if eq .Section "health" }} data-force-theme="light"{{ end }}>
 <head>
   <script>
-    (function(){var t=localStorage.getItem('ut-theme');if(!t){t=document.documentElement.hasAttribute('data-default-theme')?document.documentElement.getAttribute('data-default-theme'):'dark';localStorage.setItem('ut-theme',t)}document.documentElement.setAttribute('data-theme',t)})();
+    (function(){var f=document.documentElement.getAttribute('data-force-theme');if(f){document.documentElement.setAttribute('data-theme',f);return}var t=localStorage.getItem('ut-theme');if(!t){t='dark';localStorage.setItem('ut-theme',t)}document.documentElement.setAttribute('data-theme',t)})();
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,6 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ readFile "static/css/style.css" | crypto.MD5 }}">
-  {{ if eq .Section "health-science" }}
-  <link rel="stylesheet" href="{{ "css/health-science.css" | relURL }}?v={{ readFile "static/css/health-science.css" | crypto.MD5 }}">
-  {{ end }}
   {{ if eq .Section "health" }}
   <link rel="stylesheet" href="{{ "css/health-guidea.css" | relURL }}">
   {{ end }}
