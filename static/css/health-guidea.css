@@ -255,10 +255,10 @@
 
 /* ── Fortune 100 / Client Logos ──────────────────────────────────── */
 .g-clients {
-  background: #fff;
-  padding: 120px 0 160px;
-  border-radius: 60px 60px 0 0;
-  margin: -60px 0 0;
+  background: var(--teal-tint);
+  padding: 240px 0 160px;
+  border-radius: 56px 56px 0 0;
+  margin-top: -56px;
   position: relative;
   z-index: 3;
 }
@@ -651,7 +651,7 @@
 
 /* ── Testimonials ────────────────────────────────────────────────── */
 .g-testimonials {
-  background: #fff;
+  background: #f5f5f5;
   padding: 112px 0 100px;
   border-radius: 60px 60px 0 0;
   margin: -60px 0 0;
@@ -686,7 +686,7 @@
 }
 
 .g-testimonial-card {
-  background: var(--gray-bg);
+  background: var(--teal-tint);
   border-radius: 16px;
   padding: 32px;
   border: 1px solid var(--border);
@@ -763,7 +763,7 @@
 
 /* ── Insights Section ────────────────────────────────────────────── */
 .g-insights {
-  background: var(--teal-tint);
+  background: #fff;
   padding: 112px 0 160px;
   border-radius: 60px 60px 0 0;
   margin: -60px 0 0;
@@ -825,39 +825,44 @@
 .g-insight-card {
   border-radius: 16px;
   overflow: hidden;
-  position: relative;
-  aspect-ratio: 4/3;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
   transition: transform 0.3s;
+  text-decoration: none;
 }
 
 .g-insight-card:hover {
   transform: translateY(-4px);
 }
 
-.g-insight-card img {
-  position: absolute;
-  inset: 0;
+.g-insight-img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.g-insight-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.g-insight-overlay {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  background: linear-gradient(transparent, rgba(0,0,0,0.15) 19%, rgba(0,0,0,0.75) 81%);
-  padding: 32px;
+.g-insight-body {
+  padding: 16px 4px;
 }
 
-.g-insight-overlay h3 {
+.g-insight-body h3 {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  color: #fff;
-  line-height: 1.4;
+  color: var(--dark-text);
+  margin-bottom: 4px;
+}
+
+.g-insight-body p {
+  font-size: 14px;
+  color: var(--mid-text);
+  line-height: 1.5;
 }
 
 /* ── Contact / CTA Section ───────────────────────────────────────── */
