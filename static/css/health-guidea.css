@@ -1,19 +1,19 @@
 /* ==========================================================================
    Guidea Homepage Recreation — Light Theme
-   Palette: white / #f7f7f7 / #eef8fa / #e2f3f6, accent #0097b2
+   Palette: Flexoki (stephango.com/flexoki), cyan accent
    ========================================================================== */
 
 /* Reset & Base */
 .guidea-page {
-  --teal: #0097b2;
-  --teal-hover: #007a8a;
-  --teal-tint: #eef8fa;
-  --teal-light: #e2f3f6;
-  --warm-white: #fafbfc;
-  --gray-bg: #f7f7f7;
-  --dark-text: #1a1a2e;
-  --mid-text: #444;
-  --light-text: #666;
+  --teal: #3AA99F;
+  --teal-hover: #24837B;
+  --teal-tint: #FFFCF0;
+  --teal-light: #BFE8D9;
+  --warm-white: #FFFCF0;
+  --gray-bg: #FFFCF0;
+  --dark-text: #1C1B1A;
+  --mid-text: #100F0F;
+  --light-text: #6F6E69;
   --border: rgba(0,0,0,0.08);
   font-family: 'DM Sans', system-ui, sans-serif;
   color: var(--dark-text);
@@ -54,8 +54,8 @@
 
 /* ── Hero Section ────────────────────────────────────────────────── */
 .g-hero {
-  background: #fff;
-  padding: 96px 0 160px;
+  background: var(--warm-white);
+  padding: 60px 0 160px;
   position: relative;
   overflow: visible;
 }
@@ -77,22 +77,43 @@
 
 .g-hero-text {
   margin-bottom: 24px;
-  padding-top: 80px;
+  padding-top: 44px;
 }
 
 .g-hero h1 {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 64px;
+  font-size: 58px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.2px;
   color: var(--dark-text);
   margin-bottom: 24px;
-  max-width: 900px;
+  max-width: 1000px;
+}
+
+.g-scribble-word {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.g-scribble {
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  width: calc(100% + 4px);
+  height: 14px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.g-scribble path {
+  stroke: var(--teal);
 }
 
 .g-hero-desc {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.7;
   color: var(--mid-text);
   margin-bottom: 32px;
@@ -116,13 +137,17 @@
   border-radius: 8px;
   font-weight: 600;
   font-size: 15px;
-  transition: background 0.2s;
+  transition: background 0.25s;
   border: none;
   cursor: pointer;
 }
 
-.g-btn-primary:hover {
+.g-btn-primary:hover,
+.g-btn-primary:focus,
+[data-theme="light"] .g-btn-primary:hover,
+[data-theme="light"] .g-btn-primary:focus {
   background: var(--teal-hover);
+  color: #fff;
 }
 
 .g-btn-outline {
@@ -136,12 +161,17 @@
   font-weight: 600;
   font-size: 15px;
   border: 1.5px solid rgba(0,0,0,0.2);
-  transition: border-color 0.2s;
+  transition: background 0.25s, border-color 0.25s;
   cursor: pointer;
 }
 
-.g-btn-outline:hover {
+.g-btn-outline:hover,
+.g-btn-outline:focus,
+[data-theme="light"] .g-btn-outline:hover,
+[data-theme="light"] .g-btn-outline:focus {
   border-color: var(--dark-text);
+  background: rgba(0,0,0,0.04);
+  color: var(--dark-text);
 }
 
 .g-hero-images {
@@ -152,7 +182,6 @@
   position: relative;
   margin-bottom: -220px;
   z-index: 10;
-  max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -308,28 +337,39 @@
 }
 
 .g-logo-grid-5 {
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .g-logo-grid-5 li {
-  height: 80px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .g-logo-grid-5 img {
-  max-height: 56px;
-  max-width: 140px;
-  width: 140px;
-  height: 56px;
+  max-height: none;
+  max-width: none;
+  width: auto;
+  height: auto;
   object-fit: contain;
   opacity: 0.5;
   filter: grayscale(1) brightness(0.8);
 }
 
+/* Per-logo sizing for visual balance */
+.g-logo-grid-5 li:nth-child(1) img { height: 72px; }  /* NHS — wide mark */
+.g-logo-grid-5 li:nth-child(2) img { height: 52px; }  /* Kent — tall wordmark */
+.g-logo-grid-5 li:nth-child(3) img { height: 38px; }  /* Surrey — crest + text, very wide */
+.g-logo-grid-5 li:nth-child(4) img { height: 58px; }  /* Sussex — tall US mark */
+.g-logo-grid-5 li:nth-child(5) img { height: 56px; }  /* HFMT — square-ish */
+
 /* ── Process Section ─────────────────────────────────────────────── */
 .g-process {
-  background: var(--gray-bg);
+  background: var(--warm-white);
   padding: 128px 0 200px;
   border-radius: 60px 60px 0 0;
   margin: -60px 0 0;
@@ -360,7 +400,7 @@
 }
 
 .g-process-quote {
-  background: rgba(0,151,178,0.08);
+  background: rgba(58,169,159,0.08);
   border-radius: 12px;
   padding: 24px;
   font-style: italic;
@@ -388,7 +428,7 @@
 }
 
 .g-process-step {
-  background: #fff;
+  background: var(--warm-white);
   border-radius: 16px;
   padding: 28px;
   transition: box-shadow 0.2s;
@@ -396,7 +436,7 @@
 }
 
 .g-process-step:hover {
-  box-shadow: 0 8px 32px rgba(0,151,178,0.1);
+  box-shadow: 0 8px 32px rgba(58,169,159,0.1);
 }
 
 .g-process-step img,
@@ -451,7 +491,7 @@
 }
 
 .g-org-card {
-  background: #fff;
+  background: var(--warm-white);
   border-radius: 20px;
   padding: 40px;
   border: 1px solid var(--border);
@@ -486,7 +526,7 @@
 
 /* ── Industries Section ──────────────────────────────────────────── */
 .g-industries {
-  background: #fff;
+  background: var(--warm-white);
   padding: 112px 0 160px;
   border-radius: 60px 60px 0 0;
   margin: -60px 0 0;
@@ -651,7 +691,7 @@
 
 /* ── Testimonials ────────────────────────────────────────────────── */
 .g-testimonials {
-  background: #f5f5f5;
+  background: var(--warm-white);
   padding: 112px 0 100px;
   border-radius: 60px 60px 0 0;
   margin: -60px 0 0;
@@ -686,7 +726,7 @@
 }
 
 .g-testimonial-card {
-  background: var(--teal-tint);
+  background: var(--warm-white);
   border-radius: 16px;
   padding: 32px;
   border: 1px solid var(--border);
@@ -736,7 +776,7 @@
 
 .g-testimonial-info span {
   font-size: 12px;
-  color: #888;
+  color: #878580;
 }
 
 .g-testimonial-logo {
@@ -763,7 +803,7 @@
 
 /* ── Insights Section ────────────────────────────────────────────── */
 .g-insights {
-  background: #fff;
+  background: var(--warm-white);
   padding: 112px 0 160px;
   border-radius: 60px 60px 0 0;
   margin: -60px 0 0;
@@ -896,7 +936,7 @@
 }
 
 .g-contact-form {
-  background: #fff;
+  background: var(--warm-white);
   border-radius: 16px;
   padding: 32px;
   border: 1px solid var(--border);
@@ -943,7 +983,7 @@
 
 .g-form-group input::placeholder,
 .g-form-group textarea::placeholder {
-  color: #aaa;
+  color: #9F9D96;
 }
 
 .g-form-group input:focus,
@@ -1099,4 +1139,14 @@
     border-radius: 32px 32px 0 0;
     margin-top: -32px;
   }
+}
+
+/* ── Health page header override ─────────────────────────────────── */
+[data-force-theme="light"] .site-header,
+[data-force-theme="light"] .header-strip {
+  background: #FFFCF0;
+}
+
+[data-force-theme="light"] .site-logo {
+  --color-logo-accent: #3AA99F;
 }
