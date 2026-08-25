@@ -1,0 +1,233 @@
+{{ define "main" }}
+<div class="cd-page">
+
+  <!-- Hero -->
+  <section class="cd-hero" id="top">
+    <div class="cd-wrap cd-hero-inner">
+      <div class="cd-hero-text">
+        <h1>Accessible, gamified technology <em class="cd-mark">co&#8209;designed</em> with researchers</h1>
+        <p class="cd-lede">We're a digital studio with expertise in building accessible reliable software solutions for research tools, clinical apps, and engagement experiences.</p>
+        <div class="cd-hero-actions">
+          <a href="#contact" class="cd-btn cd-btn-primary">Get In Touch</a>
+          <a href="#projects" class="cd-btn cd-btn-outline">Case Studies</a>
+        </div>
+      </div>
+      <div class="cd-hero-media">
+        <img src="{{ "images/health/hero-workshop.jpg" | relURL }}" alt="A co-design workshop in progress" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- Client band -->
+  <section class="cd-band">
+    <div class="cd-wrap cd-band-inner">
+      <p class="cd-band-label">Chosen by leading universities and research organisations across the UK and Europe</p>
+      <ul class="cd-band-logos">
+        <li><img src="{{ "images/clients/nhs.webp" | relURL }}" alt="NHS" loading="lazy"></li>
+        <li><img src="{{ "images/clients/kent.svg" | relURL }}" alt="University of Kent" loading="lazy"></li>
+        <li><img src="{{ "images/clients/surrey.svg" | relURL }}" alt="University of Surrey" loading="lazy"></li>
+        <li><img src="{{ "images/clients/sussex.webp" | relURL }}" alt="University of Sussex" loading="lazy"></li>
+        <li><img src="{{ "images/clients/hfmt.webp" | relURL }}" alt="University of Hamburg" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- What we build -->
+  <section class="cd-section" id="about">
+    <div class="cd-wrap">
+      <div class="cd-section-head">
+        <h2>What we build</h2>
+        <p>Our team combines deep health domain knowledge with hands-on software development. We've delivered tools used by thousands of participants across multiple countries, always grounded in co-design and iterative testing with real users.</p>
+      </div>
+      <ul class="cd-cap-grid">
+        <li class="cd-cap cd-cap-wide">
+          <div class="cd-cap-media cd-cap-media-wide">
+            <img src="{{ "images/health/cocog-tablet-desk.png" | relURL }}" alt="A clinical research app running on a tablet" loading="lazy">
+          </div>
+          <h3>Clinical Research Apps</h3>
+        </li>
+        <li class="cd-cap">
+          <div class="cd-cap-media">
+            <img src="{{ "images/health/insight-codesign.jpg" | relURL }}" alt="Participants taking part in a co-design session" loading="lazy">
+          </div>
+          <h3>Patient Engagement Tools</h3>
+        </li>
+        <li class="cd-cap">
+          <div class="cd-cap-media">
+            <img src="{{ "images/health/insight-gamification.jpg" | relURL }}" alt="A gamified health experience" loading="lazy">
+          </div>
+          <h3>Gamified Health Experiences</h3>
+        </li>
+        <li class="cd-cap">
+          <div class="cd-cap-media">
+            <img src="{{ "images/health/coplay-laptop.png" | relURL }}" alt="A research dashboard on a laptop" loading="lazy">
+          </div>
+          <h3>Data Collection &amp; Dashboards</h3>
+        </li>
+        <li class="cd-cap">
+          <div class="cd-cap-media">
+            <img src="{{ "images/health/hero-codesign.jpg" | relURL }}" alt="Researchers working across multiple sites" loading="lazy">
+          </div>
+          <h3>Multi-site Research Platforms</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="cd-dark">
+    <div class="cd-wrap">
+      <div class="cd-dark-head">
+        <h2>What our partners say</h2>
+        <p>Long-term relationships with research teams who come back for their next study</p>
+      </div>
+      <div class="cd-quote-grid">
+        <figure class="cd-quote">
+          <blockquote>"I sort of forgot that you're contracted technology partners, and I felt like you're part of our team because of how you were involved in everything."</blockquote>
+          <figcaption><strong>Nyangi Gityamwi</strong>Research Fellow, University of Surrey</figcaption>
+        </figure>
+        <figure class="cd-quote">
+          <blockquote>"After Unusual Technology implemented our software here, it helped us remove 20% of all the errors and streamline the whole process."</blockquote>
+          <figcaption><strong>Bernard Cheung &amp; Agnieszka Nohawica</strong>Owners, Bosco Dental Studio</figcaption>
+        </figure>
+        <figure class="cd-quote">
+          <blockquote>"They just know their stuff and I was really impressed. We will definitely work with Unusual Technologies again."</blockquote>
+          <figcaption><strong>Karen Worden</strong>Digital Interpretation Manager, RAF Museum</figcaption>
+        </figure>
+        <figure class="cd-quote">
+          <blockquote>"They've got experience, they've got the same kind of values. I can tell that they're really interested in our project."</blockquote>
+          <figcaption><strong>Cate Grundy</strong>Founder, Friendly Fox Design</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="cd-section" id="projects">
+    <div class="cd-wrap">
+      <div class="cd-projects-head">
+        <div>
+          <h2>Recent co-designed projects</h2>
+          <p>A look at some of the research tools, clinical apps, and engagement platforms we've built with our partners.</p>
+        </div>
+        <a href="{{ "projects/" | relURL }}" class="cd-btn cd-btn-ghost">see all</a>
+      </div>
+      <div class="cd-project-grid">
+        <a href="{{ "projects/co-cog/" | relURL }}" class="cd-project">
+          <div class="cd-project-media">
+            <img src="{{ "images/projects/co-cog.png" | relURL }}" alt="Co-Cog dementia monitoring app" loading="lazy">
+          </div>
+          <div class="cd-project-body">
+            <h3>Co-Cog</h3>
+            <p>Gamified cognitive monitoring for people living with early-stage dementia</p>
+          </div>
+        </a>
+        <a href="{{ "projects/co-play/" | relURL }}" class="cd-project">
+          <div class="cd-project-media">
+            <img src="{{ "images/projects/co-play.jpg" | relURL }}" alt="Co-Play exergame" loading="lazy">
+          </div>
+          <div class="cd-project-body">
+            <h3>Co-Play</h3>
+            <p>An adaptive exergame designed with and for people with dementia</p>
+          </div>
+        </a>
+        <a href="{{ "projects/breez-dental/" | relURL }}" class="cd-project">
+          <div class="cd-project-media">
+            <img src="{{ "images/projects/breez-dental.png" | relURL }}" alt="Breez Dental AI notes" loading="lazy">
+          </div>
+          <div class="cd-project-body">
+            <h3>Breez Dental</h3>
+            <p>AI-powered clinical note-taking that gives dentists their time back</p>
+          </div>
+        </a>
+        <a href="{{ "projects/tale-together/" | relURL }}" class="cd-project">
+          <div class="cd-project-media">
+            <img src="{{ "images/projects/tale-together.webp" | relURL }}" alt="Tale Together intergenerational platform" loading="lazy">
+          </div>
+          <div class="cd-project-body">
+            <h3>Tale Together</h3>
+            <p>Bridging generations through collaborative storytelling and AI</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="cd-section" id="process">
+    <div class="cd-wrap">
+      <div class="cd-section-head">
+        <h2>How We Build Health and Research Software</h2>
+        <p>Each project follows four phases. We begin by understanding your research goals and end users, then co-design, build and refine the tool until it fits the people who rely on it.</p>
+      </div>
+
+      <figure class="cd-pull">
+        <blockquote>"I sort of forgot that you're contracted technology partners, and I felt like you're part of our team because of how you were involved in everything."</blockquote>
+        <figcaption>Nyangi Gityamwi<br>Research Fellow, University of Surrey</figcaption>
+      </figure>
+
+      <ol class="cd-steps">
+        <li class="cd-step">
+          <span class="cd-step-num">01</span>
+          <h3>Discover</h3>
+          <p>Map out user needs, clinical workflows, and research objectives</p>
+        </li>
+        <li class="cd-step cd-step-accent">
+          <span class="cd-step-num">02</span>
+          <h3>Co-Design</h3>
+          <p>Workshop and prototype with researchers, clinicians, and end users</p>
+        </li>
+        <li class="cd-step">
+          <span class="cd-step-num">03</span>
+          <h3>Build</h3>
+          <p>Develop and test production-ready software in short, focused sprints</p>
+        </li>
+        <li class="cd-step">
+          <span class="cd-step-num">04</span>
+          <h3>Deploy &amp; Iterate</h3>
+          <p>Launch into the field, gather real-world feedback, and continuously improve</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="cd-section cd-contact" id="contact">
+    <div class="cd-wrap cd-contact-inner">
+      <div class="cd-contact-text">
+        <h2>Talk to us to receive custom software designed for your research</h2>
+        <p>Whether you're planning a new study, looking to digitise an existing protocol, or exploring how gamification could improve participant engagement, we'd be happy to chat. No commitment, just a conversation about what you're trying to achieve.</p>
+        <p class="cd-contact-note">Tell us a bit about your research and we'll be in touch.</p>
+      </div>
+      <form class="cd-form" action="mailto:{{ .Site.Params.email }}" method="post" enctype="text/plain">
+        <label>First Name
+          <input type="text" name="first-name" placeholder="Enter your first name">
+        </label>
+        <label>Last Name
+          <input type="text" name="last-name" placeholder="Enter your last name">
+        </label>
+        <label>Role
+          <input type="text" name="role" placeholder="e.g. Principal Investigator">
+        </label>
+        <label>Organisation
+          <input type="text" name="organisation" placeholder="University or institution">
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="name@example.ac.uk">
+        </label>
+        <label>Phone (optional)
+          <input type="tel" name="phone" placeholder="+44 7xxx xxx xxx">
+        </label>
+        <label class="cd-form-full">About your project
+          <textarea rows="5" name="project" placeholder="Tell us about your study, timeline, and what you're looking for"></textarea>
+        </label>
+        <div class="cd-form-foot">
+          <button type="submit" class="cd-btn cd-btn-primary">Get in touch</button>
+          <p>or email us directly at <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</div>
+{{ end }}

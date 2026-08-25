@@ -1,0 +1,811 @@
+/* ==========================================================================
+   Co-Design page
+   Palette taken from the Claude Design "Accessible Health Tech Studio" concept
+   and applied as this page's light-mode colours, including the site header.
+   ========================================================================== */
+
+.cd-page,
+html[data-force-theme="light"] {
+  --cd-bg: #F1F5F4;
+  --cd-cream: #F7F3EC;
+  --cd-ink: #0C2A2B;
+  --cd-blue: #17557E;
+  --cd-mint: #A8E0CE;
+  --cd-green: #0E5A52;
+  --cd-body: #33504D;
+  --cd-muted: #55716D;
+  --cd-faint: #7C9894;
+  --cd-line: #D2E0DC;
+  --cd-band: #E6EFED;
+  --cd-card: #FFFFFF;
+  --cd-media: #DCE8E5;
+  --cd-dark-card: #123433;
+  --cd-dark-line: #23514E;
+  --cd-dark-muted: #A9C3BE;
+  --cd-field-line: #B7CCC7;
+}
+
+/* --------------------------------------------------------------------------
+   Site chrome: header, footer and page background recoloured for this page
+   The header keeps its existing markup, layout, logo and nav font.
+   -------------------------------------------------------------------------- */
+
+html[data-force-theme="light"] {
+  --color-primary: var(--cd-blue);
+  --color-primary-bright: var(--cd-ink);
+  --color-header-bg: rgba(247, 243, 236, 0.92);
+  --color-header-link: var(--cd-ink);
+  --color-logo-text: var(--cd-ink);
+  --color-logo-accent: var(--cd-blue);
+  --color-footer-bg: var(--cd-band);
+  --color-footer-text: var(--cd-muted);
+  --color-footer-legal: var(--cd-faint);
+  --color-footer-border: var(--cd-line);
+  --color-text-muted: var(--cd-muted);
+  --color-text-secondary: var(--cd-body);
+  /* Mobile nav overlay (style.css paints it with these two) */
+  --color-black: var(--cd-cream);
+  --color-white: var(--cd-ink);
+}
+
+html[data-force-theme="light"] body {
+  background: var(--cd-bg);
+  color: var(--cd-ink);
+}
+
+html[data-force-theme="light"] .header-strip {
+  background: var(--color-header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cd-line);
+}
+
+html[data-force-theme="light"] .site-header {
+  background: transparent;
+}
+
+html[data-force-theme="light"] .site-footer {
+  background: var(--cd-band);
+  border-top: 1px solid var(--cd-line);
+}
+
+html[data-force-theme="light"] :focus-visible {
+  outline: 3px solid var(--cd-green);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Page base
+   -------------------------------------------------------------------------- */
+
+.cd-page {
+  padding-top: 120px; /* clears the fixed site header */
+  font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  color: var(--cd-ink);
+  background: var(--cd-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cd-page *,
+.cd-page *::before,
+.cd-page *::after {
+  box-sizing: border-box;
+}
+
+/* Resets are wrapped in :where() so they carry no specificity and every
+   component rule below can override them without an arms race. */
+
+:where(.cd-page) h1,
+:where(.cd-page) h2,
+:where(.cd-page) h3 {
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+:where(.cd-page) p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+:where(.cd-page) img {
+  display: block;
+  max-width: 100%;
+}
+
+:where(.cd-page) ul,
+:where(.cd-page) ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Not in :where() — this has to beat `[data-theme="light"] a` from style.css.
+   Component links below carry a .cd-page prefix so they in turn beat this. */
+.cd-page a {
+  color: var(--cd-blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.cd-wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.cd-section {
+  padding: clamp(64px, 8vw, 104px) 0 0;
+}
+
+/* --- Buttons --- */
+
+.cd-page .cd-btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cd-page .cd-btn-primary {
+  font-size: 18px;
+  color: #F1F5F4;
+  background: var(--cd-blue);
+  padding: 16px 32px;
+}
+
+.cd-page .cd-btn-primary:hover,
+.cd-page .cd-btn-primary:focus {
+  background: var(--cd-ink);
+  color: #F1F5F4;
+}
+
+.cd-page .cd-btn-outline {
+  font-size: 18px;
+  color: var(--cd-ink);
+  background: transparent;
+  border-color: var(--cd-ink);
+  padding: 16px 30px;
+}
+
+.cd-page .cd-btn-outline:hover,
+.cd-page .cd-btn-outline:focus {
+  background: var(--cd-ink);
+  color: #F1F5F4;
+}
+
+.cd-page .cd-btn-ghost {
+  font-size: 16px;
+  color: var(--cd-ink);
+  background: transparent;
+  border-color: var(--cd-ink);
+  padding: 12px 26px;
+  white-space: nowrap;
+}
+
+.cd-page .cd-btn-ghost:hover,
+.cd-page .cd-btn-ghost:focus {
+  background: var(--cd-mint);
+  color: var(--cd-ink);
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.cd-hero {
+  padding: clamp(48px, 6vw, 96px) 0 clamp(48px, 6vw, 72px);
+}
+
+.cd-hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 64px;
+  align-items: end;
+}
+
+.cd-hero h1 {
+  font-size: clamp(40px, 5.4vw, 74px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.cd-mark {
+  font-style: normal;
+  background: linear-gradient(transparent 62%, var(--cd-mint) 62%, var(--cd-mint) 96%, transparent 96%);
+}
+
+.cd-lede {
+  font-size: 21px;
+  line-height: 1.55;
+  max-width: 620px;
+  margin: 32px 0 40px;
+  color: var(--cd-body);
+}
+
+.cd-hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cd-hero-media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 2px solid var(--cd-ink);
+  background: var(--cd-media);
+}
+
+.cd-hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   Client band
+   -------------------------------------------------------------------------- */
+
+.cd-band {
+  border-top: 1px solid var(--cd-line);
+  border-bottom: 1px solid var(--cd-line);
+  background: var(--cd-band);
+}
+
+.cd-band-inner {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.cd-band-label {
+  max-width: 320px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--cd-muted);
+}
+
+.cd-band-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 44px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cd-band-logos img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: grayscale(1) contrast(1.15);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.cd-band-logos li:hover img {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+/* --------------------------------------------------------------------------
+   Section heads
+   -------------------------------------------------------------------------- */
+
+.cd-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+.cd-section-head h2 {
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.06;
+}
+
+.cd-section-head p {
+  margin-top: 6px;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--cd-body);
+}
+
+/* --------------------------------------------------------------------------
+   What we build
+   -------------------------------------------------------------------------- */
+
+.cd-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cd-cap {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--cd-ink);
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--cd-card);
+}
+
+.cd-cap-wide {
+  grid-column: span 2;
+}
+
+.cd-cap-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--cd-media);
+  border-bottom: 2px solid var(--cd-ink);
+  overflow: hidden;
+}
+
+.cd-cap-media-wide {
+  aspect-ratio: 16 / 6;
+}
+
+.cd-cap-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cd-cap h3 {
+  font-size: 24px;
+  letter-spacing: -0.02em;
+  padding: 22px 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Testimonials (dark)
+   -------------------------------------------------------------------------- */
+
+.cd-dark {
+  margin-top: clamp(64px, 8vw, 104px);
+  background: var(--cd-ink);
+  color: #F1F5F4;
+  padding: clamp(64px, 8vw, 96px) 0;
+}
+
+.cd-dark-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.cd-dark-head h2 {
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.06;
+}
+
+.cd-dark-head p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--cd-dark-muted);
+}
+
+.cd-quote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cd-quote {
+  margin: 0;
+  padding: 36px;
+  border: 1px solid var(--cd-dark-line);
+  border-radius: 22px;
+  background: var(--cd-dark-card);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cd-quote blockquote {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #F1F5F4;
+  text-wrap: pretty;
+}
+
+.cd-quote figcaption {
+  margin-top: auto;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--cd-dark-muted);
+  border-top: 1px solid var(--cd-dark-line);
+  padding-top: 20px;
+}
+
+.cd-quote figcaption strong {
+  display: block;
+  color: var(--cd-mint);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   Projects
+   -------------------------------------------------------------------------- */
+
+.cd-projects-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.cd-projects-head h2 {
+  font-size: clamp(32px, 3.6vw, 48px);
+  line-height: 1.06;
+  margin-bottom: 18px;
+}
+
+.cd-projects-head p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--cd-body);
+  max-width: 640px;
+}
+
+.cd-project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.cd-page .cd-project {
+  border: 2px solid var(--cd-ink);
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--cd-card);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cd-page .cd-project:hover,
+.cd-page .cd-project:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 0 -4px var(--cd-mint);
+}
+
+.cd-project-media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-bottom: 2px solid var(--cd-ink);
+  background: var(--cd-media);
+  overflow: hidden;
+}
+
+.cd-project-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cd-project-body {
+  padding: 28px;
+}
+
+.cd-project-body h3 {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.cd-project-body p {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--cd-body);
+}
+
+/* --------------------------------------------------------------------------
+   Process
+   -------------------------------------------------------------------------- */
+
+.cd-pull {
+  margin: 0;
+  padding: 40px 44px;
+  background: var(--cd-green);
+  color: #F1F5F4;
+  border-radius: 24px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: end;
+}
+
+.cd-pull blockquote {
+  margin: 0;
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: clamp(21px, 2.2vw, 27px);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.cd-pull figcaption {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #BFD8CF;
+  max-width: 190px;
+}
+
+.cd-steps {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cd-step {
+  padding: 28px;
+  border: 2px solid var(--cd-ink);
+  border-radius: 20px;
+  background: var(--cd-card);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 230px;
+}
+
+.cd-step-accent {
+  background: var(--cd-mint);
+}
+
+.cd-step-num {
+  font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: var(--cd-blue);
+}
+
+.cd-step h3 {
+  font-size: 25px;
+  letter-spacing: -0.02em;
+}
+
+.cd-step p {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--cd-body);
+}
+
+.cd-step-accent p {
+  color: #0B2E2A;
+}
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+
+.cd-contact {
+  padding-bottom: clamp(72px, 9vw, 112px);
+}
+
+.cd-contact-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.cd-contact-text {
+  position: sticky;
+  top: 110px;
+}
+
+.cd-contact-text h2 {
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.07;
+  margin-bottom: 24px;
+}
+
+.cd-contact-text p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--cd-body);
+  margin-bottom: 28px;
+}
+
+.cd-contact-note {
+  font-size: 17px !important;
+  color: var(--cd-muted) !important;
+  border-left: 3px solid var(--cd-mint);
+  padding-left: 18px;
+  margin-bottom: 0 !important;
+}
+
+.cd-form {
+  background: var(--cd-card);
+  border: 2px solid var(--cd-ink);
+  border-radius: 28px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.cd-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cd-form-full {
+  grid-column: 1 / -1;
+}
+
+.cd-form input,
+.cd-form textarea {
+  font: inherit;
+  font-weight: 400;
+  color: var(--cd-ink);
+  padding: 14px 16px;
+  border: 2px solid var(--cd-field-line);
+  border-radius: 12px;
+  background: var(--cd-bg);
+  width: 100%;
+}
+
+.cd-form textarea {
+  resize: vertical;
+}
+
+.cd-form input::placeholder,
+.cd-form textarea::placeholder {
+  color: var(--cd-faint);
+  opacity: 1;
+}
+
+.cd-form input:focus,
+.cd-form textarea:focus {
+  border-color: var(--cd-green);
+  background: var(--cd-card);
+  outline: none;
+}
+
+.cd-form-foot {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cd-form-foot p {
+  font-size: 15px;
+  color: var(--cd-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .cd-hero-inner,
+  .cd-section-head,
+  .cd-dark-head,
+  .cd-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cd-hero-media {
+    aspect-ratio: 16 / 10;
+    max-width: 620px;
+  }
+
+  .cd-contact-text {
+    position: static;
+  }
+
+  .cd-band-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .cd-band-label {
+    max-width: none;
+  }
+
+  .cd-band-logos {
+    justify-content: flex-start;
+  }
+
+  .cd-cap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cd-cap-wide {
+    grid-column: span 2;
+  }
+
+  .cd-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .cd-wrap {
+    padding: 0 20px;
+  }
+
+  .cd-lede {
+    font-size: 19px;
+  }
+
+  .cd-cap-grid,
+  .cd-quote-grid,
+  .cd-project-grid,
+  .cd-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-cap-wide {
+    grid-column: span 1;
+  }
+
+  .cd-cap-media-wide {
+    aspect-ratio: 4 / 3;
+  }
+
+  .cd-projects-head {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .cd-pull {
+    grid-template-columns: 1fr;
+    padding: 32px 28px;
+    align-items: start;
+  }
+
+  .cd-pull figcaption {
+    max-width: none;
+  }
+
+  .cd-form {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+  }
+
+  .cd-step {
+    min-height: 0;
+  }
+
+  .cd-btn-primary,
+  .cd-btn-outline {
+    font-size: 17px;
+    padding: 14px 26px;
+  }
+}

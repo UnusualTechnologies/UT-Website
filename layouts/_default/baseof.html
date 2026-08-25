@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}"{{ if eq .Section "health" }} data-force-theme="light"{{ end }}>
+<html lang="{{ .Site.LanguageCode }}"{{ if in (slice "health" "co-design") .Section }} data-force-theme="light"{{ end }}>
 <head>
   <script>
     (function(){var f=document.documentElement.getAttribute('data-force-theme');if(f){document.documentElement.setAttribute('data-theme',f);return}var t=localStorage.getItem('ut-theme');if(!t){t='dark';localStorage.setItem('ut-theme',t)}document.documentElement.setAttribute('data-theme',t)})();
@@ -39,6 +39,10 @@
   {{ if eq .Section "health" }}
   <link rel="stylesheet" href="{{ "css/health-guidea.css" | relURL }}">
   {{ end }}
+  {{ if eq .Section "co-design" }}
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/co-design.css" | relURL }}?v={{ readFile "static/css/co-design.css" | crypto.MD5 }}">
+  {{ end }}
   {{ partial "structured-data.html" . }}
   {{ if not hugo.IsServer }}
   <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
@@ -49,7 +53,7 @@
 
   {{ partial "header.html" . }}
 
-  {{ partial "breadcrumbs.html" . }}
+  {{ if ne .Section "co-design" }}{{ partial "breadcrumbs.html" . }}{{ end }}
 
   <main id="content">
     {{ block "main" . }}{{ end }}
