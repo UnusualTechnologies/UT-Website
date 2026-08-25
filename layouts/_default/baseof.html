@@ -1,14 +1,14 @@
+{{- $light := eq .Section "health-tech" -}}
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}"{{ if eq .Section "health-tech" }} data-force-theme="light"{{ end }}>
+{{/* The site is dark throughout; only the health-tech landing page is light.
+     Both attributes are set here at build time: data-theme drives style.css,
+     data-force-theme drives health-tech.css. */}}
+<html lang="{{ .Site.LanguageCode }}" data-theme="{{ cond $light "light" "dark" }}"{{ if $light }} data-force-theme="light"{{ end }}>
 <head>
-  <script>
-    (function(){var f=document.documentElement.getAttribute('data-force-theme');if(f){document.documentElement.setAttribute('data-theme',f);return}var t=localStorage.getItem('ut-theme');if(!t){t='dark';localStorage.setItem('ut-theme',t)}document.documentElement.setAttribute('data-theme',t)})();
-  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="{{ cond $light "light" "dark" }}">
+  <meta name="theme-color" content="{{ cond $light "#F7F3EC" "#1d1d1f" }}">
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
   {{- $description := or .Description .Params.overview .Site.Params.description }}
   <meta name="description" content="{{ $description }}">
@@ -36,7 +36,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ readFile "static/css/style.css" | crypto.MD5 }}">
-  {{ if eq .Section "health-tech" }}
+  {{ if $light }}
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "css/health-tech.css" | relURL }}?v={{ readFile "static/css/health-tech.css" | crypto.MD5 }}">
   {{ end }}
@@ -50,7 +50,7 @@
 
   {{ partial "header.html" . }}
 
-  {{ if ne .Section "health-tech" }}{{ partial "breadcrumbs.html" . }}{{ end }}
+  {{ if not $light }}{{ partial "breadcrumbs.html" . }}{{ end }}
 
   <main id="content">
     {{ block "main" . }}{{ end }}
@@ -64,7 +64,6 @@
   <script src="{{ "js/carousel.js" | relURL }}?v={{ readFile "static/js/carousel.js" | crypto.MD5 }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="{{ "js/shader-bg.js" | relURL }}?v={{ readFile "static/js/shader-bg.js" | crypto.MD5 }}"></script>
-  <script src="{{ "js/theme.js" | relURL }}?v={{ readFile "static/js/theme.js" | crypto.MD5 }}"></script>
   <script src="{{ "js/return-link.js" | relURL }}?v={{ readFile "static/js/return-link.js" | crypto.MD5 }}"></script>
 </body>
 </html>

@@ -57,8 +57,12 @@
       // survive, and the flag is gone so the next load removes it outright.
       // Removing on transitionend would never fire under reduced motion.
       el.classList.remove('is-visible');
+      document.body.classList.remove('has-return-link');
     });
   }
+
+  // Lets the footer reserve space so the popup never covers its legal links
+  document.body.classList.add('has-return-link');
 
   requestAnimationFrame(function () { el.classList.add('is-visible'); });
 })();
