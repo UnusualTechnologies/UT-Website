@@ -288,13 +288,34 @@ html[data-force-theme="light"] :focus-visible {
   justify-content: flex-end;
 }
 
+.cd-band-logos li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .cd-band-logos img {
-  height: 42px;
   width: auto;
   object-fit: contain;
   opacity: 0.85;
   filter: grayscale(1) contrast(1.15);
   transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+/* Per-logo heights so the marks read at the same optical weight, the same
+   approach the health page uses. Raw heights differ because the artwork
+   aspect ratios do. */
+.cd-band-logos li:nth-child(1) img { height: 60px; }  /* NHS — wide mark */
+.cd-band-logos li:nth-child(2) img { height: 44px; }  /* Kent — tall wordmark */
+.cd-band-logos li:nth-child(3) img { height: 32px; }  /* Surrey — crest + text, very wide */
+.cd-band-logos li:nth-child(4) img { height: 48px; }  /* Sussex — tall US mark */
+.cd-band-logos li:nth-child(5) img { height: 46px; }  /* HFMT — square-ish */
+
+/* Hamburg's artwork is light gold (avg luminance ~165), so grayscale alone
+   leaves it too pale against the band. Knock it down to match the others. */
+.cd-band-logos li:nth-child(5) img {
+  filter: grayscale(1) brightness(0.55) contrast(1.4);
 }
 
 .cd-band-logos li:hover img {
