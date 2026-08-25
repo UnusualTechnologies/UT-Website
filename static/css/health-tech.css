@@ -1,28 +1,28 @@
 /* ==========================================================================
-   Co-Design page
+   Health Tech page
    Palette taken from the Claude Design "Accessible Health Tech Studio" concept
    and applied as this page's light-mode colours, including the site header.
    ========================================================================== */
 
-.cd-page,
+.ht-page,
 html[data-force-theme="light"] {
-  --cd-bg: #F1F5F4;
-  --cd-cream: #F7F3EC;
-  --cd-ink: #0C2A2B;
-  --cd-blue: #17557E;
-  --cd-mint: #A8E0CE;
-  --cd-green: #0E5A52;
-  --cd-body: #33504D;
-  --cd-muted: #55716D;
-  --cd-faint: #7C9894;
-  --cd-line: #D2E0DC;
-  --cd-band: #E6EFED;
-  --cd-card: #FFFFFF;
-  --cd-media: #DCE8E5;
-  --cd-dark-card: #123433;
-  --cd-dark-line: #23514E;
-  --cd-dark-muted: #A9C3BE;
-  --cd-field-line: #B7CCC7;
+  --ht-bg: #F1F5F4;
+  --ht-cream: #F7F3EC;
+  --ht-ink: #0C2A2B;
+  --ht-blue: #17557E;
+  --ht-mint: #A8E0CE;
+  --ht-green: #0E5A52;
+  --ht-body: #33504D;
+  --ht-muted: #55716D;
+  --ht-faint: #7C9894;
+  --ht-line: #D2E0DC;
+  --ht-band: #E6EFED;
+  --ht-card: #FFFFFF;
+  --ht-media: #DCE8E5;
+  --ht-dark-card: #123433;
+  --ht-dark-line: #23514E;
+  --ht-dark-muted: #A9C3BE;
+  --ht-field-line: #B7CCC7;
 }
 
 /* --------------------------------------------------------------------------
@@ -31,33 +31,33 @@ html[data-force-theme="light"] {
    -------------------------------------------------------------------------- */
 
 html[data-force-theme="light"] {
-  --color-primary: var(--cd-blue);
-  --color-primary-bright: var(--cd-ink);
+  --color-primary: var(--ht-blue);
+  --color-primary-bright: var(--ht-ink);
   --color-header-bg: rgba(247, 243, 236, 0.92);
-  --color-header-link: var(--cd-ink);
-  --color-logo-text: var(--cd-ink);
-  --color-logo-accent: var(--cd-blue);
-  --color-footer-bg: var(--cd-band);
-  --color-footer-text: var(--cd-muted);
-  --color-footer-legal: var(--cd-faint);
-  --color-footer-border: var(--cd-line);
-  --color-text-muted: var(--cd-muted);
-  --color-text-secondary: var(--cd-body);
+  --color-header-link: var(--ht-ink);
+  --color-logo-text: var(--ht-ink);
+  --color-logo-accent: var(--ht-blue);
+  --color-footer-bg: var(--ht-band);
+  --color-footer-text: var(--ht-muted);
+  --color-footer-legal: var(--ht-faint);
+  --color-footer-border: var(--ht-line);
+  --color-text-muted: var(--ht-muted);
+  --color-text-secondary: var(--ht-body);
   /* Mobile nav overlay (style.css paints it with these two) */
-  --color-black: var(--cd-cream);
-  --color-white: var(--cd-ink);
+  --color-black: var(--ht-cream);
+  --color-white: var(--ht-ink);
 }
 
 html[data-force-theme="light"] body {
-  background: var(--cd-bg);
-  color: var(--cd-ink);
+  background: var(--ht-bg);
+  color: var(--ht-ink);
 }
 
 html[data-force-theme="light"] .header-strip {
   background: var(--color-header-bg);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--cd-line);
+  border-bottom: 1px solid var(--ht-line);
 }
 
 html[data-force-theme="light"] .site-header {
@@ -65,12 +65,12 @@ html[data-force-theme="light"] .site-header {
 }
 
 html[data-force-theme="light"] .site-footer {
-  background: var(--cd-band);
-  border-top: 1px solid var(--cd-line);
+  background: var(--ht-band);
+  border-top: 1px solid var(--ht-line);
 }
 
 html[data-force-theme="light"] :focus-visible {
-  outline: 3px solid var(--cd-green);
+  outline: 3px solid var(--ht-green);
   outline-offset: 3px;
 }
 
@@ -78,28 +78,28 @@ html[data-force-theme="light"] :focus-visible {
    Page base
    -------------------------------------------------------------------------- */
 
-.cd-page {
+.ht-page {
   padding-top: 120px; /* clears the fixed site header */
   font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
-  color: var(--cd-ink);
-  background: var(--cd-bg);
+  color: var(--ht-ink);
+  background: var(--ht-bg);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-.cd-page *,
-.cd-page *::before,
-.cd-page *::after {
+.ht-page *,
+.ht-page *::before,
+.ht-page *::after {
   box-sizing: border-box;
 }
 
 /* Resets are wrapped in :where() so they carry no specificity and every
    component rule below can override them without an arms race. */
 
-:where(.cd-page) h1,
-:where(.cd-page) h2,
-:where(.cd-page) h3 {
+:where(.ht-page) h1,
+:where(.ht-page) h2,
+:where(.ht-page) h3 {
   font-family: 'Bricolage Grotesque', system-ui, sans-serif;
   font-weight: 600;
   letter-spacing: -0.025em;
@@ -107,44 +107,44 @@ html[data-force-theme="light"] :focus-visible {
   text-wrap: pretty;
 }
 
-:where(.cd-page) p {
+:where(.ht-page) p {
   margin: 0;
   text-wrap: pretty;
 }
 
-:where(.cd-page) img {
+:where(.ht-page) img {
   display: block;
   max-width: 100%;
 }
 
-:where(.cd-page) ul,
-:where(.cd-page) ol {
+:where(.ht-page) ul,
+:where(.ht-page) ol {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 /* Not in :where() — this has to beat `[data-theme="light"] a` from style.css.
-   Component links below carry a .cd-page prefix so they in turn beat this. */
-.cd-page a {
-  color: var(--cd-blue);
+   Component links below carry a .ht-page prefix so they in turn beat this. */
+.ht-page a {
+  color: var(--ht-blue);
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 
-.cd-wrap {
+.ht-wrap {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 32px;
 }
 
-.cd-section {
+.ht-section {
   padding: clamp(64px, 8vw, 104px) 0 0;
 }
 
 /* --- Buttons --- */
 
-.cd-page .cd-btn {
+.ht-page .ht-btn {
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
@@ -154,98 +154,98 @@ html[data-force-theme="light"] :focus-visible {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.cd-page .cd-btn-primary {
+.ht-page .ht-btn-primary {
   font-size: 18px;
   color: #F1F5F4;
-  background: var(--cd-blue);
+  background: var(--ht-blue);
   padding: 16px 32px;
 }
 
-.cd-page .cd-btn-primary:hover,
-.cd-page .cd-btn-primary:focus {
-  background: var(--cd-ink);
+.ht-page .ht-btn-primary:hover,
+.ht-page .ht-btn-primary:focus {
+  background: var(--ht-ink);
   color: #F1F5F4;
 }
 
-.cd-page .cd-btn-outline {
+.ht-page .ht-btn-outline {
   font-size: 18px;
-  color: var(--cd-ink);
+  color: var(--ht-ink);
   background: transparent;
-  border-color: var(--cd-ink);
+  border-color: var(--ht-ink);
   padding: 16px 30px;
 }
 
-.cd-page .cd-btn-outline:hover,
-.cd-page .cd-btn-outline:focus {
-  background: var(--cd-ink);
+.ht-page .ht-btn-outline:hover,
+.ht-page .ht-btn-outline:focus {
+  background: var(--ht-ink);
   color: #F1F5F4;
 }
 
-.cd-page .cd-btn-ghost {
+.ht-page .ht-btn-ghost {
   font-size: 16px;
-  color: var(--cd-ink);
+  color: var(--ht-ink);
   background: transparent;
-  border-color: var(--cd-ink);
+  border-color: var(--ht-ink);
   padding: 12px 26px;
   white-space: nowrap;
 }
 
-.cd-page .cd-btn-ghost:hover,
-.cd-page .cd-btn-ghost:focus {
-  background: var(--cd-mint);
-  color: var(--cd-ink);
+.ht-page .ht-btn-ghost:hover,
+.ht-page .ht-btn-ghost:focus {
+  background: var(--ht-mint);
+  color: var(--ht-ink);
 }
 
 /* --------------------------------------------------------------------------
    Hero
    -------------------------------------------------------------------------- */
 
-.cd-hero {
+.ht-hero {
   padding: clamp(48px, 6vw, 96px) 0 clamp(48px, 6vw, 72px);
 }
 
-.cd-hero-inner {
+.ht-hero-inner {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 64px;
   align-items: end;
 }
 
-.cd-hero h1 {
+.ht-hero h1 {
   font-size: clamp(40px, 5.4vw, 74px);
   line-height: 1.02;
   letter-spacing: -0.03em;
 }
 
-.cd-mark {
+.ht-mark {
   font-style: normal;
-  background: linear-gradient(transparent 62%, var(--cd-mint) 62%, var(--cd-mint) 96%, transparent 96%);
+  background: linear-gradient(transparent 62%, var(--ht-mint) 62%, var(--ht-mint) 96%, transparent 96%);
 }
 
-.cd-lede {
+.ht-lede {
   font-size: 21px;
   line-height: 1.55;
   max-width: 620px;
   margin: 32px 0 40px;
-  color: var(--cd-body);
+  color: var(--ht-body);
 }
 
-.cd-hero-actions {
+.ht-hero-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.cd-hero-media {
+.ht-hero-media {
   position: relative;
   aspect-ratio: 4 / 5;
   border-radius: 24px;
   overflow: hidden;
-  border: 2px solid var(--cd-ink);
-  background: var(--cd-media);
+  border: 2px solid var(--ht-ink);
+  background: var(--ht-media);
 }
 
-.cd-hero-media img {
+.ht-hero-media img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -257,13 +257,13 @@ html[data-force-theme="light"] :focus-visible {
    Client band
    -------------------------------------------------------------------------- */
 
-.cd-band {
-  border-top: 1px solid var(--cd-line);
-  border-bottom: 1px solid var(--cd-line);
-  background: var(--cd-band);
+.ht-band {
+  border-top: 1px solid var(--ht-line);
+  border-bottom: 1px solid var(--ht-line);
+  background: var(--ht-band);
 }
 
-.cd-band-inner {
+.ht-band-inner {
   padding-top: 36px;
   padding-bottom: 36px;
   display: grid;
@@ -272,15 +272,15 @@ html[data-force-theme="light"] :focus-visible {
   align-items: center;
 }
 
-.cd-band-label {
+.ht-band-label {
   max-width: 320px;
   font-size: 15px;
   line-height: 1.5;
   font-weight: 700;
-  color: var(--cd-muted);
+  color: var(--ht-muted);
 }
 
-.cd-band-logos {
+.ht-band-logos {
   display: flex;
   flex-wrap: wrap;
   gap: 20px 44px;
@@ -288,14 +288,14 @@ html[data-force-theme="light"] :focus-visible {
   justify-content: flex-end;
 }
 
-.cd-band-logos li {
+.ht-band-logos li {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.cd-band-logos img {
+.ht-band-logos img {
   width: auto;
   object-fit: contain;
   opacity: 0.85;
@@ -306,19 +306,19 @@ html[data-force-theme="light"] :focus-visible {
 /* Per-logo heights so the marks read at the same optical weight, the same
    approach the health page uses. Raw heights differ because the artwork
    aspect ratios do. */
-.cd-band-logos li:nth-child(1) img { height: 60px; }  /* NHS — wide mark */
-.cd-band-logos li:nth-child(2) img { height: 44px; }  /* Kent — tall wordmark */
-.cd-band-logos li:nth-child(3) img { height: 32px; }  /* Surrey — crest + text, very wide */
-.cd-band-logos li:nth-child(4) img { height: 48px; }  /* Sussex — tall US mark */
-.cd-band-logos li:nth-child(5) img { height: 46px; }  /* HFMT — square-ish */
+.ht-band-logos li:nth-child(1) img { height: 60px; }  /* NHS — wide mark */
+.ht-band-logos li:nth-child(2) img { height: 44px; }  /* Kent — tall wordmark */
+.ht-band-logos li:nth-child(3) img { height: 32px; }  /* Surrey — crest + text, very wide */
+.ht-band-logos li:nth-child(4) img { height: 48px; }  /* Sussex — tall US mark */
+.ht-band-logos li:nth-child(5) img { height: 46px; }  /* HFMT — square-ish */
 
 /* Hamburg's artwork is light gold (avg luminance ~165), so grayscale alone
    leaves it too pale against the band. Knock it down to match the others. */
-.cd-band-logos li:nth-child(5) img {
+.ht-band-logos li:nth-child(5) img {
   filter: grayscale(1) brightness(0.55) contrast(1.4);
 }
 
-.cd-band-logos li:hover img {
+.ht-band-logos li:hover img {
   opacity: 1;
   filter: grayscale(0);
 }
@@ -327,7 +327,7 @@ html[data-force-theme="light"] :focus-visible {
    Section heads
    -------------------------------------------------------------------------- */
 
-.cd-section-head {
+.ht-section-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -335,54 +335,54 @@ html[data-force-theme="light"] :focus-visible {
   margin-bottom: 48px;
 }
 
-.cd-section-head h2 {
+.ht-section-head h2 {
   font-size: clamp(32px, 3.6vw, 48px);
   line-height: 1.06;
 }
 
-.cd-section-head p {
+.ht-section-head p {
   margin-top: 6px;
   font-size: 19px;
   line-height: 1.6;
-  color: var(--cd-body);
+  color: var(--ht-body);
 }
 
 /* --------------------------------------------------------------------------
    What we build
    -------------------------------------------------------------------------- */
 
-.cd-cap-grid {
+.ht-cap-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.cd-cap {
+.ht-cap {
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--cd-ink);
+  border: 2px solid var(--ht-ink);
   border-radius: 22px;
   overflow: hidden;
-  background: var(--cd-card);
+  background: var(--ht-card);
 }
 
-.cd-cap-wide {
+.ht-cap-wide {
   grid-column: span 2;
 }
 
-.cd-cap-media {
+.ht-cap-media {
   position: relative;
   aspect-ratio: 4 / 3;
-  background: var(--cd-media);
-  border-bottom: 2px solid var(--cd-ink);
+  background: var(--ht-media);
+  border-bottom: 2px solid var(--ht-ink);
   overflow: hidden;
 }
 
-.cd-cap-media-wide {
+.ht-cap-media-wide {
   aspect-ratio: 16 / 6;
 }
 
-.cd-cap-media img {
+.ht-cap-media img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -390,7 +390,7 @@ html[data-force-theme="light"] :focus-visible {
   object-fit: cover;
 }
 
-.cd-cap h3 {
+.ht-cap h3 {
   font-size: 24px;
   letter-spacing: -0.02em;
   padding: 22px 24px;
@@ -400,14 +400,14 @@ html[data-force-theme="light"] :focus-visible {
    Testimonials (dark)
    -------------------------------------------------------------------------- */
 
-.cd-dark {
+.ht-dark {
   margin-top: clamp(64px, 8vw, 104px);
-  background: var(--cd-ink);
+  background: var(--ht-ink);
   color: #F1F5F4;
   padding: clamp(64px, 8vw, 96px) 0;
 }
 
-.cd-dark-head {
+.ht-dark-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -415,35 +415,35 @@ html[data-force-theme="light"] :focus-visible {
   margin-bottom: 56px;
 }
 
-.cd-dark-head h2 {
+.ht-dark-head h2 {
   font-size: clamp(32px, 3.6vw, 48px);
   line-height: 1.06;
 }
 
-.cd-dark-head p {
+.ht-dark-head p {
   font-size: 19px;
   line-height: 1.6;
-  color: var(--cd-dark-muted);
+  color: var(--ht-dark-muted);
 }
 
-.cd-quote-grid {
+.ht-quote-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-.cd-quote {
+.ht-quote {
   margin: 0;
   padding: 36px;
-  border: 1px solid var(--cd-dark-line);
+  border: 1px solid var(--ht-dark-line);
   border-radius: 22px;
-  background: var(--cd-dark-card);
+  background: var(--ht-dark-card);
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.cd-quote blockquote {
+.ht-quote blockquote {
   margin: 0;
   font-size: 20px;
   line-height: 1.5;
@@ -451,18 +451,18 @@ html[data-force-theme="light"] :focus-visible {
   text-wrap: pretty;
 }
 
-.cd-quote figcaption {
+.ht-quote figcaption {
   margin-top: auto;
   font-size: 15px;
   line-height: 1.5;
-  color: var(--cd-dark-muted);
-  border-top: 1px solid var(--cd-dark-line);
+  color: var(--ht-dark-muted);
+  border-top: 1px solid var(--ht-dark-line);
   padding-top: 20px;
 }
 
-.cd-quote figcaption strong {
+.ht-quote figcaption strong {
   display: block;
-  color: var(--cd-mint);
+  color: var(--ht-mint);
   font-weight: 700;
 }
 
@@ -470,7 +470,7 @@ html[data-force-theme="light"] :focus-visible {
    Projects
    -------------------------------------------------------------------------- */
 
-.cd-projects-head {
+.ht-projects-head {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 40px;
@@ -478,50 +478,50 @@ html[data-force-theme="light"] :focus-visible {
   margin-bottom: 48px;
 }
 
-.cd-projects-head h2 {
+.ht-projects-head h2 {
   font-size: clamp(32px, 3.6vw, 48px);
   line-height: 1.06;
   margin-bottom: 18px;
 }
 
-.cd-projects-head p {
+.ht-projects-head p {
   font-size: 19px;
   line-height: 1.6;
-  color: var(--cd-body);
+  color: var(--ht-body);
   max-width: 640px;
 }
 
-.cd-project-grid {
+.ht-project-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
-.cd-page .cd-project {
-  border: 2px solid var(--cd-ink);
+.ht-page .ht-project {
+  border: 2px solid var(--ht-ink);
   border-radius: 24px;
   overflow: hidden;
-  background: var(--cd-card);
+  background: var(--ht-card);
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cd-page .cd-project:hover,
-.cd-page .cd-project:focus-visible {
+.ht-page .ht-project:hover,
+.ht-page .ht-project:focus-visible {
   transform: translateY(-4px);
-  box-shadow: 0 12px 0 -4px var(--cd-mint);
+  box-shadow: 0 12px 0 -4px var(--ht-mint);
 }
 
-.cd-project-media {
+.ht-project-media {
   position: relative;
   aspect-ratio: 16 / 10;
-  border-bottom: 2px solid var(--cd-ink);
-  background: var(--cd-media);
+  border-bottom: 2px solid var(--ht-ink);
+  background: var(--ht-media);
   overflow: hidden;
 }
 
-.cd-project-media img {
+.ht-project-media img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -529,30 +529,30 @@ html[data-force-theme="light"] :focus-visible {
   object-fit: cover;
 }
 
-.cd-project-body {
+.ht-project-body {
   padding: 28px;
 }
 
-.cd-project-body h3 {
+.ht-project-body h3 {
   font-size: 28px;
   letter-spacing: -0.02em;
   margin-bottom: 10px;
 }
 
-.cd-project-body p {
+.ht-project-body p {
   font-size: 17px;
   line-height: 1.55;
-  color: var(--cd-body);
+  color: var(--ht-body);
 }
 
 /* --------------------------------------------------------------------------
    Process
    -------------------------------------------------------------------------- */
 
-.cd-pull {
+.ht-pull {
   margin: 0;
   padding: 40px 44px;
-  background: var(--cd-green);
+  background: var(--ht-green);
   color: #F1F5F4;
   border-radius: 24px;
   display: grid;
@@ -561,7 +561,7 @@ html[data-force-theme="light"] :focus-visible {
   align-items: end;
 }
 
-.cd-pull blockquote {
+.ht-pull blockquote {
   margin: 0;
   font-family: 'Bricolage Grotesque', system-ui, sans-serif;
   font-weight: 400;
@@ -571,55 +571,55 @@ html[data-force-theme="light"] :focus-visible {
   text-wrap: pretty;
 }
 
-.cd-pull figcaption {
+.ht-pull figcaption {
   font-size: 15px;
   line-height: 1.5;
   color: #BFD8CF;
   max-width: 190px;
 }
 
-.cd-steps {
+.ht-steps {
   margin-top: 56px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-.cd-step {
+.ht-step {
   padding: 28px;
-  border: 2px solid var(--cd-ink);
+  border: 2px solid var(--ht-ink);
   border-radius: 20px;
-  background: var(--cd-card);
+  background: var(--ht-card);
   display: flex;
   flex-direction: column;
   gap: 14px;
   min-height: 230px;
 }
 
-.cd-step-accent {
-  background: var(--cd-mint);
+.ht-step-accent {
+  background: var(--ht-mint);
 }
 
-.cd-step-num {
+.ht-step-num {
   font-family: 'Bricolage Grotesque', system-ui, sans-serif;
   font-weight: 800;
   font-size: 15px;
   letter-spacing: 0.1em;
-  color: var(--cd-blue);
+  color: var(--ht-blue);
 }
 
-.cd-step h3 {
+.ht-step h3 {
   font-size: 25px;
   letter-spacing: -0.02em;
 }
 
-.cd-step p {
+.ht-step p {
   font-size: 16px;
   line-height: 1.55;
-  color: var(--cd-body);
+  color: var(--ht-body);
 }
 
-.cd-step-accent p {
+.ht-step-accent p {
   color: #0B2E2A;
 }
 
@@ -627,46 +627,46 @@ html[data-force-theme="light"] :focus-visible {
    Contact
    -------------------------------------------------------------------------- */
 
-.cd-contact {
+.ht-contact {
   padding-bottom: clamp(72px, 9vw, 112px);
 }
 
-.cd-contact-inner {
+.ht-contact-inner {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 72px;
   align-items: start;
 }
 
-.cd-contact-text {
+.ht-contact-text {
   position: sticky;
   top: 110px;
 }
 
-.cd-contact-text h2 {
+.ht-contact-text h2 {
   font-size: clamp(32px, 3.4vw, 46px);
   line-height: 1.07;
   margin-bottom: 24px;
 }
 
-.cd-contact-text p {
+.ht-contact-text p {
   font-size: 19px;
   line-height: 1.6;
-  color: var(--cd-body);
+  color: var(--ht-body);
   margin-bottom: 28px;
 }
 
-.cd-contact-note {
+.ht-contact-note {
   font-size: 17px !important;
-  color: var(--cd-muted) !important;
-  border-left: 3px solid var(--cd-mint);
+  color: var(--ht-muted) !important;
+  border-left: 3px solid var(--ht-mint);
   padding-left: 18px;
   margin-bottom: 0 !important;
 }
 
-.cd-form {
-  background: var(--cd-card);
-  border: 2px solid var(--cd-ink);
+.ht-form {
+  background: var(--ht-card);
+  border: 2px solid var(--ht-ink);
   border-radius: 28px;
   padding: 40px;
   display: grid;
@@ -674,7 +674,7 @@ html[data-force-theme="light"] :focus-visible {
   gap: 22px;
 }
 
-.cd-form label {
+.ht-form label {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -682,40 +682,40 @@ html[data-force-theme="light"] :focus-visible {
   font-weight: 700;
 }
 
-.cd-form-full {
+.ht-form-full {
   grid-column: 1 / -1;
 }
 
-.cd-form input,
-.cd-form textarea {
+.ht-form input,
+.ht-form textarea {
   font: inherit;
   font-weight: 400;
-  color: var(--cd-ink);
+  color: var(--ht-ink);
   padding: 14px 16px;
-  border: 2px solid var(--cd-field-line);
+  border: 2px solid var(--ht-field-line);
   border-radius: 12px;
-  background: var(--cd-bg);
+  background: var(--ht-bg);
   width: 100%;
 }
 
-.cd-form textarea {
+.ht-form textarea {
   resize: vertical;
 }
 
-.cd-form input::placeholder,
-.cd-form textarea::placeholder {
-  color: var(--cd-faint);
+.ht-form input::placeholder,
+.ht-form textarea::placeholder {
+  color: var(--ht-faint);
   opacity: 1;
 }
 
-.cd-form input:focus,
-.cd-form textarea:focus {
-  border-color: var(--cd-green);
-  background: var(--cd-card);
+.ht-form input:focus,
+.ht-form textarea:focus {
+  border-color: var(--ht-green);
+  background: var(--ht-card);
   outline: none;
 }
 
-.cd-form-foot {
+.ht-form-foot {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
@@ -723,9 +723,9 @@ html[data-force-theme="light"] :focus-visible {
   flex-wrap: wrap;
 }
 
-.cd-form-foot p {
+.ht-form-foot p {
   font-size: 15px;
-  color: var(--cd-muted);
+  color: var(--ht-muted);
 }
 
 /* --------------------------------------------------------------------------
@@ -733,99 +733,99 @@ html[data-force-theme="light"] :focus-visible {
    -------------------------------------------------------------------------- */
 
 @media (max-width: 1000px) {
-  .cd-hero-inner,
-  .cd-section-head,
-  .cd-dark-head,
-  .cd-contact-inner {
+  .ht-hero-inner,
+  .ht-section-head,
+  .ht-dark-head,
+  .ht-contact-inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .cd-hero-media {
+  .ht-hero-media {
     aspect-ratio: 16 / 10;
     max-width: 620px;
   }
 
-  .cd-contact-text {
+  .ht-contact-text {
     position: static;
   }
 
-  .cd-band-inner {
+  .ht-band-inner {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .cd-band-label {
+  .ht-band-label {
     max-width: none;
   }
 
-  .cd-band-logos {
+  .ht-band-logos {
     justify-content: flex-start;
   }
 
-  .cd-cap-grid {
+  .ht-cap-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cd-cap-wide {
+  .ht-cap-wide {
     grid-column: span 2;
   }
 
-  .cd-steps {
+  .ht-steps {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 720px) {
-  .cd-wrap {
+  .ht-wrap {
     padding: 0 20px;
   }
 
-  .cd-lede {
+  .ht-lede {
     font-size: 19px;
   }
 
-  .cd-cap-grid,
-  .cd-quote-grid,
-  .cd-project-grid,
-  .cd-steps {
+  .ht-cap-grid,
+  .ht-quote-grid,
+  .ht-project-grid,
+  .ht-steps {
     grid-template-columns: 1fr;
   }
 
-  .cd-cap-wide {
+  .ht-cap-wide {
     grid-column: span 1;
   }
 
-  .cd-cap-media-wide {
+  .ht-cap-media-wide {
     aspect-ratio: 4 / 3;
   }
 
-  .cd-projects-head {
+  .ht-projects-head {
     grid-template-columns: 1fr;
     justify-items: start;
   }
 
-  .cd-pull {
+  .ht-pull {
     grid-template-columns: 1fr;
     padding: 32px 28px;
     align-items: start;
   }
 
-  .cd-pull figcaption {
+  .ht-pull figcaption {
     max-width: none;
   }
 
-  .cd-form {
+  .ht-form {
     grid-template-columns: 1fr;
     padding: 28px 24px;
   }
 
-  .cd-step {
+  .ht-step {
     min-height: 0;
   }
 
-  .cd-btn-primary,
-  .cd-btn-outline {
+  .ht-btn-primary,
+  .ht-btn-outline {
     font-size: 17px;
     padding: 14px 26px;
   }

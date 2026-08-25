@@ -29,7 +29,7 @@
     apply(next);
   }
 
-  // Forced theme (e.g. health page is always light)
+  // Forced theme (e.g. the health-tech page is always light)
   var forced = document.documentElement.getAttribute('data-force-theme');
   if (forced) {
     apply(forced);

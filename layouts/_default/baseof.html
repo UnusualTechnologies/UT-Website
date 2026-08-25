@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}"{{ if in (slice "health" "co-design") .Section }} data-force-theme="light"{{ end }}>
+<html lang="{{ .Site.LanguageCode }}"{{ if eq .Section "health-tech" }} data-force-theme="light"{{ end }}>
 <head>
   <script>
     (function(){var f=document.documentElement.getAttribute('data-force-theme');if(f){document.documentElement.setAttribute('data-theme',f);return}var t=localStorage.getItem('ut-theme');if(!t){t='dark';localStorage.setItem('ut-theme',t)}document.documentElement.setAttribute('data-theme',t)})();
@@ -36,24 +36,21 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ "favicon-192x192.png" | relURL }}">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}?v={{ readFile "static/css/style.css" | crypto.MD5 }}">
-  {{ if eq .Section "health" }}
-  <link rel="stylesheet" href="{{ "css/health-guidea.css" | relURL }}">
-  {{ end }}
-  {{ if eq .Section "co-design" }}
+  {{ if eq .Section "health-tech" }}
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "css/co-design.css" | relURL }}?v={{ readFile "static/css/co-design.css" | crypto.MD5 }}">
+  <link rel="stylesheet" href="{{ "css/health-tech.css" | relURL }}?v={{ readFile "static/css/health-tech.css" | crypto.MD5 }}">
   {{ end }}
   {{ partial "structured-data.html" . }}
   {{ if not hugo.IsServer }}
   <script defer src="https://umami.unusualtechnologies.com/script.js" data-website-id="1b794df6-cd62-4cb0-8eb8-6c25eec6ab49"></script>
   {{ end }}
 </head>
-<body class="{{ with .Params.bodyClass }}{{ . }}{{ end }}{{ if .IsHome }} home{{ end }}" data-base-path="{{ "" | relURL }}">
+<body class="{{ with .Params.bodyClass }}{{ . }}{{ end }}{{ if .IsHome }} home{{ end }}" data-base-path="{{ "" | relURL }}" data-section="{{ .Section }}">
   <a class="skip-link" href="#content">Skip to content</a>
 
   {{ partial "header.html" . }}
 
-  {{ if ne .Section "co-design" }}{{ partial "breadcrumbs.html" . }}{{ end }}
+  {{ if ne .Section "health-tech" }}{{ partial "breadcrumbs.html" . }}{{ end }}
 
   <main id="content">
     {{ block "main" . }}{{ end }}
@@ -62,10 +59,12 @@
   {{ if not .IsHome }}{{ partial "footer.html" . }}{{ end }}
 
   <div id="shader-bg"></div>
+  {{ partial "return-link.html" . }}
   <script src="{{ "js/main.js" | relURL }}?v={{ readFile "static/js/main.js" | crypto.MD5 }}"></script>
   <script src="{{ "js/carousel.js" | relURL }}?v={{ readFile "static/js/carousel.js" | crypto.MD5 }}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="{{ "js/shader-bg.js" | relURL }}?v={{ readFile "static/js/shader-bg.js" | crypto.MD5 }}"></script>
   <script src="{{ "js/theme.js" | relURL }}?v={{ readFile "static/js/theme.js" | crypto.MD5 }}"></script>
+  <script src="{{ "js/return-link.js" | relURL }}?v={{ readFile "static/js/return-link.js" | crypto.MD5 }}"></script>
 </body>
 </html>
