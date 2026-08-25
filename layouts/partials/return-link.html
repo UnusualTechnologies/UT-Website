@@ -1,5 +1,5 @@
 {{/*
-  Return link — a fixed bottom-left link back to the Health Tech landing page.
+  Return link — a fixed bottom-right link back to the Health Tech landing page.
 
   Health Tech is not in the main nav, so anyone who lands there and clicks
   through to Projects or About has no way back. This gives them one, but only
@@ -11,12 +11,12 @@
 */}}
 {{ if ne .Section "health-tech" }}
   {{ with site.GetPage "/health-tech" }}
-  <nav class="return-link" id="return-link" aria-label="Return to Health Tech">
+  <nav class="return-link" id="return-link" aria-label="Return to Health Tech page">
     <a class="return-link-go" href="{{ .RelPermalink }}">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Health Tech
+      Back to Health Tech Page
     </a>
-    <button type="button" class="return-link-close" aria-label="Dismiss the Health Tech link">
+    <button type="button" class="return-link-close" aria-label="Dismiss the Health Tech page link">
       <span aria-hidden="true">&times;</span>
     </button>
   </nav>

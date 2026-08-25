@@ -1,7 +1,7 @@
 /**
  * Return link
  * - Visiting the health-tech page sets a flag in localStorage
- * - Every other page reads that flag and reveals the bottom-left link
+ * - Every other page reads that flag and reveals the bottom-right link
  * - The close button clears the flag, so the link stays gone until the
  *   visitor goes back to the health-tech page
  */

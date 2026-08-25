@@ -2639,7 +2639,7 @@ textarea.ideas-input {
 
 .return-link {
   position: fixed;
-  left: 24px;
+  right: 24px;
   bottom: 24px;
   /* Below .site-header (1000). The header is position:fixed with a z-index, so
      it forms a stacking context and the mobile nav drawer inside it paints at
@@ -2717,7 +2717,7 @@ textarea.ideas-input {
 
 @media (max-width: 544px) {
   .return-link {
-    left: 12px;
+    right: 12px;
     bottom: 12px;
     max-width: calc(100vw - 24px);
     padding: 6px 6px 6px 12px;
