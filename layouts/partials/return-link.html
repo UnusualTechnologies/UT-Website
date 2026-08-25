@@ -1,0 +1,24 @@
+{{/*
+  Return link — a fixed bottom-left link back to the Health Tech landing page.
+
+  Health Tech is not in the main nav, so anyone who lands there and clicks
+  through to Projects or About has no way back. This gives them one, but only
+  if they have actually been there: static/js/return-link.js reveals it when it
+  finds the flag in localStorage, and strips it from the DOM when it doesn't.
+
+  Wrapped in site.GetPage so that if the page is ever removed or renamed this
+  renders nothing, rather than handing visitors a link to a 404.
+*/}}
+{{ if ne .Section "health-tech" }}
+  {{ with site.GetPage "/health-tech" }}
+  <nav class="return-link" id="return-link" aria-label="Return to Health Tech">
+    <a class="return-link-go" href="{{ .RelPermalink }}">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Health Tech
+    </a>
+    <button type="button" class="return-link-close" aria-label="Dismiss the Health Tech link">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </nav>
+  {{ end }}
+{{ end }}

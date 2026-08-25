@@ -2632,3 +2632,102 @@ textarea.ideas-input {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Return link
+   ========================================================================== */
+
+.return-link {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  /* Below .site-header (1000). The header is position:fixed with a z-index, so
+     it forms a stacking context and the mobile nav drawer inside it paints at
+     1000 too — which means the opaque drawer covers this while the menu is
+     open, with no JS coordination needed. */
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100vw - 48px);
+  padding: 8px 8px 8px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(4px);
+  /* visibility is discrete, so it steps rather than interpolates. Delaying it
+     by the fade duration keeps the node visible until the fade finishes;
+     .is-visible resets the delay so showing is immediate. */
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+}
+
+.return-link.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
+}
+
+/* Colour is deliberately left to the global `a` rules so the link matches every
+   other link in both themes. Do not set `color` here with a single class:
+   `[data-theme="light"] a` is 0,1,1 and outranks it regardless of source order. */
+.return-link-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-xs);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.return-link-go:hover {
+  text-decoration: underline;
+}
+
+.return-link-close {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 4px;
+  color: var(--color-text-secondary);
+  font-family: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.return-link-close:hover,
+.return-link-close:focus {
+  color: var(--color-text-primary);
+  background: var(--color-surface-overlay);
+}
+
+@media (max-width: 544px) {
+  .return-link {
+    left: 12px;
+    bottom: 12px;
+    max-width: calc(100vw - 24px);
+    padding: 6px 6px 6px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .return-link,
+  .return-link.is-visible {
+    transform: none;
+    transition: none;
+  }
+}
