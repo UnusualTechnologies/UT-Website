@@ -1,20 +1,27 @@
 ---
-title: "Bowling VFX"
-type: "projects"
-project_type: "Client"
-tags:
-  - "art"
-  - "attraction"
-  - "unity"
-  - "vfx"
-description: "Technical art and VFX for a Middle Eastern bowling attraction themed around environmental super heroes."
+title: Bowling VFX
+type: projects
 status: unlisted
+project_type: Client
+tags:
+  - art
+  - attraction
+  - unity
+  - vfx
 prominence: 0
-featured_image: "/images/projects/bowling-vfx.webp"
-
-overview: "We helped out a fellow creative company who were having issues with their technical art. Their client was a Middle Eastern based bowling business that wanted their alleys themed around environmental super heroes. The full project is due to release in 2026."
-
-technologies: ["Unity", "Shaders", "Attraction"]
+featured_image: /images/projects/bowling-vfx.webp
+banner_image: ''
+overview: We worked with Teq4 to provide help with their VFX for a Cyber Bowling experience in Saudi Arabia. Their alleys are themed around environmental super heroes.
+overview_video_id: ''
+technologies:
+  - Unity
+  - Shaders
+  - Attraction
+try_it: null
+overview_image: null
+client: null
+testimonial: null
+description: Technical art and VFX for a Middle Eastern bowling attraction themed around environmental super heroes.
 ---
 
 <video autoplay loop muted playsinline preload="none">
