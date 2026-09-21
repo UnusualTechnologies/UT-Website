@@ -1,7 +1,7 @@
 ---
 title: Bowling VFX
 type: projects
-status: draft
+status: unlisted
 project_type: Client
 tags:
   - art
