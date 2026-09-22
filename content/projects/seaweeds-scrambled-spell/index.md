@@ -25,7 +25,7 @@ try_it:
   text: ''
   links:
     - label: Play it now
-      url: https://web-apps.unusualtechnologies.com/haven-halloween/indexx.html
+      url: https://web-apps.unusualtechnologies.com/haven-halloween/index/html
     - label: Download the AR markers
       url: /downloads/Seaweeds-AR-Markers.pdf
 overview_image: null
