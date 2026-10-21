@@ -1,7 +1,7 @@
 ---
 title: Art Lead
 is_listing: true
-status: unlisted
+status: live
 ---
 
 **Compensation:** £60,000 (£75,000 full-time equivalent) 
