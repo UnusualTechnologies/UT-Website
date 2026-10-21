@@ -52,6 +52,4 @@ We’re moving towards fewer, higher-value projects, and our visuals need to mat
 
 ### **How to Apply**
 
-Please send us your portfolio, and any additional proof of your qualification for this role.
-
-Contact with subject line “Art Lead”
+If you think you'd be a good fit or you'd like to learn more we'd love to hear from you. To begin that conversation please send us your portfolio by email with subject line “Art Lead” by Friday 30th October
