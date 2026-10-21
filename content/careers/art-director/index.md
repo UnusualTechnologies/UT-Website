@@ -26,7 +26,7 @@ Unusual Technologies is a small, growing team of specialists. We take on project
 
 We’re moving towards fewer, higher-value projects, and our visuals need to match. This is the hire that makes that happen.
 
-**What you’ll do**
+### **What you’ll do**
 
 - Own the high visual standard across every client and in-house project 
 - Produce much of the work yourself with tools/AI, including and UI/UX design, 2D art, 3D modelling and texturing, animation, pitch decks, website, etc.
@@ -35,7 +35,7 @@ We’re moving towards fewer, higher-value projects, and our visuals need to mat
 - Establish and enforce good processes and pipelines,including project planning, task estimation and prioritisation, and file hygiene 
 - Communicate and collaborate closely with the wider team and our clients
 
-**What we’re looking for**
+### **What we’re looking for**
 
 - A strong eye across visual disciplines, both 2D and 3D
 - Experience producing art for real-time engines (ideally Unity) and an understanding of their constraints. 
@@ -46,7 +46,7 @@ We’re moving towards fewer, higher-value projects, and our visuals need to mat
 - Disciplined and process-driven, holding yourself and others to the same standard 
 - You keep up to date with new tools, processes and trends 
 
-**Nice to have**
+### **Nice to have**
 
 - VFX, technical scripting, sketching and concept, video editing
 
