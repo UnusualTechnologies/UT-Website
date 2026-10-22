@@ -4,7 +4,7 @@ is_listing: true
 status: live
 ---
 
-**Compensation:** £60,000 (£75,000 full-time equivalent) 
+**Compensation:** Up to £60,000 (£75,000 full-time equivalent) 
 
 **Hours:** 30 hrs/week, with room for flexibility. 
 
