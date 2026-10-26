@@ -1,13 +1,13 @@
 ---
 title: OceanX Digital Twin
 type: projects
-status: unlisted
+status: live
 project_type: Client
 tags:
   - data-visualisation
   - unity
   - vfx
-prominence: 50
+prominence: 100
 featured_image: /images/projects/OXDigitalTwin_Thumb.webp
 banner_image: /images/projects/OXDigitalTwin_Banner.webp
 overview: |-
