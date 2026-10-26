@@ -1,7 +1,7 @@
 ---
 title: OceanX Digital Twin
 type: projects
-status: unlisted
+status: live
 project_type: Client
 tags:
   - data-visualisation
