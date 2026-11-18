@@ -4,7 +4,7 @@ is_listing: true
 status: live
 ---
 
-**Compensation:** £30,000 - £40,000
+**Compensation:** £40,000 - £50,000 FTE
 
 **Location:** 2 office days in Brighton, (room for flexibility)
 
