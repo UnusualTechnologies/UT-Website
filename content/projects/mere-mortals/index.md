@@ -12,7 +12,7 @@ tags:
 prominence: 45
 featured_image: /images/projects/mere-mortals.webp
 banner_image: "/images/projects/banners/mere-mortals.png"
-overview: We were hired by Oobikoo Games to create a game and engine for making games inspired by Vampire Survivors. This was a more traditional videogame for us to make, but really allowed us to highlight our capabilities in game development!
+overview: "For Oobikoo Games, we designed and built Mere Mortals, an Ancient Greek pixel-art bullet-heaven game playable in the browser, together with all its art and sound and a customisable engine so the client can keep making new content themselves."
 overview_video_id: jFkRcovatls
 technologies:
   - Video Game
@@ -31,17 +31,24 @@ testimonial:
   person_name: John
   person_org: Oobikoo Games
   video_id: XRgHhMEdIDw
+key_facts:
+  - label: "Genre"
+    value: "Bullet heaven / survivor-like, pixel art"
+  - label: "Our role"
+    value: "Game design input, development, all art and sound, engine tools"
+  - label: "Timeline"
+    value: "Two cycles, about two months"
+  - label: "Platform"
+    value: "Unity, WebGL (plays in the browser)"
 ---
 
-## The Objective
+{{% carousel title="Gameplay" %}}
+![Mere Mortals gameplay at level 12: the player surrounded by hundreds of demons, priests and buffalo, with damage numbers on screen.](/images/projects/Screenshot-2025-02-10-143422-1-768x432.png)
+![Mere Mortals Level Up screen offering three upgrades: new Holy Aura, Swipe level 4 and Mighty Hammer level 3.](/images/projects/Screenshot-2025-02-10-143125-768x432.png)
+![Mere Mortals chest reward screen granting five items, including weapon upgrades and two heart pickups.](/images/projects/Screenshot-2025-02-10-143209-768x432.png)
+{{% /carousel %}}
 
-We were tasked with developing an Ancient Greek themed 'Survivor-Like' or 'Bullet-Heaven' game, and an engine that would easily allow the client to add, remove, or change existing weapons, enemies, characters, and levels with a high degree of customisability throughout.
-
-In the end, we wouldn't be responsible for publishing, but would instead provide the client with and engine for them to continue to develop their own games with.
-
-For the prototype, we had a focus on a pixel art style, developing; sprites, animations, UI and tilemaps needed to demonstrate the functionality. This involved a much more iterative approach of mocking up sprites, getting client feedback and iterating until they were happy.
-
-{{% carousel %}}
+{{% carousel title="Enemy sprites" %}}
 ![Pixel art sprite animation of a Mere Mortals cultist enemy in a red loincloth, holding a rock above his head.](/images/projects/Crazies.gif)
 ![Pixel art running animation of a dark grey demon dog enemy with red eyes and a gold collar, made for Mere Mortals.](/images/projects/Demon-Dog.gif)
 ![Pixel art sprite of a winged red demon with horns and a scythe, one of the Mere Mortals enemy animations.](/images/projects/Demon.gif)
@@ -51,26 +58,52 @@ For the prototype, we had a focus on a pixel art style, developing; sprites, ani
 ![Pixel art sprite of a kneeling worshipper in pale robes with hands clasped in prayer, a Mere Mortals enemy.](/images/projects/Woshipper.gif)
 {{% /carousel %}}
 
-## Development
+![Custom Unity Weapon Item Editor for Mere Mortals, showing per-level damage, area, cooldown and pierce stats for the Swipe weapon.](/images/projects/Screenshot-2025-02-10-161225-1024x520.png "The weapon editor we built for the client")
 
-This was done over the span of two cycles (about two months) and some bonus work after to add extra functionality.
+<!-- writeup -->
 
-The first cycle focused on the engine – this involved the core functionality for a working prototype with a game loop; and the second cycle focused on adding content such as new enemies, weapons, a level and items such as chests which provide you with upgrades to collected items.
+## The brief
 
-{{% carousel %}}
-![Mere Mortals gameplay at level 12: the player surrounded by hundreds of demons, priests and buffalo, with damage numbers on screen.](/images/projects/Screenshot-2025-02-10-143422-1-768x432.png)
-![Mere Mortals Level Up screen offering three upgrades: new Holy Aura, Swipe level 4 and Mighty Hammer level 3.](/images/projects/Screenshot-2025-02-10-143125-768x432.png)
-![Mere Mortals chest reward screen granting five items, including weapon upgrades and two heart pickups.](/images/projects/Screenshot-2025-02-10-143209-768x432.png)
-{{% /carousel %}}
+Oobikoo Games asked us for an Ancient Greek-themed bullet-heaven game, the genre also called "survivor-like", where one hero fights off ever-growing waves of enemies with weapons that fire automatically. They wanted two things: a playable prototype, and an engine they could use to add, remove and change weapons, enemies, characters and levels themselves afterwards. Publishing stayed with the client.
 
-With the possibility for large numbers of entities on screen (from enemies, to EXP pickups, to damage counters) there was a big focus on optimised code and logic, ensuring the game's performance always remained high, even with the limitation of WebGL.
+## What we made
 
-It was developed in Unity and used certain additional plugins to add extra functionality and help speed up and improve the development process.
+- **A playable game**, built in Unity for WebGL so it runs in a web browser.
+- **Seven weapons:** Swipe, Freezing Breath, Mighty Hammer, Fist of God, Lightning Strike, Cupid's Arrow and Holy Aura. Each upgrades through levels; on levelling up, players choose between new weapons and upgrades.
+- **Enemies** including mortals, cultists, worshippers, evil priests, demons, demon dogs and charging buffalo, plus chests that award several upgrades at once.
+- **All the art and sound:** pixel-art characters, animations, tilemaps and UI. We mocked up sprites, took the client's feedback and iterated until they were happy.
 
-## Engine Tools
+## Built for hundreds of enemies
 
-Whilst we spent some time balancing weapons and enemies in order to make an enjoyable prototype, our real goal was to provide the client with a helpful array of tools that could be used to easily alter the game's behaviour. These included having easily customisable weapon stats for each of the weapon's levels, being able to adjust probabilities of certain item drops, or global constant settings such as the base move speed or knockback duration.
+A game like this can have hundreds of enemies on screen at once, plus experience pickups and damage numbers. Browsers give games less processing power than a desktop build, so we put a lot of work into efficient code to keep the game running smoothly in WebGL.
 
-We also made custom functionality as easy to add as possible: so even though weapons may require custom locomotive or damaging logic, the component-based design makes them easy to add and swap out.
+## Tools the client can use
 
-![Custom Unity Weapon Item Editor for Mere Mortals, showing per-level damage, area, cooldown and pierce stats for the Swipe weapon.](/images/projects/Screenshot-2025-02-10-161225-1024x520.png)
+The engine was the main deliverable. We built custom Unity editors so the client can change the game without writing code:
+
+- per-level stats for every weapon, such as damage, area, cooldown and pierce (for example, Swipe has 8 levels, with damage rising from 10 to 40);
+- drop probabilities for items;
+- global settings such as base move speed and knockback duration.
+
+Weapons use a component-based design, so new weapons with their own movement or damage logic can be added and swapped without rewriting the rest of the game.
+
+## How the project ran
+
+The work ran over two cycles of about a month each. The first built the engine and a working game loop; the second added content: new enemies, weapons, a level and chests. We then did some extra work to add further features.
+
+## Technology
+
+| Part | Technology |
+|---|---|
+| Engine | Unity, with custom editor tools |
+| Platform | WebGL, playable in the browser |
+| Art | 2D pixel art: sprites, animations, tilemaps, UI |
+| Architecture | Component-based weapons and enemies |
+
+## Questions
+
+**Can I play Mere Mortals?**
+Yes. Use the "Play it now" link at the top of this page.
+
+**Does Unusual Technologies make games for other studios?**
+Yes. For Mere Mortals we handled game design input, programming, art, sound and tools, and handed over an engine the client can keep building on.

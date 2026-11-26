@@ -38,7 +38,7 @@ Planned, agreed and not built yet:
 - `robots.txt` allows everything except `/admin/`, explicitly allows the main AI crawlers (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended, PerplexityBot, Amazonbot, FacebookBot), and links the sitemap.
 - Only the live domain may be indexed: a build with any other base URL (e.g. the GitHub Pages staging site) gets `noindex, nofollow` (Douglas Kelly, 2026-11-26, staging copies would compete with the live site).
 - `llms.txt` is a hand-written summary of the company, services, key pages and selected projects.
-- Every regular page also has a Markdown copy (`index.md` beside `index.html`): title, description and body. Front matter (overview, client) is not included.
+- Every regular page also has a Markdown copy (`index.md` beside `index.html`): title, description (else `overview`), client, key facts, technologies, video link, video description, client quote, then the body. Shortcodes in the body appear as raw text.
 - `static/_headers` advertises `llms.txt`, the sitemap and RSS in `Link` headers.
 - Sitemap: Hugo default.
 
@@ -63,6 +63,6 @@ Planned, agreed and not built yet:
 ## Open questions
 
 - `llms.txt` is maintained by hand and lists 7 projects. Generate it from content instead? (bootstrap, 2026-11-26)
-- The Markdown copies leave out `overview` and `client`. Include them? (bootstrap, 2026-11-26)
+- The Markdown copies show shortcodes such as `{{% carousel %}}` as raw text. Strip them? (2026-11-26)
 - JSON-LD values are not escaped, so a quote mark in an overview could break it. (bootstrap, 2026-11-26)
 - 35 of 37 projects have no `description`; they rely on `overview`. (bootstrap, 2026-11-26)

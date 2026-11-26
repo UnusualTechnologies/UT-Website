@@ -2720,3 +2720,81 @@ textarea.ideas-input {
     transition: none;
   }
 }
+
+/* --- Case study: key facts, video description, write-up (provisional, awaiting artist pass) --- */
+
+.project-key-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px 24px;
+  margin: 24px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-surface-border);
+  border-bottom: 1px solid var(--color-surface-border);
+}
+
+.project-key-fact dt {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-tertiary);
+  margin-bottom: 4px;
+}
+
+.project-key-fact dd {
+  margin: 0;
+  color: var(--color-white);
+}
+
+.video-description {
+  margin-top: 12px;
+  background: var(--color-accent-bg);
+  border: 1px solid var(--color-accent-border);
+  border-radius: 8px;
+  padding: 10px 16px;
+}
+
+.video-description > summary {
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.video-description-text {
+  margin-top: 12px;
+  color: var(--color-text-secondary);
+}
+
+.project-writeup {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-writeup > h2:first-child {
+  margin-top: 0;
+}
+
+.project-writeup p,
+.project-writeup li {
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+.project-writeup table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.project-writeup th,
+.project-writeup td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--color-surface-border);
+  color: var(--color-text-primary);
+}
+
+.project-writeup th {
+  color: var(--color-primary);
+  font-weight: 500;
+}
