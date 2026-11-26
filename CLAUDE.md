@@ -48,3 +48,16 @@ Key fields for `content/projects/*/index.md`:
 - `overview_video_id` — YouTube video ID only (not full URL)
 - `banner_image` — optional hero banner (different from featured_image)
 - `try_it`, `overview_image`, `client`, `testimonial` — optional nested objects
+
+## Design docs
+
+The design is the source of truth in `docs/design/`: start at `docs/design/README.md`
+(index + code-path map), then read only the pages you need.
+
+- Before changing user/player-facing behaviour or values, use the `design-docs` skill.
+- If a change contradicts a recorded decision (vision, Intent, Tried & rejected, or a
+  stamped line), stop: show who made it and when, suggest talking to them, and only
+  proceed when the person you're working with says so.
+- At the end of a task that changed designed behaviour, update the relevant page(s)
+  in place, or say "no design change" with a one-line reason.
+- Keep pages short: vision ≤150 lines, system pages ≤250, index ≤60.
