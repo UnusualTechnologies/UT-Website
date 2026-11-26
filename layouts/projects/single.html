@@ -38,6 +38,18 @@
         </div>
         {{ end }}
 
+        <!-- Key facts (provisional layout, see docs/design/systems/case-studies.md) -->
+        {{ with .Params.key_facts }}
+        <dl class="project-key-facts">
+          {{ range . }}
+          <div class="project-key-fact">
+            <dt>{{ .label }}</dt>
+            <dd>{{ .value }}</dd>
+          </div>
+          {{ end }}
+        </dl>
+        {{ end }}
+
         <!-- Technologies -->
         <h2 class="tech-heading">Technologies</h2>
         {{ with .Params.technologies }}
@@ -69,8 +81,14 @@
       {{ if .Params.overview_video_id }}
       <div class="project-overview-media">
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/{{ .Params.overview_video_id }}?rel=0&modestbranding=1" frameborder="0" allowfullscreen loading="lazy"></iframe>
+          <iframe src="https://www.youtube.com/embed/{{ .Params.overview_video_id }}?rel=0&modestbranding=1" title="{{ .Title }} video" frameborder="0" allowfullscreen loading="lazy"></iframe>
         </div>
+        {{ with .Params.video_description }}
+        <details class="video-description">
+          <summary>Read video description</summary>
+          <div class="video-description-text">{{ . | markdownify }}</div>
+        </details>
+        {{ end }}
       </div>
       {{ else }}
       {{ with .Params.overview_image }}
@@ -87,9 +105,15 @@
     </section>
 
     <!-- Case Study -->
-    {{ if .Content }}
+    {{/* A "<!-- writeup -->" line in the body splits it: visuals above it render here,
+         the written case study below it renders after the testimonial. */}}
+    {{ $parts := split (string .Content) "<!-- writeup -->" }}
+    {{ $visuals := index $parts 0 }}
+    {{ $writeup := "" }}
+    {{ if gt (len $parts) 1 }}{{ $writeup = index $parts 1 }}{{ end }}
+    {{ if trim $visuals " \n\r\t" }}
     <section class="section project-content">
-      {{ .Content }}
+      {{ $visuals | safeHTML }}
     </section>
     {{ end }}
 
@@ -131,6 +155,13 @@
           {{ with .person_org }}<span>{{ . }}</span>{{ end }}
         </div>
       </div>
+    </section>
+    {{ end }}
+
+    <!-- Written case study -->
+    {{ with $writeup }}
+    <section class="section project-content project-writeup">
+      {{ . | safeHTML }}
     </section>
     {{ end }}
 

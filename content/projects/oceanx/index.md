@@ -11,7 +11,7 @@ prominence: 95
 featured_image: "/images/projects/oceanx.webp"
 banner_image: "/images/projects/banners/oceanx.webp"
 
-overview: "We collaborated with OceanX to produce a digital twin of the marine world, utilising advanced data visualisation techniques to provide an experience that enables scientists and researchers to explore data in an engaging and innovative way."
+overview: "For OceanX, we built a real-time 3D replay of a deep-sea ROV dive in Unity, turning sonar maps, dive tracks, water readings and species detections from OceanX missions into an environment scientists can explore."
 
 technologies: ["Digital Twin", "GIS data", "VFX"]
 
@@ -20,48 +20,76 @@ client:
   website: "https://oceanx.org/"
 
 overview_video_id: "ipCscTs8UiA"
+key_facts:
+  - label: "Sector"
+    value: "Ocean science and research"
+  - label: "Our role"
+    value: "Data processing, 3D modelling, real-time visualisation"
+  - label: "Platform"
+    value: "Unity (real-time 3D)"
+  - label: "Data shown"
+    value: "Sonar seabed maps, ROV dive track, depth, temperature, salinity and oxygen, species detections"
 ---
-
-Emulating a deep-sea dive in the OceanXplorer submersible, the project allows the user to discover the biodiversity of the ocean in correlation with data collected across OceanX' missions. Using realtime 3D techniques (rendered in Unity), the ROV follows an animated trail, visualising the collection of data across time and space in an exploration-based virtual environment.
 
 <div class="gallery gallery-2col">
 
-![3D model of the OceanX ROV at 248 m depth, with live temperature, pressure, salinity and oxygen readouts and a sidebar identifying jellyfish species.](/images/projects/oceanxweb-1024x522.webp)
+![3D model of the OceanX ROV at 248 m depth, with live temperature, pressure, salinity and oxygen readouts and a sidebar identifying jellyfish species.](/images/projects/oceanxweb-1024x522.webp "Mid-water at 248 m")
 
-![The OceanX ROV near the seabed at 1,000 m; boxes mark species detections and a panel reports 86% species-identification accuracy across 100,000 possible species.](/images/projects/oceanxweb2-1024x509.webp)
+![The OceanX ROV near the seabed at 1,000 m; boxes mark species detections and a panel reports 86% species-identification accuracy across 100,000 possible species.](/images/projects/oceanxweb2-1024x509.webp "Species detections at 1,000 m")
+
+</div>
+
+<div class="gallery gallery-2col">
+
+![Labelled 3D model of the OceanX ROV showing its sensors, propulsion thrusters and Schilling grabber arms.](/images/projects/oceanxweb3-1024x864.webp "The ROV, modelled from its blueprints")
+
+![Seamount sonar data as a colour depth map (top) and the same terrain rebuilt as a 3D environment in Unity (bottom).](/images/projects/oceanxweb4.webp "From sonar data to 3D terrain")
 
 </div>
 
-This project aims to provide scientists and researchers with a legible way to process, understand and experience data. Here, we have employed our expertise in software to show our commitment to our client's vision – allowing the user to probe deeper below the surface and discover vital insights into ocean biodiversity and marine conservation.
+![The OceanX ROV's recorded dive path traced as a white line across 3D seafloor terrain.](/images/projects/oceanxweb5-1024x787.webp "The recorded dive path")
 
-Designed for interactive and demonstrative experiences, the project meets both the client's immediate needs whilst enabling a platform for future education and learning.
+<!-- writeup -->
 
-## Development
+## The challenge
 
-We corresponded with our client throughout the process, regularly exchanging data to ensure the project is accurate and insightful. We used data processing software to map out the findings, comparing and joining information to generate precise 3D models in Unity.
+OceanX collects huge amounts of data on its deep-sea missions: sonar maps of the seabed, the path of each ROV (remotely operated vehicle) dive, water measurements taken along the way, and the marine life its AI identifies in the footage. Spread across spreadsheets and charts, that data is hard to take in. OceanX wanted scientists and researchers to see it together, in place and in time, as if they were on the dive.
 
-<div class="three-col-layout">
-<div class="three-col-left">
+## What we built
 
-![Seamount sonar data as a colour depth map (top) and the same terrain rebuilt as a 3D environment in Unity (bottom).](/images/projects/oceanxweb4.webp)
+A real-time 3D replay of an ROV dive, built in Unity:
 
-</div>
-<div class="three-col-center">
+- **The seabed** is rebuilt from sonar topography data, so the terrain matches the real seamount.
+- **The ROV** follows its recorded path through the water. Its 3D model is built from OceanX's blueprints and labelled: sensors (altimeter, depth sensors, multibeam sonar, RBR sensor, fluxgate compass, rate gyro and hydrophones), eight electric thrusters, and its Schilling grabber and manipulator arms.
+- **Live readouts** show depth, time, temperature, pressure, salinity and oxygen saturation as the dive progresses, down to about 1,000 m.
+- **Species detections** appear as boxes along the dive, with a sidebar showing the species identified, such as jellies, *Atolla* jellyfish and ctenophores.
 
-We started by processing the data for the path of the dive, using material collected from sonar systems to begin mapping the virtual environment in accordance with underwater topography data. This allowed us to render the terrain imagery. After this, we looked at OceanX ROV blueprints to design an accurate 3D model, complete with labelled components.
+## Species detections from OceanX's AI
 
-This allows the project to display findings from the dive in realtime, as the sub progresses along the path. Here, AI allows for the taxonomic identification of marine species by using water column properties of the area (e.g., depth, temperature and pressure), which we have represented with wire boxes to show points of interaction and discovery.
+The species identifications come from OceanX's own AI, which analyses the ROV's footage after each dive. We visualised its results rather than building the AI. The replay also shows the model's own statistics, for example 86% species-identification accuracy, chosen from about 100,000 possible species, so viewers can judge how far to trust each detection.
 
-</div>
-<div class="three-col-right">
+## How we built it
 
-![Labelled 3D model of the OceanX ROV showing its sensors, propulsion thrusters and Schilling grabber arms.](/images/projects/oceanxweb3-1024x864.webp)
+We exchanged data with OceanX throughout the project to keep the replay accurate. First we processed the dive path and the sonar data to map the terrain. Then we modelled the ROV from its blueprints, and finally we linked the dive's measurements and species detections to the ROV's position over time, so the data plays back in sequence as the ROV moves.
 
-![The OceanX ROV's recorded dive path traced as a white line across 3D seafloor terrain.](/images/projects/oceanxweb5-1024x787.webp)
+The work continued as the [OceanX Digital Twin](/projects/oceanx-digital-twin/), which extends the replay to a full interactive globe of OceanX's missions.
 
-</div>
-</div>
+## Technology
 
-## Evaluation
+| Part | Technology |
+|---|---|
+| Engine | Unity, real-time 3D |
+| Terrain | Sonar bathymetry processed into 3D terrain |
+| Data | Dive track, water readings, AI species detections from OceanX |
+| Visuals | Custom underwater lighting and visual effects |
 
-The project opens a space for meaningful collaboration between science, research and software. Through the creation of a digital twin, it allows for effective and engaging ways to learn about the environment, revolutionising research as immersive and accessible. We aim to develop the tools to make data analysis more efficient, whilst creating opportunities for education and conservation of both physical and virtual environments.
+## Questions
+
+**What is a digital twin of a dive?**
+A 3D replay of a real dive, built from the data recorded on it, so you can watch the ROV's path, readings and discoveries in place rather than in separate charts.
+
+**Did Unusual Technologies build the species-detection AI?**
+No. The detections come from OceanX's AI. We built the real-time 3D environment that shows them alongside the dive data.
+
+**Can Unusual Technologies visualise other scientific data?**
+Yes. We turn GIS, sensor and research data into real-time 3D tools for scientists, educators and the public.

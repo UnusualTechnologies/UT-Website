@@ -21,6 +21,7 @@ Planned, agreed and not built yet:
 - Every case study has a video, a video description or transcript next to it, and a client quote (Douglas Kelly, 2026-11-26).
 - One page per project, with sections, not separate pages per aspect (Douglas Kelly, 2026-11-26, separate thin pages compete with each other).
 - Facts that only appear inside images are written into the page text; they are listed in `docs/case-study-audit.md` (Douglas Kelly, 2026-11-26).
+- The exact page format, copy and look are provisional and will be finalised with an artist; drafts go straight into the project pages on `dev` for review there (Douglas Kelly, 2026-11-26).
 
 ## Design
 
@@ -35,11 +36,19 @@ Planned, agreed and not built yet:
 
 **Case study page** (`layouts/projects/single.html`), top to bottom:
 1. Hero: `banner_image` (else `featured_image`) behind a dark overlay, with the title. Long titles get a smaller style.
-2. Overview: `overview` text, client (linked if `client.website` is set), technology badges, then optional "try it" links or text.
-3. Overview media: a YouTube video (`overview_video_id`), else `overview_image` with caption.
-4. The Markdown body: free-form sections, galleries and layout `<div>`s, carousels, audio, self-hosted looping videos.
+2. Overview: `overview` text, client (linked if `client.website` is set), optional key-facts strip (`key_facts`), technology badges, then optional "try it" links or text.
+3. Overview media: a YouTube video (`overview_video_id`) with an optional "Read video description" toggle (`video_description`), else `overview_image` with caption.
+4. Visuals: the Markdown body above a `<!-- writeup -->` line (carousels, galleries, images, videos). Bodies without the line render whole here, as before.
 5. Testimonial (optional): quote, video or thumbnail, full text, name, title, organisation.
-6. "Back to Projects" link.
+6. Write-up: the Markdown body below `<!-- writeup -->`, in a narrower reading column.
+7. "Back to Projects" link.
+
+**Provisional rewritten format** (Douglas Kelly, 2026-11-26, pilots: co-cog, oceanx, mere-mortals; to be finalised with an artist)
+- `overview`: one sentence, answer first: who it was for, what we built, the result.
+- `key_facts`: 4–5 label/value pairs, e.g. Partners, Who it's for, Our role, Platform, Timeline, Data shown. Not Client, which the page already shows.
+- Visuals: images grouped into titled carousels or two-column galleries; captions only where they add meaning.
+- Write-up sections, each about 80–180 words: The challenge (or The brief), What we built, one or two sections on what made it distinctive, How we worked, Technology (a table), Questions (2–3 short Q&As).
+- Every claim comes from the page, Cortex or the images; anything unconfirmed is left out.
 
 **Status**
 
@@ -75,6 +84,8 @@ Planned, agreed and not built yet:
 ## Tried & rejected
 
 ## Open questions
+
+- Video descriptions for the pilots are not written yet: they need someone to watch each video, or the files. (Douglas Kelly, 2026-11-26)
 
 - `project_type` (Client / In-house / Prototype) is set on every project but not shown anywhere. Should it be? (bootstrap, 2026-11-26)
 - Should the tag filter list come from the tags actually used, rather than a hard-coded list? (bootstrap, 2026-11-26)
