@@ -35,9 +35,9 @@ Unusual Technologies was asked to create an editor expansion for Unity, that wou
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/Screenshot-2022-12-21-at-10.20.50-min.png)
+![Phone running Popup View over a goldfinch photo, with a low-poly 3D goldfinch appearing above it in AR.](/images/projects/Screenshot-2022-12-21-at-10.20.50-min.png)
 
-![](/images/projects/Screenshot-2022-12-21-at-10.20.34-min.png)
+![Phone held over a printed butterfly image among leaves, triggering an animated AR butterfly in Popup View.](/images/projects/Screenshot-2022-12-21-at-10.20.34-min.png)
 
 </div>
 
@@ -50,9 +50,9 @@ During the creation of Popup View, we used Addressables which allowed for upload
 Whilst developing Popup View, our client provided a group of university interns. The students were involved in the process of creating content, which would then be uploaded to the app using the Addressables system. We also trained them how to use the basics of Unity, and showed them how to use the tools we implemented, to upload and test the content they had created on the app.
 
 {{% carousel %}}
-![](/images/projects/Screenshot_20230712-113225_Popup-View-768x1530.jpg)
-![](/images/projects/Screenshot_20230712-111903_Popup-View-e1689158275344.jpg)
-![](/images/projects/Screenshot_20230712-111914_Popup-View-e1689158288419.jpg)
+![Popup View app showing a winged 3D dragon in AR above its dragon trigger image on a computer screen.](/images/projects/Screenshot_20230712-113225_Popup-View-768x1530.jpg)
+![Popup View home screen listing searchable AR campaigns, including Butterfly - Sweet Like Nectar, Bugs in the Woods and Pow! + Love!](/images/projects/Screenshot_20230712-111903_Popup-View-e1689158275344.jpg)
+![Campaign page for Butterfly - Sweet Like Nectar, with instructions and six coloured trigger images that launch the AR NFT artwork.](/images/projects/Screenshot_20230712-111914_Popup-View-e1689158288419.jpg)
 {{% /carousel %}}
 
 ## Campaigns

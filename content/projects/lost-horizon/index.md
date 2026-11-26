@@ -50,7 +50,7 @@ testimonial:
 
 In the rapidly evolving landscape of entertainment and immersive technology, the team at Unusual Technologies embarked on a unique project: creating a virtual replica of Lost Horizon, the beloved club in Bristol. This virtual club would be accessible to anyone, anywhere, through virtual reality headsets, allowing people to engage in live interactions within its virtual twin. We will explore how this innovative project came to life, the motivations behind it, and the meticulous process undertaken by the team.
 
-![A view of the main party space in the virtual reality Lost Horizon club](/images/projects/Screenshot-2022-12-19-at-15.18.46-min-768x394.png)
+![Avatars at tables and the bar in the main room of Lost Horizon's virtual club, built in Unity, under stage lights and a mirror ball.](/images/projects/Screenshot-2022-12-19-at-15.18.46-min-768x394.png "A view of the main party space in the virtual reality Lost Horizon club")
 
 ## Lost Horizon - A Metaverse Creation
 
@@ -60,19 +60,19 @@ Its grand debut came in the form of a two-day, four-stage festival that captivat
 
 We specialise in blending entertainment with immersive technology, and this project presented an exciting opportunity to push the boundaries even further. Leveraging the power of Unity, the team set out to create an entire club within the realm of virtual reality. This standalone platform would not only accommodate guests but also foster a network of digital twins—highly detailed, interactive, and three-dimensional replicas of real-world venues.
 
-![A view of the DJ booth inside the club, with the unique psychedelic decoration.](/images/projects/Screenshot-2022-12-19-at-15.19.18-min-768x408.png)
+![A DJ avatar on the Lost Horizon stage between twin speaker stacks, under a pink mountain mural bearing the club's logo.](/images/projects/Screenshot-2022-12-19-at-15.19.18-min-768x408.png "A view of the DJ booth inside the club, with the unique psychedelic decoration.")
 
 ## The Vision: Bridging Gaps & Fostering Accessibility
 
 The driving force behind the creation of the Lost Horizon Virtual Club was to provide people with unprecedented access to live streams and bands from all around the world. By entering the virtual space as avatars, audiences would have the opportunity to socialise, meet new people, and experience live music venues. The ultimate goal was to leverage technology to enhance accessibility to real-world culture, eliminating the barriers of distance and cost that often hinder such experiences.
 
-![The scene as you approach the club from the outside world.](/images/projects/Screenshot-2022-12-19-at-15.20.01-min-768x434.png)
+![An avatar walking down a night-time street towards the virtual Lost Horizon venue, with lit tower blocks behind.](/images/projects/Screenshot-2022-12-19-at-15.20.01-min-768x434.png "The scene as you approach the club from the outside world.")
 
 ## The Collaborative Effort
 
 Unusual Technologies meticulously set up the virtual environment, ensuring a 360-degree view that would awe and immerse the players. The integration of cutting-edge motion technology added an extra layer of realism, allowing users to feel truly present in the digital realm.
 
-![A perspective of the club warehouse in the street view.](/images/projects/Screenshot-2022-12-19-at-15.18.19-min-768x420.png)
+![The teal Lost Horizon warehouse on a street corner in the virtual city, its windows showing Back to Life posters.](/images/projects/Screenshot-2022-12-19-at-15.18.19-min-768x420.png "A perspective of the club warehouse in the street view.")
 
 ## Crafting Realistic Avatars & Digital Twins
 

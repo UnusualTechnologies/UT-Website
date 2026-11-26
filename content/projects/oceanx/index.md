@@ -26,9 +26,9 @@ Emulating a deep-sea dive in the OceanXplorer submersible, the project allows th
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/oceanxweb-1024x522.webp)
+![3D model of the OceanX ROV at 248 m depth, with live temperature, pressure, salinity and oxygen readouts and a sidebar identifying jellyfish species.](/images/projects/oceanxweb-1024x522.webp)
 
-![](/images/projects/oceanxweb2-1024x509.webp)
+![The OceanX ROV near the seabed at 1,000 m; boxes mark species detections and a panel reports 86% species-identification accuracy across 100,000 possible species.](/images/projects/oceanxweb2-1024x509.webp)
 
 </div>
 
@@ -43,7 +43,7 @@ We corresponded with our client throughout the process, regularly exchanging dat
 <div class="three-col-layout">
 <div class="three-col-left">
 
-![](/images/projects/oceanxweb4.webp)
+![Seamount sonar data as a colour depth map (top) and the same terrain rebuilt as a 3D environment in Unity (bottom).](/images/projects/oceanxweb4.webp)
 
 </div>
 <div class="three-col-center">
@@ -55,9 +55,9 @@ This allows the project to display findings from the dive in realtime, as the su
 </div>
 <div class="three-col-right">
 
-![](/images/projects/oceanxweb3-1024x864.webp)
+![Labelled 3D model of the OceanX ROV showing its sensors, propulsion thrusters and Schilling grabber arms.](/images/projects/oceanxweb3-1024x864.webp)
 
-![](/images/projects/oceanxweb5-1024x787.webp)
+![The OceanX ROV's recorded dive path traced as a white line across 3D seafloor terrain.](/images/projects/oceanxweb5-1024x787.webp)
 
 </div>
 </div>

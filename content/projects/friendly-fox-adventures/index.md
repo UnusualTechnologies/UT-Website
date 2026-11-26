@@ -51,7 +51,7 @@ testimonial:
 
 We aimed to make an app targeted at kids that encourages outdoor play. The design challenge was getting kids away from the screen with the help of a screen. We aimed to use the familiarity of an app to get them outside and setup games that they would play in the real world. Additionally, we utilised AI to further ease them away from the screen and into appreciating what is around them.
 
-![](/images/projects/main-flip.png)
+![Friendly Fox Adventures on a phone, asking the player to drag ingredients such as an acorn and blackberries into a potion cauldron.](/images/projects/main-flip.png)
 
 ## How It Plays
 
@@ -59,17 +59,17 @@ AR action is triggered by a series of markers in the real world, forming an inte
 
 Players need to complete a series of tasks that immerse them in nature, learning about what they find and becoming more aware of the need to look after the environment on the way.
 
-![](/images/projects/fox-on-tree-2-768x1152.png)
+![Phone held up to a beech tree in the woods, with the cartoon Friendly Fox appearing on the trunk in augmented reality.](/images/projects/fox-on-tree-2-768x1152.png)
 
 ## Design
 
 When designing the app we kept in mind that we were targeting children. Therefore, we focussed on both keeping it educational and interactive, we also explored environmental factors. We made sure to have lots of colour and interactive objectives for the kids to work through. We gave everything a 'cartoony' and playful appearance to keep kids engaged and keen to try out more trails in the future.
 
 {{% carousel %}}
-![](/images/projects/Screenshot_20230707-102503_FriendlyFoxAdventures-e1688728950239.jpg)
-![](/images/projects/Screenshot_20230524-131716_FriendlyFoxAdventureswith-background-e1688728974285.png)
-![](/images/projects/out-1024x823.webp)
-![](/images/projects/FriendlyFoxAdventures_ConceptArt_v2-724x1024.webp)
+![Friendly Fox Adventures title screen with Start Game, Photo Album and Credits buttons and the fox standing on a woodland path.](/images/projects/Screenshot_20230707-102503_FriendlyFoxAdventures-e1688728950239.jpg)
+![In-app camera screen telling players to find and scan the fox, with the eight potion ingredients shown along the top.](/images/projects/Screenshot_20230524-131716_FriendlyFoxAdventureswith-background-e1688728974285.png)
+![UI wireframes for the app's home screen, AR video player, camera and photo album, plus pop-ups for continuing a game and missing potion items.](/images/projects/out-1024x823.webp)
+![Mood board of eight numbered cartoon woodland backgrounds used to explore the art style for Friendly Fox Adventures.](/images/projects/FriendlyFoxAdventures_ConceptArt_v2-724x1024.webp)
 {{% /carousel %}}
 
 ## Friendly Fox Adventures Objectives
@@ -89,26 +89,26 @@ Current Objective types:
 - Helping the environment
 
 {{% carousel %}}
-![Fox Marker](/images/projects/Fox_Marker-scaled-1-1024x1024.webp)
-![Hawk Marker](/images/projects/Hawk_Marker-scaled-1-1024x1024.webp)
-![Squirrel Marker](/images/projects/Squirrel_Marker-scaled-1-1024x1024.webp)
-![Hedgehog Marker](/images/projects/Hedgehog_Marker-scaled-1-1024x1024.webp)
-![Mouse Marker](/images/projects/Mouse_Marker-scaled-1-1024x1024.webp)
-![Badger Marker](/images/projects/Badger_Marker-scaled-1-1024x1024.webp)
-![Deer Marker](/images/projects/Deer_Marker-scaled-1-1024x1024.webp)
-![Magpie Marker](/images/projects/Magpie_Marker-scaled-1.webp)
-![Snail Marker](/images/projects/Snail_Marker-1024x1024.webp)
-![Robin Marker](/images/projects/Robin_Marker-1024x1024.webp)
-![Snake Marker](/images/projects/Snake_Marker-scaled-1-1024x1024.webp)
-![Cauldron Marker](/images/projects/Cauldron_Marker-scaled-1-1024x1024.webp)
-![Wizard Marker](/images/projects/Wizard_Marker-scaled-1-1024x1024.webp)
+![AR trail marker showing the smiling cartoon fox character inside a blue geometric frame.](/images/projects/Fox_Marker-scaled-1-1024x1024.webp "Fox Marker")
+![AR trail marker showing a red hawk character wearing aviator goggles, inside a blue geometric frame.](/images/projects/Hawk_Marker-scaled-1-1024x1024.webp "Hawk Marker")
+![AR trail marker showing a squirrel character wearing an acorn-cup hat, inside a blue geometric frame.](/images/projects/Squirrel_Marker-scaled-1-1024x1024.webp "Squirrel Marker")
+![AR trail marker showing a hedgehog character with a pirate eye patch, inside a blue geometric frame.](/images/projects/Hedgehog_Marker-scaled-1-1024x1024.webp "Hedgehog Marker")
+![AR trail marker showing a waving mouse character in a pink tutu, inside a blue geometric frame.](/images/projects/Mouse_Marker-scaled-1-1024x1024.webp "Mouse Marker")
+![AR trail marker showing a badger character in a brown hat, waving, inside a blue geometric frame.](/images/projects/Badger_Marker-scaled-1-1024x1024.webp "Badger Marker")
+![AR trail marker showing a spotted deer character with antlers, inside a blue geometric frame.](/images/projects/Deer_Marker-scaled-1-1024x1024.webp "Deer Marker")
+![AR trail marker showing a magpie character in orange glasses and a gold chain, inside a blue geometric frame.](/images/projects/Magpie_Marker-scaled-1.webp "Magpie Marker")
+![AR trail marker showing a snail character with a blue spiral shell, inside a blue geometric frame.](/images/projects/Snail_Marker-1024x1024.webp "Snail Marker")
+![AR trail marker showing a robin character holding a megaphone, inside a blue geometric frame.](/images/projects/Robin_Marker-1024x1024.webp "Robin Marker")
+![AR trail marker showing a smiling green snake character, inside a blue geometric frame.](/images/projects/Snake_Marker-scaled-1-1024x1024.webp "Snake Marker")
+![AR trail marker showing the green potion cauldron over a campfire, where players combine the ingredients they collect.](/images/projects/Cauldron_Marker-scaled-1-1024x1024.webp "Cauldron Marker")
+![AR trail marker showing the villainous wizard in a red cape and purple suit, whom players must defeat.](/images/projects/Wizard_Marker-scaled-1-1024x1024.webp "Wizard Marker")
 {{% /carousel %}}
 
 ## Expandability
 
 We have joined up with a number of different nature trail organisations and private farmers to create unique individual apps for various locations with their own set of unique animals and quest objectives using our quest system.
 
-![](/images/projects/PXL_20250821_092938219-769x1024.jpg)
+![Wild Adventures interactive trail sign for the red fox, with a QR code to download the app and facts about the fox's home and food.](/images/projects/PXL_20250821_092938219-769x1024.jpg)
 
 ## Our Take
 

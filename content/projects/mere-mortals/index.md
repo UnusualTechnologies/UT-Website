@@ -42,13 +42,13 @@ In the end, we wouldn't be responsible for publishing, but would instead provide
 For the prototype, we had a focus on a pixel art style, developing; sprites, animations, UI and tilemaps needed to demonstrate the functionality. This involved a much more iterative approach of mocking up sprites, getting client feedback and iterating until they were happy.
 
 {{% carousel %}}
-![](/images/projects/Crazies.gif)
-![](/images/projects/Demon-Dog.gif)
-![](/images/projects/Demon.gif)
-![](/images/projects/Mortal-1-1.gif)
-![](/images/projects/Evil-Priest-1.gif)
-![](/images/projects/Bulffalo_2.gif)
-![](/images/projects/Woshipper.gif)
+![Pixel art sprite animation of a Mere Mortals cultist enemy in a red loincloth, holding a rock above his head.](/images/projects/Crazies.gif)
+![Pixel art running animation of a dark grey demon dog enemy with red eyes and a gold collar, made for Mere Mortals.](/images/projects/Demon-Dog.gif)
+![Pixel art sprite of a winged red demon with horns and a scythe, one of the Mere Mortals enemy animations.](/images/projects/Demon.gif)
+![Pixel art walking animation of a mortal enemy in a brown tunic for the Ancient Greek themed Mere Mortals.](/images/projects/Mortal-1-1.gif)
+![Pixel art sprite of a purple-robed evil priest with red eyes and a crooked staff, a Mere Mortals enemy.](/images/projects/Evil-Priest-1.gif)
+![Pixel art charging animation of a brown buffalo enemy with curved horns, made for Mere Mortals.](/images/projects/Bulffalo_2.gif)
+![Pixel art sprite of a kneeling worshipper in pale robes with hands clasped in prayer, a Mere Mortals enemy.](/images/projects/Woshipper.gif)
 {{% /carousel %}}
 
 ## Development
@@ -58,9 +58,9 @@ This was done over the span of two cycles (about two months) and some bonus work
 The first cycle focused on the engine – this involved the core functionality for a working prototype with a game loop; and the second cycle focused on adding content such as new enemies, weapons, a level and items such as chests which provide you with upgrades to collected items.
 
 {{% carousel %}}
-![](/images/projects/Screenshot-2025-02-10-143422-1-768x432.png)
-![](/images/projects/Screenshot-2025-02-10-143125-768x432.png)
-![](/images/projects/Screenshot-2025-02-10-143209-768x432.png)
+![Mere Mortals gameplay at level 12: the player surrounded by hundreds of demons, priests and buffalo, with damage numbers on screen.](/images/projects/Screenshot-2025-02-10-143422-1-768x432.png)
+![Mere Mortals Level Up screen offering three upgrades: new Holy Aura, Swipe level 4 and Mighty Hammer level 3.](/images/projects/Screenshot-2025-02-10-143125-768x432.png)
+![Mere Mortals chest reward screen granting five items, including weapon upgrades and two heart pickups.](/images/projects/Screenshot-2025-02-10-143209-768x432.png)
 {{% /carousel %}}
 
 With the possibility for large numbers of entities on screen (from enemies, to EXP pickups, to damage counters) there was a big focus on optimised code and logic, ensuring the game's performance always remained high, even with the limitation of WebGL.
@@ -73,4 +73,4 @@ Whilst we spent some time balancing weapons and enemies in order to make an enjo
 
 We also made custom functionality as easy to add as possible: so even though weapons may require custom locomotive or damaging logic, the component-based design makes them easy to add and swap out.
 
-![](/images/projects/Screenshot-2025-02-10-161225-1024x520.png)
+![Custom Unity Weapon Item Editor for Mere Mortals, showing per-level damage, area, cooldown and pierce stats for the Swipe weapon.](/images/projects/Screenshot-2025-02-10-161225-1024x520.png)

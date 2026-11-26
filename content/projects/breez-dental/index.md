@@ -36,10 +36,10 @@ testimonial:
 ---
 
 {{% carousel %}}
-![Breez is a subscription-based SaaS](/images/projects/Screenshot-2025-05-28-143229.png)
-![](/images/projects/Screenshot-2025-11-12-145319-768x793.png)
-![Dental notes and recordings are stored securely](/images/projects/Screenshot-2025-11-12-152814-768x546.png)
-![](/images/projects/Screenshot-2025-11-12-145448-768x789.png)
+![Breez marketing copy for voice-powered dental notes, describing voice recognition built for dental terminology and a supplied microphone.](/images/projects/Screenshot-2025-05-28-143229.png "Breez is a subscription-based SaaS")
+![Breez desktop app processing an exam across three appointment tabs, beside a support chat about fixing a misheard dental term.](/images/projects/Screenshot-2025-11-12-145319-768x793.png)
+![Breez admin view of AI-generated clinical notes from a ChatGPT prompt, with complaint, dental findings and treatment plan.](/images/projects/Screenshot-2025-11-12-152814-768x546.png "Dental notes and recordings are stored securely")
+![Breez desktop app showing structured exam notes, including BPE scores and recall interval, with Save & Copy and Redo buttons.](/images/projects/Screenshot-2025-11-12-145448-768x789.png)
 {{% /carousel %}}
 
 ## Secure & Compliant Medical Apps

@@ -28,7 +28,7 @@ The topic of the [game jam](https://itch.io/jam/boss-rush-jam-2021) was to make 
 
 The game was made in Game Maker Studio, using their custom GameMaker language.
 
-![Screenshot From The Beginning Of The Game](/images/projects/Screenshot-2023-07-07-161627-r4ry4u1aipvvb3ilp8n29dji9sibyxqohijp8i50v4.png)
+![Opening scene of Dreamers Tower in a two-colour pixel art style: a small figure on a stone platform beneath hanging chains.](/images/projects/Screenshot-2023-07-07-161627-r4ry4u1aipvvb3ilp8n29dji9sibyxqohijp8i50v4.png "Screenshot From The Beginning Of The Game")
 
 ## The Result
 
@@ -39,11 +39,11 @@ In the end I made five bosses, each with custom movement, attacks, and soundtrac
 The feedback I got most was that they should have health bars and that they were too "tanky" – which is to say they had too much health. So if I was to improve it I would likely readjust this balance to make each boss slightly quicker – however it would have also been interesting to see others play the game in order to get an idea of what else might have been an issue.
 
 {{% carousel %}}
-![](/images/projects/Screenshot-2023-07-10-103700-150x150.png)
-![](/images/projects/Screenshot-2023-07-10-103811-150x150.png)
-![](/images/projects/Screenshot-2023-07-10-103920-150x150.png)
-![](/images/projects/Screenshot-2023-07-10-101704-150x150.png)
-![](/images/projects/Screenshot-2023-07-10-101923-150x150.png)
+![Thumbnail of a Dreamers Tower boss: a small glowing diamond-shaped eye floating in darkness.](/images/projects/Screenshot-2023-07-10-103700-150x150.png)
+![Thumbnail of a Dreamers Tower boss: an armoured knight with a plumed helmet, a shield, an axe and a lance.](/images/projects/Screenshot-2023-07-10-103811-150x150.png)
+![Thumbnail of a Dreamers Tower boss: a large eye-like creature made of swirling bubbles.](/images/projects/Screenshot-2023-07-10-103920-150x150.png)
+![Thumbnail of a Dreamers Tower boss: a witch in a pointed hat inside a ring of dots, surrounded by projectiles.](/images/projects/Screenshot-2023-07-10-101704-150x150.png)
+![Thumbnail of a Dreamers Tower boss: a tall one-eyed figure standing over the small player character.](/images/projects/Screenshot-2023-07-10-101923-150x150.png)
 {{% /carousel %}}
 
 In the end, it turned out well. It came 3rd for graphics and gameplay and 6th overall. I was happy with what I was able to achieve in the limited time and even though there are a few bugs and unpolished bits, the [ratings](https://itch.io/jam/boss-rush-jam-2021/rate/1144966) were very positive and constructive.

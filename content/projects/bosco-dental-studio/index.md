@@ -34,13 +34,13 @@ We delivered the final product within just 8 days.
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/bosco_flowchart-1.png)
+![Blurred overview of the practice's original triage flow chart and scoring table that the Bosco Dental Studio tool replicates.](/images/projects/bosco_flowchart-1.png)
 
-![](/images/projects/bosco_ui-1024x575.png)
+![Bosco Dental Studio receptionist tool triaging a chipped tooth, showing appointment length, urgency, expectations and likely outcome.](/images/projects/bosco_ui-1024x575.png)
 
 </div>
 
-![Generated summary](/images/projects/bosco_summary-1024x575.png)
+![Receptionist tool summary screen with the urgency 'Treatment same day' and auto-generated patient notes ready to copy.](/images/projects/bosco_summary-1024x575.png "Generated summary")
 
 ## Designing For Utility
 
@@ -52,9 +52,9 @@ Upon finalising the design, we developed the application using Unity and C#, a d
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/Designs.png)
+![Figma prototypes for the Bosco triage tool comparing two question layouts and a summary screen with a copy-to-clipboard button.](/images/projects/Designs.png)
 
-![](/images/projects/Bosco_ReceptionFlow.drawio-e1707221152557-1-899x1024.png)
+![Blurred draw.io flow chart mapping the branching questions in the Bosco Dental Studio reception triage process.](/images/projects/Bosco_ReceptionFlow.drawio-e1707221152557-1-899x1024.png)
 
 </div>
 

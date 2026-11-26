@@ -34,11 +34,11 @@ testimonial: null
 ---
 
 {{% carousel %}}
-![](/images/projects/Movie_006-frame-at-0m25s.jpg)
-![](/images/projects/Movie_003-frame-at-0m2s.jpg)
-![](/images/projects/Movie_005-frame-at-0m6s.jpg)
-![](/images/projects/Movie_006-frame-at-0m8s.jpg)
-![](/images/projects/Movie_006-frame-at-0m16s.jpg)
+![Seaweeds' Scrambled Spell letter screen with one of five letters collected and a prompt to talk like a witch to the next checkpoint.](/images/projects/Movie_006-frame-at-0m25s.jpg)
+![Cobweb-clearing minigame: a spooky beach scene covered in spider webs for players to wipe away on their phone.](/images/projects/Movie_003-frame-at-0m2s.jpg)
+![Bug-squashing minigame set in a slime-covered room, with a fuzzy purple bug, a splat mark and a progress bar.](/images/projects/Movie_005-frame-at-0m6s.jpg)
+![Riddle minigame in a witch's caravan full of Halloween objects, with a rhyming clue about a witch's hat, question 1 of 3.](/images/projects/Movie_006-frame-at-0m8s.jpg)
+!["Spell Done!" end screen beneath the Seaweeds' Scrambled Spell logo, shown when the Halloween trail is completed.](/images/projects/Movie_006-frame-at-0m16s.jpg)
 {{% /carousel %}}
 
 ## Write-Ups & Learnings

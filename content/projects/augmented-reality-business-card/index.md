@@ -33,19 +33,19 @@ As an in-house project, we developed the AR business card to both show and tell 
 <div class="carousel-grid">
 
 {{% carousel title="Early Model Viewer Prototype..." %}}
-![](/images/projects/Screenshot-8-Apr-2024-11_25_21-768x1707.png)
-![](/images/projects/WhatsApp-Image-2023-07-14-at-2.50.35-PM-1.jpeg)
-![](/images/projects/Screenshot-2024-10-23-150103-e1729692320229.png)
-![](/images/projects/Screenshot-23-Oct-2024-15_00_00-768x1707.png)
+![Early Model Viewer prototype placing a 3D scanned figure on a desk in AR, with a link to see Unusual Technologies' projects.](/images/projects/Screenshot-8-Apr-2024-11_25_21-768x1707.png)
+![Early AR prototype showing a wireframe cartoon robot holding a gem on a glowing hexagonal platform in a living room.](/images/projects/WhatsApp-Image-2023-07-14-at-2.50.35-PM-1.jpeg)
+![HTML code for the Model Viewer prototype, with a model-viewer element, an Activate AR Mode button and a fallback QR code.](/images/projects/Screenshot-2024-10-23-150103-e1729692320229.png)
+![Model Viewer prototype web page with a 3D scanned figure, an Activate AR Mode button and a Contact Us button.](/images/projects/Screenshot-23-Oct-2024-15_00_00-768x1707.png)
 {{% /carousel %}}
 
 {{% carousel title="The finished product!" %}}
-![](/images/projects/Screenshot_20241017-120217-768x1707.png)
-![](/images/projects/Screenshot_20241017-120330-768x1707.png)
-![](/images/projects/Screenshot_20241017-120413-768x1707.png)
-![](/images/projects/Screenshot_20241017-120303-768x1707.png)
-![](/images/projects/Screenshot_20241017-150844-768x1707.png)
-![](/images/projects/Screenshot-2024-10-23-160513-e1729695961100.png)
+![AR business card start screen with a light bulb drawing and the prompt "Pull the cord to start".](/images/projects/Screenshot_20241017-120217-768x1707.png)
+![Scratch card screen revealing Unusual Technologies' services and a prize to arrange a free consultation.](/images/projects/Screenshot_20241017-120330-768x1707.png)
+![Share screen with a QR code so the AR business card can be passed on to someone else.](/images/projects/Screenshot_20241017-120413-768x1707.png)
+![Unscratched services scratch card screen with three "Scratch me!" panels.](/images/projects/Screenshot_20241017-120303-768x1707.png)
+![Chroma-keyed presenter standing in a garden in AR, beside a "Training & Education" label and a "Look around!" prompt.](/images/projects/Screenshot_20241017-150844-768x1707.png)
+![Lens Studio script that downloads a remote prefab asset and spawns it once it has loaded.](/images/projects/Screenshot-2024-10-23-160513-e1729695961100.png)
 {{% /carousel %}}
 
 </div>
@@ -60,9 +60,9 @@ After several iterations and extensive testing, we chose to use Lens Studio, whi
 
 <div class="gallery gallery-2col">
 
-![Planning and wireframing the design](/images/projects/Untitled-2024-10-17-1159-768x582.png)
+![Wireframe flow for the AR business card, from permissions and start screen to video categories, sharing and the scratch card.](/images/projects/Untitled-2024-10-17-1159-768x582.png "Planning and wireframing the design")
 
-![Developing in Lens Studio](/images/projects/Screenshot-2024-10-23-152516-1024x535.png)
+![Lens Studio editor with three presenter videos labelled Games, Training & Education and Installations & Attractions in the scene.](/images/projects/Screenshot-2024-10-23-152516-1024x535.png "Developing in Lens Studio")
 
 </div>
 
@@ -72,9 +72,9 @@ In the end, we opted for videos instead of 3D models and produced a series of fi
 
 <div class="gallery gallery-2col">
 
-![Before...](/images/projects/EducationTest-frame-at-0m10s.jpg)
+![Video frame of a presenter filmed against a green screen before chroma keying.](/images/projects/EducationTest-frame-at-0m10s.jpg "Before...")
 
-![After!](/images/projects/WithImageTest-frame-at-0m9s.jpg)
+![Green-screen presenter frame with added Unity, Unreal and Godot logos, programming language icons and game examples.](/images/projects/WithImageTest-frame-at-0m9s.jpg "After!")
 
 </div>
 

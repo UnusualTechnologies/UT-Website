@@ -1,6 +1,6 @@
 <figure class="project-figure">
   <img src="{{ .Destination | relURL }}" alt="{{ .Text }}" loading="lazy">
-  {{ with .Text }}
+  {{ with .Title }}
   <figcaption>{{ . }}</figcaption>
   {{ end }}
 </figure>

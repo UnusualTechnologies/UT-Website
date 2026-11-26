@@ -25,9 +25,9 @@ The VR Home Builder is designed to be an application that integrates the immersi
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/Screenshot-2022-12-20-at-12.13.47.png)
+![VR Home Builder title over a passthrough view of a garden, with the in-app colour picker and controller pointer.](/images/projects/Screenshot-2022-12-20-at-12.13.47.png)
 
-![](/images/projects/Screenshot-2022-12-20-at-14.54.13.png)
+![NFT artworks hung on a pink virtual wall in VR Home Builder, floating against a sky backdrop.](/images/projects/Screenshot-2022-12-20-at-14.54.13.png)
 
 </div>
 
@@ -35,7 +35,7 @@ The VR Home Builder is designed to be an application that integrates the immersi
 
 VR Home Builder transforms the design and construction process by blending virtual reality (VR) and augmented reality (AR). This tool leverages the immersive experience provided by VR headsets, granting users an in-depth, 360-degree view of their projects as if they were physically present within them.
 
-![VR Home Builder](/images/projects/Screenshot-2022-12-20-at-12.39.13.png)
+![An orange gridded wall traced in VR Home Builder over the headset's passthrough view of a real garden.](/images/projects/Screenshot-2022-12-20-at-12.39.13.png "VR Home Builder")
 
 ## The Vision
 
@@ -43,16 +43,16 @@ The VR Home Builder, armed with cutting-edge VR headsets, goes beyond a static 2
 
 The client also pictured VR lovers using it to build their personal spaces that represent actual physical spaces from their own lives.
 
-![An inside look of the VR Home Builder](/images/projects/Screenshot-2022-12-20-at-14.54.13.png)
+![Close view of NFT artworks placed on a pink wall built in VR Home Builder.](/images/projects/Screenshot-2022-12-20-at-14.54.13.png "An inside look of the VR Home Builder")
 
 ## NFT's
 
 VR Home Builder flexibility extends to the inclusion of non-fungible tokens (NFTs) into the virtual space. As digital assets that represent real-world objects like art, music, and other forms of creative work, NFTs have become increasingly popular. Within the VR Home Builder, users can incorporate their own NFTs, like digital artwork or furniture designs, into their projects. This feature presents an exciting opportunity to showcase unique, valuable digital assets in a personal or professional space.
 
-![NFTs Special Feature](/images/projects/Screenshot-2022-12-20-at-12.37.25.png)
+![The NFT menu in VR Home Builder, a scrollable grid of artworks, open beside an astronaut NFT hung on a pink wall.](/images/projects/Screenshot-2022-12-20-at-12.37.25.png "NFTs Special Feature")
 
 ## Who Can Use It?
 
 The VR Home Builder can be tailored for business and personal use in a variety of disciplines. Industry examples include architecture, education and gaming.
 
-![Built in colour picker feature](/images/projects/compresserd-hob-768x479.png)
+![Choosing a wall colour with the VR Home Builder colour picker, pointing a controller at an orange gridded wall.](/images/projects/compresserd-hob-768x479.png "Built in colour picker feature")

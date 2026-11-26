@@ -28,9 +28,9 @@ You can see some outputs below:
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/AI_Tools_SlippingOver.webp)
+![DALL·E 3 illustration of a man in a shirt and tie slipping on a wet floor, made for the question 'Have you had a fall recently?'](/images/projects/AI_Tools_SlippingOver.webp)
 
-![](/images/projects/AI_Tools_Satified.webp)
+![DALL·E 3 attempt at 'Are you satisfied with your life?': a puzzled man surrounded by question marks and thought bubbles.](/images/projects/AI_Tools_Satified.webp)
 
 </div>
 
@@ -50,9 +50,9 @@ Here are some other outputs that we tried for depicting AI.
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/AI_Image_2.webp)
+![DALL·E 3 portrait depicting AI: a woman with robotic plates on her face and a mechanical neck, against a green background.](/images/projects/AI_Image_2.webp)
 
-![](/images/projects/AI_Image_3.webp)
+![DALL·E 3 flat illustration depicting AI: a man working at a computer beside a desktop robot assistant.](/images/projects/AI_Image_3.webp)
 
 </div>
 
@@ -113,4 +113,4 @@ Other time-consuming tasks like proofreading or copy editing can be aided with A
 
 The discussion around Artificial General Intelligence (AGI) is ongoing, with uncertainties about its impact on our world. As we navigate these technological advancements, it's essential to stay informed and adapt to emerging trends. We don't currently know how this will shape our world, but here is Dall.E3's take on it!
 
-![](/images/projects/AI_Image_1-768x768.webp)
+![DALL·E 3's take on the future of AI: a woman on a mountain top overlooking a glowing futuristic city and holographic icons.](/images/projects/AI_Image_1-768x768.webp)
