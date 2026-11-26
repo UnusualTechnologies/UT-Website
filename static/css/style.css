@@ -1517,6 +1517,8 @@ ul {
 .project-figure img {
   display: block;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   height: auto;
   border-radius: 8px;
 }
@@ -1666,10 +1668,9 @@ ul {
 
 .project-content .carousel .project-figure img {
   width: 100%;
-  height: 100%;
-  max-width: none;
+  height: auto;
   object-fit: cover;
-  margin: 0;
+  margin: 0 auto;
   border-radius: 8px;
 }
 
@@ -2811,4 +2812,35 @@ textarea.ideas-input {
 
 .testimonial-full[open] > summary {
   margin-bottom: 12px;
+}
+
+/* Overview details row: spans both overview columns (provisional, awaiting artist pass) */
+.project-overview-details {
+  grid-column: 1 / -1;
+}
+
+.project-overview-details .project-key-facts {
+  margin-top: 0;
+}
+
+.project-overview-details .project-key-fact dd a {
+  color: var(--color-primary);
+}
+
+.project-technologies .tech-heading {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-tertiary);
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.project-key-fact.project-client-info {
+  display: block;
+  margin: 0;
+}
+
+.project-key-fact .project-client-name {
+  font-size: inherit;
 }

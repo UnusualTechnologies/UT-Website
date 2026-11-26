@@ -1,5 +1,14 @@
+{{- /* Images are never shown larger than their real size, so small originals (old WordPress
+     thumbnails) stay sharp instead of being stretched and blurred. Width and height are
+     also given so the page doesn't jump as images load. */ -}}
+{{- $src := .Destination -}}
+{{- $w := 0 -}}{{- $h := 0 -}}
+{{- $local := path.Join "static" $src -}}
+{{- if and (not (strings.HasPrefix $src "http")) (fileExists $local) (in (slice ".png" ".jpg" ".jpeg" ".gif" ".webp") (lower (path.Ext $src))) -}}
+  {{- with imageConfig $local -}}{{- $w = .Width -}}{{- $h = .Height -}}{{- end -}}
+{{- end -}}
 <figure class="project-figure">
-  <img src="{{ .Destination | relURL }}" alt="{{ .Text }}" loading="lazy">
+  <img src="{{ $src | relURL }}" alt="{{ .Text }}" loading="lazy"{{ if $w }} width="{{ $w }}" height="{{ $h }}" style="max-width: min(100%, {{ $w }}px)"{{ end }}>
   {{ with .Title }}
   <figcaption>{{ . }}</figcaption>
   {{ end }}

@@ -26,40 +26,6 @@
         <p class="project-overview-desc">{{ . }}</p>
         {{ end }}
 
-        <!-- Client Info -->
-        {{ with .Params.client }}
-        <div class="project-client-info">
-          <h2 class="client-heading">Client</h2>
-          {{ if .website }}
-          <a href="{{ .website }}" class="project-client-name" target="_blank" rel="noopener">{{ .name }}</a>
-          {{ else }}
-          <span class="project-client-name">{{ .name }}</span>
-          {{ end }}
-        </div>
-        {{ end }}
-
-        <!-- Key facts (provisional layout, see docs/design/systems/case-studies.md) -->
-        {{ with .Params.key_facts }}
-        <dl class="project-key-facts">
-          {{ range . }}
-          <div class="project-key-fact">
-            <dt>{{ .label }}</dt>
-            <dd>{{ .value }}</dd>
-          </div>
-          {{ end }}
-        </dl>
-        {{ end }}
-
-        <!-- Technologies -->
-        <h2 class="tech-heading">Technologies</h2>
-        {{ with .Params.technologies }}
-        <div class="project-tech-badges">
-          {{ range . }}
-          <span class="project-tag">{{ . }}</span>
-          {{ end }}
-        </div>
-        {{ end }}
-
         <!-- Try It -->
         {{ with .Params.try_it }}
         <div class="project-try-it">
@@ -102,6 +68,37 @@
       </div>
       {{ end }}
       {{ end }}
+      <!-- Client, key facts and technologies: a full-width row under the text and video,
+           so the two columns stay level (provisional layout, awaiting artist pass) -->
+      <div class="project-overview-details">
+        {{ if or .Params.client .Params.key_facts }}
+        <dl class="project-key-facts">
+          {{ with .Params.client }}
+          <div class="project-key-fact project-client-info">
+            <dt>Client</dt>
+            <dd>{{ if .website }}<a href="{{ .website }}" class="project-client-name" target="_blank" rel="noopener">{{ .name }}</a>{{ else }}<span class="project-client-name">{{ .name }}</span>{{ end }}</dd>
+          </div>
+          {{ end }}
+          {{ range .Params.key_facts }}
+          <div class="project-key-fact">
+            <dt>{{ .label }}</dt>
+            <dd>{{ .value }}</dd>
+          </div>
+          {{ end }}
+        </dl>
+        {{ end }}
+
+        {{ with .Params.technologies }}
+        <div class="project-technologies">
+          <h2 class="tech-heading">Technologies</h2>
+          <div class="project-tech-badges">
+            {{ range . }}
+            <span class="project-tag">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
     </section>
 
     <!-- Case Study -->

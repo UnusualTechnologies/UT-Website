@@ -36,8 +36,8 @@ Planned, agreed and not built yet:
 
 **Case study page** (`layouts/projects/single.html`), top to bottom:
 1. Hero: `banner_image` (else `featured_image`) behind a dark overlay, with the title. Long titles get a smaller style.
-2. Overview: `overview` text, client (linked if `client.website` is set), optional key-facts strip (`key_facts`), technology badges, then optional "try it" links or text.
-3. Overview media: a YouTube video (`overview_video_id`) with an optional "Read video description" toggle (`video_description`), else `overview_image` with caption.
+2. Overview, two columns side by side: left, the `overview` text and optional "try it" links or text; right, a YouTube video (`overview_video_id`) with an optional "Read video description" toggle (`video_description`), else `overview_image` with caption.
+3. Overview details, a full-width row under both columns: a facts strip (Client, linked if `client.website` is set, then any `key_facts`), then technology badges. It sits below the columns so the text and video stay level (Douglas Kelly, 2026-11-26).
 4. Visuals: the Markdown body above a `<!-- writeup -->` line (carousels, galleries, images, videos). Bodies without the line render whole here, as before.
 5. Testimonial (optional): quote, video or thumbnail, then the full text folded in a closed toggle ("Read the video transcript" when there's a video, otherwise "Read the full testimonial"), then name, title, organisation. The full text stays in the page for screen readers, search engines and AI (Douglas Kelly, 2026-11-26, visitors read the quote; few will open the full text).
 6. Write-up: the Markdown body below `<!-- writeup -->`, in a narrower reading column.
@@ -61,6 +61,7 @@ Planned, agreed and not built yet:
 **Images and video**
 - Markdown image text is the image description (`alt`); the Markdown title is the visible caption. Images without a title have no caption (Douglas Kelly, 2026-11-26, so descriptions can be added without putting text under every image).
 - All 215 body images have descriptions (2026-11-26).
+- Body images are never shown larger than their real pixel size, in carousels or elsewhere; small ones sit centred at full sharpness (Douglas Kelly, 2026-11-26, stretched WordPress thumbnails looked blurry). The render hook reads each image's size and adds width and height. Larger replacements are on the artist list.
 - Body images load lazily. Self-hosted videos are silent, autoplaying loops that load only when scrolled near (`static/js/main.js`).
 - Animations are served as MP4 loops, not large GIFs; small pixel-art GIFs stay as GIFs (Douglas Kelly, 2026-11-26, the OceanX Digital Twin GIFs went from 86 MB to 3.7 MB).
 - Carousels show 3 items at a time, wrap around, and open a lightbox on click.
