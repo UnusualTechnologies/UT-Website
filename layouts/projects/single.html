@@ -143,10 +143,15 @@
         {{ end }}
         {{ end }}
 
+        {{/* The full testimonial is folded away: it stays in the page for screen readers,
+             search engines and AI, but the quote above is what most visitors read. */}}
         {{ with .full_text }}
-        <div class="testimonial-text">
-          {{ . | markdownify }}
-        </div>
+        <details class="testimonial-full">
+          <summary>{{ if $.Params.testimonial.video_id }}Read the video transcript{{ else }}Read the full testimonial{{ end }}</summary>
+          <div class="testimonial-text">
+            {{ . | markdownify }}
+          </div>
+        </details>
         {{ end }}
 
         <div class="testimonial-attribution">

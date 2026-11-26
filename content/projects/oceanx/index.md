@@ -64,9 +64,9 @@ A real-time 3D replay of an ROV dive, built in Unity:
 - **Live readouts** show depth, time, temperature, pressure, salinity and oxygen saturation as the dive progresses, down to about 1,000 m.
 - **Species detections** appear as boxes along the dive, with a sidebar showing the species identified, such as jellies, *Atolla* jellyfish and ctenophores.
 
-## Species detections from OceanX's AI
+## Species detections
 
-The species identifications come from OceanX's own AI, which analyses the ROV's footage after each dive. We visualised its results rather than building the AI. The replay also shows the model's own statistics, for example 86% species-identification accuracy, chosen from about 100,000 possible species, so viewers can judge how far to trust each detection.
+The species identifications come from an AI that analyses the ROV's footage after each dive. The AI belongs to OceanX, and we are building it for them. The replay also shows the model's own statistics, for example 86% species-identification accuracy, chosen from about 100,000 possible species, so viewers can judge how far to trust each detection.
 
 ## How we built it
 
@@ -88,8 +88,8 @@ The work continued as the [OceanX Digital Twin](/projects/oceanx-digital-twin/),
 **What is a digital twin of a dive?**
 A 3D replay of a real dive, built from the data recorded on it, so you can watch the ROV's path, readings and discoveries in place rather than in separate charts.
 
-**Did Unusual Technologies build the species-detection AI?**
-No. The detections come from OceanX's AI. We built the real-time 3D environment that shows them alongside the dive data.
+**Who owns the species-detection AI?**
+OceanX. We are building the AI for OceanX, and it belongs to them. We also built the real-time 3D environment that shows its detections alongside the dive data.
 
 **Can Unusual Technologies visualise other scientific data?**
 Yes. We turn GIS, sensor and research data into real-time 3D tools for scientists, educators and the public.

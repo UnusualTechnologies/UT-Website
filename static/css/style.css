@@ -2798,3 +2798,17 @@ textarea.ideas-input {
   color: var(--color-primary);
   font-weight: 500;
 }
+
+/* Full testimonial / transcript, folded by default (provisional, awaiting artist pass) */
+.testimonial-full {
+  margin: 12px 0;
+}
+
+.testimonial-full > summary {
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.testimonial-full[open] > summary {
+  margin-bottom: 12px;
+}
