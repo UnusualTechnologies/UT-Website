@@ -9,6 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="{{ cond $light "light" "dark" }}">
   <meta name="theme-color" content="{{ cond $light "#F7F3EC" "#1d1d1f" }}">
+  {{- /* Only the live domain may be indexed. Staging and test builds (any other baseURL) tell search engines and AI crawlers to stay out. */}}
+  {{- if not (strings.HasPrefix site.BaseURL "https://unusualtechnologies.com") }}
+  <meta name="robots" content="noindex, nofollow">
+  {{- end }}
   <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
   {{- $description := or .Description .Params.overview .Site.Params.description }}
   <meta name="description" content="{{ $description }}">
