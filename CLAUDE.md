@@ -34,7 +34,9 @@ Hugo static site for [Unusual Technologies](https://unusualtechnologies.com/). N
 
 **Deployment (two targets):**
 - **Production (Cloudflare Pages):** Builds automatically on every push to `main` using `hugo --minify` with output directory `public`. Serves from `https://unusualtechnologies.com/`.
-- **Health/staging (GitHub Pages):** The `health-science` branch deploys to GitHub Pages via `.github/workflows/gh-pages.yml`. Builds with `--baseURL "https://unusualtechnologies.github.io/UT-Website/"`. Serves from `https://unusualtechnologies.github.io/UT-Website/`.
+- **Health/staging (GitHub Pages):** The `health-science` branch deploys to GitHub Pages via `.github/workflows/gh-pages.yml`. Builds with `--baseURL "https://unusualtechnologies.github.io/UT-Website/"`. Serves from `https://unusualtechnologies.github.io/UT-Website/`. Due to be replaced by a Cloudflare preview of `dev`. Any build not on the live domain gets `noindex`.
+
+**Branch workflow:** All work goes to the `dev` branch (feature branches merge into `dev`). `dev` is the review version of the site. Only a person pushes `dev` to `main`, which goes live. Never push or merge to `main` yourself. Note that Sveltia CMS still commits straight to `main`.
 
 **GitHub repo:** `UnusualTechnologies/UT-Website`
 
