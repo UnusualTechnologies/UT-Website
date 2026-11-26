@@ -1,0 +1,14 @@
+{
+  "extraKnownMarketplaces": {
+    "ut-claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "UnusualTechnologies/ut-claude-plugins"
+      },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": {
+    "design-docs@ut-claude-plugins": true
+  }
+}
