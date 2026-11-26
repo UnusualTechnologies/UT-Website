@@ -39,7 +39,7 @@ Planned, agreed and not built yet:
 2. Overview: `overview` text, client (linked if `client.website` is set), optional key-facts strip (`key_facts`), technology badges, then optional "try it" links or text.
 3. Overview media: a YouTube video (`overview_video_id`) with an optional "Read video description" toggle (`video_description`), else `overview_image` with caption.
 4. Visuals: the Markdown body above a `<!-- writeup -->` line (carousels, galleries, images, videos). Bodies without the line render whole here, as before.
-5. Testimonial (optional): quote, video or thumbnail, full text, name, title, organisation.
+5. Testimonial (optional): quote, video or thumbnail, then the full text folded in a closed toggle ("Read the video transcript" when there's a video, otherwise "Read the full testimonial"), then name, title, organisation. The full text stays in the page for screen readers, search engines and AI (Douglas Kelly, 2026-11-26, visitors read the quote; few will open the full text).
 6. Write-up: the Markdown body below `<!-- writeup -->`, in a narrower reading column.
 7. "Back to Projects" link.
 
