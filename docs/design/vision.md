@@ -45,6 +45,10 @@ Staff often send a specific page to a specific prospect, so pages must stand on 
 
 > Draft, needs review by Douglas Kelly
 
+### Specialists who learn the client's field
+This means: across all work, the site shows that UT learns new, complex industries quickly and well and builds for them, e.g. healthcare in Co-Cog. Case studies say what we learned about the field and who we learned it from (Douglas Kelly, 2026-11-26).
+This does NOT mean: claiming to be experts in the client's field from day one.
+
 ### Show, then tell
 This means: case studies lead with video and images; the detailed write-up sits lower on the page in short, headed sections (Douglas Kelly, 2026-11-26).
 This does NOT mean: removing text. A short factual summary and key facts stay at the top, because search engines and AI assistants weigh the opening text most.

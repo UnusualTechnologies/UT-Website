@@ -1,6 +1,6 @@
 # Case studies
 
-Serves: Show, then tell; Machine-readable by default; Facts over adjectives
+Serves: Specialists who learn the client's field; Show, then tell; Machine-readable by default; Facts over adjectives
 Code: `layouts/projects/`, `layouts/_default/_markup/render-image.html`, `layouts/shortcodes/`, `static/js/projects-filter.js`, `static/js/carousel.js`, `static/js/main.js` (lazy video), `content/projects/`
 Owner: Douglas Kelly
 
@@ -47,7 +47,8 @@ Planned, agreed and not built yet:
 - `overview`: one sentence, answer first: who it was for, what we built, the result.
 - `key_facts`: 4–5 label/value pairs, e.g. Partners, Who it's for, Our role, Platform, Timeline, Data shown. Not Client, which the page already shows.
 - Visuals: images grouped into titled carousels or two-column galleries; captions only where they add meaning.
-- Write-up sections, each about 80–180 words: The challenge (or The brief), What we built, one or two sections on what made it distinctive, How we worked, Technology (a table), Questions (2–3 short Q&As).
+- Write-up sections, each about 80–180 words: The challenge (or The brief), What we built, one or two sections on what made it distinctive, How we worked, Learning a new field (where the client's industry was new to us), Technology (a table), Questions (2–3 short Q&As).
+- Points to bring out where true, for future sales (Douglas Kelly, 2026-11-26): co-development with researchers, end users and professionals; in-person work with vulnerable people (the team holds DBS checks); accessibility across cultural norms, mental and physical ability, and non-digital natives.
 - Every claim comes from the page, Cortex or the images; anything unconfirmed is left out.
 
 **Status**

@@ -54,7 +54,7 @@ key_facts:
   - label: "Who it's for"
     value: "People living with early-stage dementia or mild cognitive impairment, and their care teams"
   - label: "Our role"
-    value: "Co-design, UX and illustration direction, app and back-end development"
+    value: "Co-development and in-person workshops, UX and illustration direction, app and back-end development"
   - label: "Platforms"
     value: "iOS and Android (Unity), PHP back end"
   - label: "In the app"
@@ -100,7 +100,7 @@ key_facts:
 
 NHS teams supporting people with early-stage dementia have limited time for in-person appointments, so changes in someone's memory, mood or health can go unnoticed between visits. Researchers from the Kent, Surrey and Sussex (KSS) research consortium wanted a tool that people living with dementia or mild cognitive impairment could use themselves, regularly, to flag when they need help as early as possible.
 
-The users were the hardest part of the brief. The app had to be easy to use for people with memory difficulties, without feeling childish or patronising.
+The users were the hardest part of the brief. The app had to be easy to use for people with memory difficulties, for people of different cultural backgrounds and physical abilities, and for people who are not used to digital technology, without feeling childish or patronising.
 
 ## What we built
 
@@ -114,7 +114,7 @@ Users log in with an anonymous code rather than their name, and a safety screen 
 
 ## Designing for people living with dementia
 
-Accessibility shaped every screen:
+We designed for accessibility in its widest sense: across cultural norms, mental and physical ability, and for people who didn't grow up with digital technology.
 
 - Every screen has a read-aloud button, a progress bar and a Skip option.
 - Answers use a few large buttons instead of typing.
@@ -123,9 +123,15 @@ Accessibility shaped every screen:
 
 ## How we worked
 
-Co-Cog was co-designed. We met regularly with the researchers, dementia clinicians, and people living with dementia and their carers, and changed the app with them from start to finish.
+Co-Cog was co-developed with everyone it affects: the university researchers, healthcare professionals working in dementia care, and the end users, people living with dementia and their carers. We met regularly from start to finish and changed the app together.
+
+We ran in-person workshops with people living with dementia and their carers. Working face to face with vulnerable people needs care as well as technical skill, and our team holds DBS checks.
 
 Early on we built demos to compare a web app with a native mobile app, and tested questions such as whether to use typed answers or Next buttons, given how screen readers behave on phones. Later milestones refined the memory tasks, connected the app to a PHP back end that stores responses and calculates the traffic-light ratings, and finalised the questions and information pages. The finished app then went to an extended testing period with people living with dementia and their carers.
+
+## Learning a new field
+
+We weren't dementia experts at the start. As in every industry we work in, we learned the field from the people in it: the researchers, the clinicians, and people living with dementia and their carers. As the project's research fellow put it, "even though you don't necessarily have expertise in dementia, you went the extra mile to think what could be appropriate to this group." That habit of learning a complex field quickly and building for it is how we work in healthcare and beyond.
 
 ## Technology
 
@@ -145,4 +151,7 @@ People living with early-stage dementia or mild cognitive impairment, and the re
 It turns each person's answers into red, amber and green results, so the care team can spot deterioration between appointments and act early.
 
 **Can Unusual Technologies build accessible apps with research teams?**
-Yes. Co-Cog was built alongside university researchers, clinicians and the people who use it. See our other [health and research projects](/projects/) for more.
+Yes. Co-Cog was co-developed with university researchers, healthcare professionals and the people who use it. See our other [health and research projects](/projects/) for more.
+
+**Can your team work directly with vulnerable people?**
+Yes. We ran in-person workshops with people living with dementia and their carers, and our team holds DBS checks.
