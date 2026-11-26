@@ -41,9 +41,9 @@ testimonial:
 ---
 
 {{% carousel %}}
-![Interactive view](/images/projects/RAF_Table-1-768x361.webp)
-![Projector setup](/images/projects/RAF_Projectors-768x576.webp)
-![Voting results](/images/projects/RAF_Table-2-768x446.webp)
+![The RAF Museum's octagonal debate table mid-debate, with a 04:20 countdown, argument cards and Send to Speaker buttons.](/images/projects/RAF_Table-1-768x361.webp "Interactive view")
+![The ceiling-mounted rig of nine projectors above the RAF Museum debate table.](/images/projects/RAF_Projectors-768x576.webp "Projector setup")
+![The debate table showing an 89% vote result for Debate 2, on whether robots making battlefield decisions would cost more lives.](/images/projects/RAF_Table-2-768x446.webp "Voting results")
 {{% /carousel %}}
 
 ## Project Demo

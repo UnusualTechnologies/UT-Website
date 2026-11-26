@@ -25,16 +25,16 @@ The app was developed in Unity using a platform called Moralis, which is a block
 
 In the case of this demo project, the application was made using testnet Polygon Mumbai. This uses the same underlying system as the live blockchain, but is designed for testing, meaning you do not have to spend paid cryptocurrency in transactions and gas fees.
 
-![](/images/projects/moralis_code.png)
+![Unity C# method that calls the lottery's placeBet smart contract function through Moralis, setting the value, gas and gas price.](/images/projects/moralis_code.png)
 
 ## Smart Contracts
 
-Smart contracts are pieces of code which reside on a blockchain and are designed to create contracts between users. This acts like a middleman, ensuring a contract is fulfilled between multiple third parties. Because of this code's immutability and visibility on the blockchain, users can be reassured that there is no risk of foul play, allowing for safer, anonymous transactions.
+Smart contracts are pieces of code which reside on a blockchain and are designed to create contracts between users. This acts like a middleman, ensuring a contract is fulfilled between multiple third parties. Because this code can't be changed once deployed and is visible on the blockchain, users can see exactly what a contract will do before they take part.
 
-In this case, our smart contracts allow people to pay an entry fee into a lottery. Then, at a set time, the smart contract would trigger its distribution logic and automatically chooses a winner out of everyone who entered, transferring the winnings to that user's wallet.
+In this case, our smart contract lets people pay an entry fee of 0.01 ether into a lottery. When the round closes, the lottery's owner selects the winner from everyone who entered, and the contract transfers the whole pot to that person's wallet.
 
-As all the code is housed inside the smart contract, there is no way for us or anyone else to tamper with it, meaning that users can confidently use the platform without feeling at risk (either from us the developers, or other anonymous players).
+Every entry and payout is recorded on the blockchain, so anyone can check who entered, how much was in the pot and where the winnings went.
 
 Smart contracts differ slightly per blockchain, but as we were targeting Ethereum, our smart contract was written in Solidity.
 
-![Sample of code from smart contract](/images/projects/sol-1.png)
+![Solidity smart contract code with a placeBet function costing 0.01 ether and a distribute function that sends the whole pot to the winner.](/images/projects/sol-1.png "Sample of code from smart contract")

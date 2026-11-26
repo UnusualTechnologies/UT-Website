@@ -34,7 +34,7 @@ A total of 5 LEGO playtables were created and installed in various locations wor
 
 The projected visuals and sound from the Unity application, including touch interactions, projected animations and a timed volcanic eruption on the dinosaur table, helped draw attention and curiosity towards the table, increasing engagement.
 
-![LEGOLAND Discovery Center](/images/projects/LegoPlaytable_Image_3-768x768.webp)
+![Entrance to a LEGOLAND Discovery Center with Chinese and English signage and a LEGO lion sculpture.](/images/projects/LegoPlaytable_Image_3-768x768.webp "LEGOLAND Discovery Center")
 
 ## R&D Findings
 
@@ -42,10 +42,10 @@ The Zed camera proved to be useable as a depth camera for tracking, however the 
 
 At the time of development, Linux proved to be too troublesome to work with due to the support of Unity not being robust enough to develop the software to a high standard. Therefore, the decision was made to pivot to Windows for the development and installation. Reliability was still the focus and the software was thoroughly tested to ensure it would operate correctly all day once installed. This included making sure that the application was not too intensive on the CPU and GPU ensuring longevity.
 
-![Top down view](/images/projects/LegoPlaytable_Image_4.webp)
+![Top-down view of the dinosaur LEGO Playtable, with projection-mapped lava flowing down a LEGO volcano.](/images/projects/LegoPlaytable_Image_4.webp "Top down view")
 
 ## The Backend
 
 The Unity scene contained an accurate model of the LEGO playtable which could then be textured and animated bringing it to life. Two perspective cameras were used to view the table from above. This eventually turned into the output for the two projectors above the table, after calibrating them with the software. The tricky part came from taking the 3D view of the Zed camera and turning it into an interactive input. Hand positions of users in the real world were translated into 2D points which then needed to be mapped onto the 3D scene within Unity.
 
-![The Unity Scene](/images/projects/LegoPlaytable_Image_2-768x373.webp)
+![The dinosaur LEGO Playtable modelled in Unity, with its volcano, island scenery and an on-table instruction screen.](/images/projects/LegoPlaytable_Image_2-768x373.webp "The Unity Scene")

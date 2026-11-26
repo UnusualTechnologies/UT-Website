@@ -39,9 +39,9 @@ Since release, our client's site experienced an exceptional surge in activity, w
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/Screenshot-2024-03-20-122648.png)
+![The Tarot Experience free reading page showing The Fool card above a box asking the user to type their question.](/images/projects/Screenshot-2024-03-20-122648.png)
 
-![](/images/projects/Screenshot-2024-03-20-122826.png)
+![A GPT-4 generated tarot reading interpreting the Wheel of Fortune card for a question about the near future.](/images/projects/Screenshot-2024-03-20-122826.png)
 
 </div>
 
@@ -51,7 +51,7 @@ The main appeal and utility of the site is the personalised readings. This is wh
 
 There are also other LLMs which would be suitable for this task such as Claude and Gemini, but currently ChatGPT outranks them in the generation of creative language. In the future, with the release of Gemini 1.5 and Claude 3 we might look at alternative AI platforms for this task which may be both cheaper and more effective than ChatGPT.
 
-![Code snippet of AI logic](/images/projects/Screenshot-2024-03-20-143244.png)
+![JavaScript function streaming a tarot reading from OpenAI's gpt-4-turbo-preview model, with the API key held in WiX Secrets.](/images/projects/Screenshot-2024-03-20-143244.png "Code snippet of AI logic")
 
 ## WiX
 
@@ -67,4 +67,4 @@ This also allows the site to collect emails which can be used for marketing in t
 
 The images are created procedurally using an HTML canvas and JavaScript logic.
 
-![Email snippet](/images/projects/Screenshot-2024-03-20-154715.png)
+![Reading email for The Devil card with three procedurally generated card images for sharing on social media.](/images/projects/Screenshot-2024-03-20-154715.png "Email snippet")

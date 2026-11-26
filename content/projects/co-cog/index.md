@@ -61,9 +61,9 @@ Given the target demographic, accessibility was at the forefront of the design. 
 We also explored ways to gamify the app – creating a more engaging user experience by providing a reward for completion. This was aimed at encouraging users to complete the questionnaire and return to it regularly.
 
 {{% carousel %}}
-![](/images/projects/question-1-147x300-1.png)
-![](/images/projects/prompt-1-147x300-1.png)
-![](/images/projects/example-1-148x300-1.png)
+![Co-Cog questionnaire screen asking about pain in the last month, with an illustration and three large answer buttons.](/images/projects/question-1-147x300-1.png)
+![Co-Cog information screen advising users to speak to a health care worker, call 111 if urgent or 999 in an emergency.](/images/projects/prompt-1-147x300-1.png)
+![Co-Cog wellbeing statement 'I can manage my emotions' with an illustration, two answer buttons and a Skip option.](/images/projects/example-1-148x300-1.png)
 {{% /carousel %}}
 
 ## Co-Design
@@ -74,9 +74,9 @@ We made demos testing the feasibility of a web-based app compared to native mobi
 
 We created UI/UX mock-ups in Figma, allowing us to visualise the play-out and look of the app, including comparing colour schemes and aesthetics. Finally, we decided on the technology stack we wanted to use for each part of the project.
 
-![Basic layout of text and buttons](/images/projects/UX.png)
+![Figma wireframes for the Co-Cog mood and emotions section, with yes/no questions and a face-based wellbeing rating scale.](/images/projects/UX.png "Basic layout of text and buttons")
 
-![UI and theming](/images/projects/Theme.png)
+![Five Co-Cog visual style tests in Figma comparing illustration styles, colour schemes and buttons for the same wellbeing question.](/images/projects/Theme.png "UI and theming")
 
 ## Early Development
 
@@ -85,10 +85,10 @@ During the early stages of development, our team worked closely with researchers
 We implemented a custom screen reader, and banner images to go alongside the researchers questions to help illustrate to the user what the question is asking and help users understand the content on the screen.
 
 {{% carousel %}}
-![](/images/projects/visual-147x300.png)
-![](/images/projects/verbal-146x300.png)
-![](/images/projects/sequence-147x300.png)
-![](/images/projects/garden-148x300.png)
+![Co-Cog visual memory task asking the user to select which of two doughnut pictures they saw earlier.](/images/projects/visual-147x300.png)
+![Co-Cog verbal memory task where the user ticks the words they remember from a grid of twelve words.](/images/projects/verbal-146x300.png)
+![Co-Cog sequence task asking the user to repeat a pattern of highlighted squares on a three-by-three grid.](/images/projects/sequence-147x300.png)
+![Illustrated garden scene from the Co-Cog app, with flower beds either side of a cobbled path.](/images/projects/garden-148x300.png)
 {{% /carousel %}}
 
 ## Illustrations
@@ -102,17 +102,17 @@ To design the banner images, we worked alongside a talented illustrator. Initial
 ## Late Development
 
 {{% carousel %}}
-![](/images/projects/plwd_1.png)
-![](/images/projects/plwd_2-300x246.png)
-![](/images/projects/plwd_3.png)
-![](/images/projects/plwd_4-300x246.png)
-![](/images/projects/plwd_5.png)
-![](/images/projects/plwd_6-300x240.png)
-![](/images/projects/plwd_7-300x250.png)
+![Co-Cog banner illustration of a woman thinking about her health, for the question on health or wellbeing concerns.](/images/projects/plwd_1.png)
+![Co-Cog illustration of two older people on the phone, for the statement 'I have people who I can talk to and ask for help'.](/images/projects/plwd_2-300x246.png)
+![Co-Cog illustration of two friends side by side, for the statement 'I feel connected to others'.](/images/projects/plwd_3.png)
+![Co-Cog illustration of a woman surrounded by happy, angry and sad faces, for the statement 'I can manage my emotions'.](/images/projects/plwd_4-300x246.png)
+![Co-Cog illustration of a woman gardening, for the statement 'I can adapt well to my changing situation'.](/images/projects/plwd_5.png)
+![Co-Cog illustration of a man picking at his food, for the question on appetite changes in the past month.](/images/projects/plwd_6-300x240.png)
+![Co-Cog illustration of a man squinting at a television, for the question on hearing and vision difficulties.](/images/projects/plwd_7-300x250.png)
 {{% /carousel %}}
 
 During the second half of the project, our team focused on capturing and utilising the data that the app collected. This included a backend that collects user responses. This then generates a rating, providing an easy way to determine whether or not a user has deteriorated since the last time they filled out the questionnaire.
 
 At this stage we also made final adjustments to the app's content, including questions and information pages. The app was then passed on to testers, for an extended period in which the app's efficiency would be evaluated, for people living with dementia and their carers.
 
-![](/images/projects/trafficlight-1024x296.png)
+![Co-Cog results dashboard showing a user's answers by category, such as mood, sleep, falls and pain, as red, amber and green icons.](/images/projects/trafficlight-1024x296.png)

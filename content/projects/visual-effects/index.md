@@ -20,20 +20,20 @@ technologies: ["VFX", "Lighting", "Shaders", "Particles"]
 ## Lightning & Photorealism
 
 {{% carousel %}}
-![](/images/projects/interior-3-1024x448.webp)
-![](/images/projects/interior-1-1024x488.webp)
-![](/images/projects/interior-5-1024x533.webp)
-![](/images/projects/interior-4-1024x609.webp)
-![](/images/projects/interior-2-1024x531.webp)
+![Real-time lit office interior in the Unity Game view, with red feature wall, pendant lights and blinds over city windows.](/images/projects/interior-3-1024x448.webp)
+![Photorealistic kitchen render with white cabinets, granite worktops, hanging pans and a stainless steel fridge.](/images/projects/interior-1-1024x488.webp)
+![Marble office lobby in Unity with recessed ceiling lights and sunlight reflecting off a glossy chequered floor.](/images/projects/interior-5-1024x533.webp)
+![Open-plan kitchen and dining room in Unity, with pendant bulbs and window light casting shadows on the floor.](/images/projects/interior-4-1024x609.webp)
+![Multi-storey atrium with timber roof beams and sunlight streaming across balconies, rendered in real time.](/images/projects/interior-2-1024x531.webp)
 {{% /carousel %}}
 
 ## Surreal Environments
 
 <div class="gallery gallery-2col">
 
-![](/images/projects/surreal-vr-architecture-2-1024x551.webp)
+![Surreal VR architecture: a modern house at dusk framed by glowing white light strips beside a blue pool.](/images/projects/surreal-vr-architecture-2-1024x551.webp)
 
-![](/images/projects/surreal-vr-architecture-1024x646.webp)
+![Modernist house with a lit pool under a purple dusk sky, surrounded by glowing pink crystal formations.](/images/projects/surreal-vr-architecture-1024x646.webp)
 
 </div>
 

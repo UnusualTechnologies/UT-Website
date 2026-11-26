@@ -25,18 +25,18 @@ technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
 <div class="bento-split">
 <div class="bento-col-large">
 
-![Front render](/images/projects/Front-Render_01.webp)
+![Front view of a photorealistic 3D head of a smiling woman with curly blonde hair, rendered against a green backdrop.](/images/projects/Front-Render_01.webp "Front render")
 
 </div>
 <div class="bento-col-small grid-2x2">
 
-![Side render](/images/projects/Side-Render-01-768x799.webp)
+![Three-quarter render of the realistic 3D female head, showing skin detail, freckles and individually groomed curly hair.](/images/projects/Side-Render-01-768x799.webp "Side render")
 
-![Bottom side render](/images/projects/Bottom-Side-Render-01-768x799.webp)
+![Low-angle render of the realistic 3D female head looking upwards, lit to show skin texture and hair strands.](/images/projects/Bottom-Side-Render-01-768x799.webp "Bottom side render")
 
-![Half lambert half render](/images/projects/Half-Lambert-Half-Render-768x799.jpg)
+![Split render of the 3D female head: the left half is untextured grey Lambert clay, the right half fully textured and shaded.](/images/projects/Half-Lambert-Half-Render-768x799.jpg "Half lambert half render")
 
-![Lambert render](/images/projects/Lambert-Render-01-768x799.webp)
+![Untextured grey Lambert clay render of the 3D female head, showing the sculpted facial form and hair groom.](/images/projects/Lambert-Render-01-768x799.webp "Lambert render")
 
 </div>
 </div>
@@ -49,11 +49,11 @@ technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
 </div>
 <div class="bento-col-small grid-2x2">
 
-![Jumper test](/images/projects/Jumper-Test_v04-300x300.webp)
+![Front view of a 3D black knitted short-sleeved top with an embellished white collar, a clothing asset test.](/images/projects/Jumper-Test_v04-300x300.webp "Jumper test")
 
-![Side view](/images/projects/Side-300x300.webp)
+![Side view of the 3D black knitted top, showing how the fabric drapes over the body and the ribbed knit texture.](/images/projects/Side-300x300.webp "Side view")
 
-![Back view](/images/projects/Back-300x300.webp)
+![Back view of the 3D black knitted short-sleeved top with its jewelled collar just visible at the neckline.](/images/projects/Back-300x300.webp "Back view")
 
 </div>
 </div>
@@ -66,11 +66,11 @@ technologies: ["3D Modelling", "Animation", "Character Design", "VFX"]
 </div>
 <div class="bento-col-small grid-2x2">
 
-![Lechar view 1](/images/projects/Lechar_v06_30-300x300.webp)
+![Stylised 3D character with blue-tinted skin, leopard-print buzz cut, face and tiger neck tattoos, against painted orange strokes.](/images/projects/Lechar_v06_30-300x300.webp "Lechar view 1")
 
-![Lechar view 2](/images/projects/Lechar_v06_07-300x300.webp)
+![Stylised tattooed 3D character in three-quarter view with a plaster on his cheek and a tiger tattoo on his neck.](/images/projects/Lechar_v06_07-300x300.webp "Lechar view 2")
 
-![Lechar view 3](/images/projects/Lechar_v06.0016-300x300.webp)
+![Front view of the stylised tattooed 3D character with a leopard-print haircut, earrings and gold chain.](/images/projects/Lechar_v06.0016-300x300.webp "Lechar view 3")
 
 </div>
 </div>

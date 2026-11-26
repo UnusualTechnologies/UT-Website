@@ -58,31 +58,31 @@ testimonial:
 
 Early feedback has been positive with The Tarot Experience reaching the finals in the VR awards, and being the runner up in Best Lifestyle Experience in the Meta Horizon Start Developer Competition.
 
-![](/images/projects/Meta-Horizon-Start-Developer-Competition.png)
+![Meta Horizon Start Developer Competition 2025 award graphic naming The Tarot Experience VR runner-up for Best Lifestyle Experience.](/images/projects/Meta-Horizon-Start-Developer-Competition.png)
 
 ## The Task
 
 Our client had designed and prototyped a VR project in Unity. The project showed great promise, but the client lacked the in-house capabilities to complete it to the level of polish that was desired. To solve this, we were brought in to debug, optimise, add functionality and ultimately publish the project on Steam and the Meta store.
 
-![The Final Scene](/images/projects/STEAM-screenshot-5-768x432.jpg)
+![Final scene of The Tarot Experience VR: concentric lotus-petal rings in red, purple and teal opening onto a starry sky.](/images/projects/STEAM-screenshot-5-768x432.jpg "The Final Scene")
 
 ## The Optimisation
 
 The crux of our challenge stemmed from the constraints presented by the target hardware – successfully running a graphically intensive application on the Oculus Quest 2. This demanding procedure entailed code optimisation, decimation and streamlining of 3D models, leveraging strategies such as fixed-foveated rendering, among other sophisticated techniques.
 
-![Wireframe of the Environment](/images/projects/Screenshot-2023-06-30-122643-768x399.png)
+![Unity wireframe view of the standing-stone environment, used to reduce polygon counts for Quest 2 performance.](/images/projects/Screenshot-2023-06-30-122643-768x399.png "Wireframe of the Environment")
 
 ## Publication
 
 Our objective involved not only the incorporation of fresh features but also the enhancement of existing mechanics. This encompassed a broad spectrum of aspects, ranging from infusing visually appealing elements such as particles and shaders to integrating pragmatic mechanics such as feedback forms and analytics. These comprehensive efforts were all directed towards prepping the application for its impending launch. Upon completion, we launched the app across two major platforms – Steam and the Meta Quest store.
 
-![A question from the feedback form](/images/projects/Screenshot-2023-06-30-123510-768x376.png)
+![In-game feedback form asking "How meaningful was the experience for you?" on a ten-point scale from not meaningful to very meaningful.](/images/projects/Screenshot-2023-06-30-123510-768x376.png "A question from the feedback form")
 
 {{% carousel %}}
-![](/images/projects/Tarot_editor_2.png)
-![](/images/projects/Tarot_editor_7.png)
-![](/images/projects/Tarot_editor_9.png)
-![](/images/projects/Tarot_editor_33.png)
-![](/images/projects/Tarot_editor_45.png)
-![](/images/projects/Tarot_editor_38.png)
+![Rainbow path leading through a cosmic tunnel of rings towards the words "Know Thy Self" in The Tarot Experience VR.](/images/projects/Tarot_editor_2.png)
+![Translucent green and blue diamond portal framing a spinning sun wheel above a hexagonal floor in a nebula sky.](/images/projects/Tarot_editor_7.png)
+![Swirling tunnel of binary digits and light beams around a glowing orb with a "Push & Hold to Spin" prompt.](/images/projects/Tarot_editor_9.png)
+![The Moon tarot card in an ornate blue frame before a glowing crystal tree, ringed by standing stones in VR.](/images/projects/Tarot_editor_33.png)
+![Golden winged caduceus rotating in front of a purple orb, wrapped by an iridescent ribbon, in The Tarot Experience VR.](/images/projects/Tarot_editor_45.png)
+![Judgement tarot card in an ornate frame at the centre of a kaleidoscopic scene of statues, swirls and arches.](/images/projects/Tarot_editor_38.png)
 {{% /carousel %}}

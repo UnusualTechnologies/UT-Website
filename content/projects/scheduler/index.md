@@ -21,7 +21,7 @@ In the company's early days, a spreadsheet was enough for managing tasks and pro
 
 The first version was prototyped with a MERN stack (React.js and MySQL). We later rebuilt it from scratch using Laravel, Livewire, and Filament, which let us iterate on ideas much faster. The application is deployed with Laravel Forge on an AWS Lightsail instance.
 
-![](/images/projects/scheduler-tasks.png)
+![Scheduler task sheet listing tasks with estimated dates, tags, assignees, projects and estimated versus logged hours.](/images/projects/scheduler-tasks.png)
 
 ## Task Management
 

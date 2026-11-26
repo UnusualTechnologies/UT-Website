@@ -25,9 +25,9 @@ overview_video_id: "R7f10FDJzoY"
 ---
 
 {{% carousel %}}
-![](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-0m4s-1024x640.jpg)
-![Pose detection & segmentation](/images/projects/mask-1024x577.png)
-![](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-0m25s-1024x640.jpg)
-![](/images/projects/Screen-Recording-2025-11-11-151156-frame-at-0m2s-1024x640.jpg)
-![](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-1m3s-1024x640.jpg)
+![Co-Play kite game menu with one- and two-player options, a webcam pose-tracking feed and the prompt to move your arms to steer the kite.](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-0m4s-1024x640.jpg)
+![Webcam view of a person with arms raised, their body segmented in green and overlaid with a computer-vision pose skeleton.](/images/projects/mask-1024x577.png "Pose detection & segmentation")
+![Co-Play kite game in progress with a 39-second timer, a kite collecting stars and the player's tracked pose shown in the corner.](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-0m25s-1024x640.jpg)
+![Player raising both arms to steer the Co-Play kite towards a star, with body-tracking points overlaid on the webcam feed.](/images/projects/Screen-Recording-2025-11-11-151156-frame-at-0m2s-1024x640.jpg)
+![Co-Play end screen reading 'Player 1 collected 24 stars!', with the kite trailing the stars it collected.](/images/projects/Screen-Recording-2025-10-31-162118-frame-at-1m3s-1024x640.jpg)
 {{% /carousel %}}

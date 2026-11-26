@@ -31,7 +31,7 @@ We aimed to delve into the methodologies employed in the procedural generation o
 
 Whilst the game was wholly constructed in two dimensions, the principles harnessed could be seamlessly transposed to fabricate a 3D landscape.
 
-![Code snippet from the world generation](/images/projects/code-768x350.png)
+![C# code from the Isles of Generation Unity project assigning tiles and biome colours from height, temperature and moisture maps.](/images/projects/code-768x350.png "Code snippet from the world generation")
 
 ## The Terrain & Biomes
 
@@ -48,11 +48,11 @@ Moreover, even the distribution of trees employed an approach known as Poisson d
 Here are some examples of worlds generated using this program:
 
 {{% carousel %}}
-![Generation Example](/images/projects/Screenshot-2023-06-30-154448.png)
-![A village in the forest](/images/projects/Screenshot-2023-06-30-152201.png)
-![A river joining the ocean](/images/projects/Screenshot-2023-06-30-152126.png)
-![Biome variety](/images/projects/Screenshot-2023-06-30-152540.png)
-![A Large world](/images/projects/Screenshot-2023-06-30-160452.png)
-![A seaside village](/images/projects/Screenshot-2023-06-30-152331.png)
-![A path through a forest](/images/projects/Screenshot-2023-06-30-152427.png)
+![Procedurally generated island map with beaches, forests, a mountain range with a snowy peak and village markers.](/images/projects/Screenshot-2023-06-30-154448.png "Generation Example")
+![Top-down view of a generated village of stone buildings on a road grid, surrounded by green and pink blossom trees.](/images/projects/Screenshot-2023-06-30-152201.png "A village in the forest")
+![Top-down tiles of a narrow river flowing from a pine forest across a sandy beach into the sea.](/images/projects/Screenshot-2023-06-30-152126.png "A river joining the ocean")
+![Generated terrain showing several biomes side by side: pine forest, snowy tundra, dry plains, a beach and the ocean.](/images/projects/Screenshot-2023-06-30-152540.png "Biome variety")
+![Map of a large generated island with three snow-capped mountain ranges, varied biomes, beaches and scattered villages.](/images/projects/Screenshot-2023-06-30-160452.png "A Large world")
+![Top-down view of a generated village of stone buildings and roads beside a beach and the open sea.](/images/projects/Screenshot-2023-06-30-152331.png "A seaside village")
+![A generated stone path winding through a forest of green and pink blossom trees, placed with Poisson disc sampling.](/images/projects/Screenshot-2023-06-30-152427.png "A path through a forest")
 {{% /carousel %}}
