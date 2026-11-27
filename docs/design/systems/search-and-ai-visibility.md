@@ -1,7 +1,7 @@
 # Search and AI visibility
 
 Serves: Machine-readable by default; Facts over adjectives
-Code: `layouts/_default/baseof.html` (head), `layouts/partials/structured-data.html`, `layouts/robots.txt`, `static/llms.txt`, `layouts/_default/single.markdown`, `static/_headers`, `hugo.toml` (`[sitemap]`, `[outputFormats]`, `[outputs]`)
+Code: `layouts/_default/baseof.html` (head), `layouts/404.html`, `layouts/partials/structured-data.html`, `layouts/robots.txt`, `static/llms.txt`, `layouts/_default/single.markdown`, `static/_headers`, `hugo.toml` (`[sitemap]`, `[outputFormats]`, `[outputs]`)
 Owner: Douglas Kelly
 
 <!--
@@ -34,6 +34,10 @@ Planned, agreed and not built yet:
 - `CreativeWork` on each case study.
 - `WebPage` on every page.
 
+**Addresses**
+- One address: `www.unusualtechnologies.com` redirects (301, path and query kept) to `https://unusualtechnologies.com` via a Cloudflare redirect rule (Douglas Kelly, 2026-11-27, so search engines see one copy of each page; the CMS sign-in also only allows the main address).
+- Unknown addresses get a real 404 status and a "Page not found" page with links to Projects, About, Contact and Home (`layouts/404.html`), instead of the homepage with a 200 (Douglas Kelly, 2026-11-27, avoids Google "soft 404s").
+
 **Crawlers**
 - `robots.txt` allows everything except `/admin/`, explicitly allows the main AI crawlers (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended, PerplexityBot, Amazonbot, FacebookBot), and links the sitemap.
 - Only the live domain may be indexed: a build with any other base URL gets `noindex, nofollow` (Douglas Kelly, 2026-11-26, staging copies would compete with the live site). Cloudflare preview addresses (`*.ut-hugo-site.pages.dev`) are built with the live base URL, so they rely on Cloudflare's own `X-Robots-Tag: noindex` header instead; `dev.unusualtechnologies.com` gets the same header from a zone response-header rule.
@@ -52,6 +56,7 @@ Planned, agreed and not built yet:
 | Value | Current | Lives in | Notes |
 |-------|---------|----------|-------|
 | Indexable domain | https://unusualtechnologies.com | `layouts/_default/baseof.html` | Any other base URL gets noindex |
+| www redirect | 301 to https://unusualtechnologies.com | Cloudflare zone redirect rule "www to main address" | |
 | Allowed AI crawlers | 7 named | `layouts/robots.txt` | |
 | Sitemap change frequency / priority | monthly / 0.5 | `hugo.toml` `[sitemap]` | |
 | Markdown copies | regular pages only | `hugo.toml` `[outputs]` | Home and section pages have none |

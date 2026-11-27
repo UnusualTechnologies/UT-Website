@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{- /* Cloudflare Pages serves this file with a real 404 status for any address that
+     doesn't exist, instead of falling back to the homepage with a 200. */ -}}
+<div class="page-gradient">
+  <article class="project-single">
+    <section class="project-hero section">
+      <h1>Page not found</h1>
+    </section>
+    <section class="section project-content not-found">
+      <p>We couldn't find that page. It may have moved, or the address may have a typo.</p>
+      <ul>
+        <li><a href="{{ "projects/" | relURL }}">See our projects</a></li>
+        <li><a href="{{ "about/" | relURL }}">About Unusual Technologies</a></li>
+        <li><a href="{{ "contact/" | relURL }}">Get in touch</a></li>
+        <li><a href="{{ "/" | relURL }}">Go to the homepage</a></li>
+      </ul>
+    </section>
+  </article>
+</div>
+{{ end }}

@@ -27,7 +27,7 @@ Related working lists (not design pages): [case-study audit](../case-study-audit
 |-----------|------|
 | `layouts/projects/`, `content/projects/`, `layouts/_default/_markup/`, `layouts/shortcodes/`, `static/js/projects-filter.js`, `static/js/carousel.js` | [Case studies](systems/case-studies.md) |
 | `layouts/health-tech/`, `content/health-tech/`, `static/css/health-tech.css` | [Service pages](systems/service-pages.md) |
-| `layouts/partials/structured-data.html`, `layouts/robots.txt`, `static/llms.txt`, `layouts/_default/single.markdown`, `static/_headers`, head of `layouts/_default/baseof.html` | [Search and AI visibility](systems/search-and-ai-visibility.md) |
+| `layouts/partials/structured-data.html`, `layouts/404.html`, `layouts/robots.txt`, `static/llms.txt`, `layouts/_default/single.markdown`, `static/_headers`, head of `layouts/_default/baseof.html` | [Search and AI visibility](systems/search-and-ai-visibility.md) |
 | `layouts/index.html`, `layouts/about/`, `layouts/team/`, `layouts/concept-and-design/`, `layouts/privacy-policy/`, `layouts/terms-and-conditions/`, `data/team.yaml`, `data/clients.yaml`, `data/testimonials.yaml`, `data/awards.yaml`, `data/values.yaml` | [Company pages](systems/company-pages.md) |
 | `layouts/contact/`, `layouts/ideas/`, `data/contact_ctas.yaml`, `static/js/ideas.js`, `apps-script/`, `layouts/partials/email-link.html`, `layouts/partials/flip-box.html` | [Enquiries](systems/enquiries.md) |
 | `layouts/careers/`, `content/careers/` | [Careers](systems/careers.md) |
