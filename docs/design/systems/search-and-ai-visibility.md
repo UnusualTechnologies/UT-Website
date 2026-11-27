@@ -36,7 +36,7 @@ Planned, agreed and not built yet:
 
 **Crawlers**
 - `robots.txt` allows everything except `/admin/`, explicitly allows the main AI crawlers (GPTBot, Google-Extended, ClaudeBot, Applebot-Extended, PerplexityBot, Amazonbot, FacebookBot), and links the sitemap.
-- Only the live domain may be indexed: a build with any other base URL gets `noindex, nofollow` (Douglas Kelly, 2026-11-26, staging copies would compete with the live site). Cloudflare preview addresses (`*.ut-hugo-site.pages.dev`) are built with the live base URL, so they rely on Cloudflare's own `X-Robots-Tag: noindex` header instead.
+- Only the live domain may be indexed: a build with any other base URL gets `noindex, nofollow` (Douglas Kelly, 2026-11-26, staging copies would compete with the live site). Cloudflare preview addresses (`*.ut-hugo-site.pages.dev`) are built with the live base URL, so they rely on Cloudflare's own `X-Robots-Tag: noindex` header instead; `dev.unusualtechnologies.com` gets the same header from a zone response-header rule.
 - `llms.txt` is a hand-written summary of the company, services, key pages and selected projects.
 - Every regular page also has a Markdown copy (`index.md` beside `index.html`): title, description (else `overview`), client, key facts, technologies, video link, video description, client quote, then the body. Shortcodes in the body appear as raw text.
 - `static/_headers` advertises `llms.txt`, the sitemap and RSS in `Link` headers.

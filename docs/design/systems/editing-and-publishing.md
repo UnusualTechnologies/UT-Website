@@ -15,7 +15,7 @@ Deliberate choices carry a decision stamp: (<who>, <YYYY-MM-DD>[, <why>]).
 
 All changes are reviewed on a dev version of the site before they go live; only a person promotes `dev` to `main` (Douglas Kelly, 2026-11-26).
 
-Cloudflare builds the `dev` branch as the review version of the site at https://dev.ut-hugo-site.pages.dev, replacing the GitHub Pages staging site (Douglas Kelly, 2026-11-27).
+Cloudflare builds the `dev` branch as the review version of the site at https://dev.unusualtechnologies.com, replacing the GitHub Pages staging site (Douglas Kelly, 2026-11-27).
 
 ## Design
 
@@ -28,7 +28,7 @@ Cloudflare builds the `dev` branch as the review version of the site at https://
 
 **Publishing**
 - Live: Cloudflare Pages builds every push to `main` with `hugo --minify` and serves https://unusualtechnologies.com.
-- Review site: Cloudflare Pages (project `ut-hugo-site`) builds every non-`main` branch as a preview. `dev` is always at https://dev.ut-hugo-site.pages.dev; other branches at `https://<branch>.ut-hugo-site.pages.dev`. Cloudflare sends `X-Robots-Tag: noindex` on all preview addresses.
+- Review site: Cloudflare Pages (project `ut-hugo-site`) builds every non-`main` branch as a preview. `dev` is always at https://dev.unusualtechnologies.com (a proxied CNAME to `dev.ut-hugo-site.pages.dev`, added as a Pages custom domain) and at https://dev.ut-hugo-site.pages.dev; other branches at `https://<branch>.ut-hugo-site.pages.dev`. Cloudflare sends `X-Robots-Tag: noindex` on `*.pages.dev`; for `dev.unusualtechnologies.com` a zone response-header rule ("Dev review site - keep out of search engines") sends `X-Robots-Tag: noindex, nofollow` (Douglas Kelly, 2026-11-27, custom domains don't get Cloudflare's preview noindex).
 - Preview builds use the live base URL, so canonical and social-preview links on the review site point at unusualtechnologies.com; in-site links stay on the preview.
 - Branches: work merges into `dev`, the review version; Douglas pushes `dev` to `main` when happy, which makes it live (Douglas Kelly, 2026-11-26).
 - CMS saves bypass `dev` and go straight to `main`.

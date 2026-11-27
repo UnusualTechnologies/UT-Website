@@ -34,7 +34,7 @@ Hugo static site for [Unusual Technologies](https://unusualtechnologies.com/). N
 
 **Deployment:**
 - **Production (Cloudflare Pages):** Builds automatically on every push to `main` using `hugo --minify` with output directory `public`. Serves from `https://unusualtechnologies.com/`.
-- **Review site (Cloudflare Pages preview):** Every push to a non-`main` branch builds a preview. `dev` is always at `https://dev.ut-hugo-site.pages.dev`; Cloudflare marks previews `noindex`. Cloudflare's Hugo version is pinned by the `HUGO_VERSION` env var (0.157.0).
+- **Review site (Cloudflare Pages preview):** Every push to a non-`main` branch builds a preview. `dev` is always at `https://dev.unusualtechnologies.com` (also `https://dev.ut-hugo-site.pages.dev`). Both are kept out of search engines: Cloudflare marks `*.pages.dev` previews `noindex`, and a Cloudflare response-header rule adds `X-Robots-Tag: noindex, nofollow` on `dev.unusualtechnologies.com`. Cloudflare's Hugo version is pinned by the `HUGO_VERSION` env var (0.157.0).
 - The old GitHub Pages staging site was switched off on 2026-11-27. Any build whose base URL isn't the live domain still gets a `noindex` meta tag.
 
 **Branch workflow:** All work goes to the `dev` branch (feature branches merge into `dev`). `dev` is the review version of the site. Only a person pushes `dev` to `main`, which goes live. Never push or merge to `main` yourself. Note that Sveltia CMS still commits straight to `main`.

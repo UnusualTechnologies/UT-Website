@@ -298,7 +298,7 @@ This is a static site: Hugo generates plain HTML/CSS/JS files. It is hosted on *
 | Branch | Where it appears | Who sees it |
 |---|---|---|
 | `main` | https://unusualtechnologies.com (live) | Everyone; indexed by search engines |
-| `dev` | https://dev.ut-hugo-site.pages.dev (review site) | Anyone with the link; hidden from search engines |
+| `dev` | https://dev.unusualtechnologies.com (review site; also https://dev.ut-hugo-site.pages.dev) | Anyone with the link; hidden from search engines |
 | any other branch | `https://<branch>.ut-hugo-site.pages.dev` | Anyone with the link; hidden from search engines |
 
 **Workflow:** work goes to `dev` (or a feature branch merged into `dev`), gets checked on the review site, and a person pushes `dev` to `main` to put it live.
