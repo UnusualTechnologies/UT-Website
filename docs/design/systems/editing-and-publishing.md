@@ -15,7 +15,7 @@ Deliberate choices carry a decision stamp: (<who>, <YYYY-MM-DD>[, <why>]).
 
 All changes are reviewed on a dev version of the site before they go live; only a person promotes `dev` to `main` (Douglas Kelly, 2026-11-26).
 
-Planned: Cloudflare builds the `dev` branch as the review version of the site, replacing the GitHub Pages staging site (Douglas Kelly, 2026-11-26, awaiting confirmation from Matt West).
+Cloudflare builds the `dev` branch as the review version of the site at https://dev.ut-hugo-site.pages.dev, replacing the GitHub Pages staging site (Douglas Kelly, 2026-11-27).
 
 ## Design
 
@@ -28,7 +28,9 @@ Planned: Cloudflare builds the `dev` branch as the review version of the site, r
 
 **Publishing**
 - Live: Cloudflare Pages builds every push to `main` with `hugo --minify` and serves https://unusualtechnologies.com.
-- Staging: pushes to the `health-science` branch deploy to GitHub Pages at https://unusualtechnologies.github.io/UT-Website/, which is hidden from search engines (see [search-and-ai-visibility](search-and-ai-visibility.md)).
+- Review site: Cloudflare Pages (project `ut-hugo-site`) builds every non-`main` branch as a preview. `dev` is always at https://dev.ut-hugo-site.pages.dev; other branches at `https://<branch>.ut-hugo-site.pages.dev`. Cloudflare sends `X-Robots-Tag: noindex` on all preview addresses.
+- Preview builds use the live base URL, so canonical and social-preview links on the review site point at unusualtechnologies.com; in-site links stay on the preview.
+- Old staging: pushes to `health-science` also deploy to GitHub Pages at https://unusualtechnologies.github.io/UT-Website/, which carries a noindex tag (see [search-and-ai-visibility](search-and-ai-visibility.md)). Due to be switched off.
 - Branches: work merges into `dev`, the review version; Douglas pushes `dev` to `main` when happy, which makes it live (Douglas Kelly, 2026-11-26).
 - CMS saves bypass `dev` and go straight to `main`.
 
@@ -38,7 +40,9 @@ Planned: Cloudflare builds the `dev` branch as the review version of the site, r
 
 | Value | Current | Lives in | Notes |
 |-------|---------|----------|-------|
-| Live build command | `hugo --minify` | Cloudflare Pages settings | Hugo version not pinned |
+| Live build command | `hugo --minify` | Cloudflare Pages settings | Output folder `public` |
+| Hugo version (Cloudflare) | 0.157.0 | Cloudflare Pages env var `HUGO_VERSION` (production and preview) | Local machines may run newer, e.g. 0.163 |
+| Preview branches | all except `main` | Cloudflare Pages project settings | |
 | Staging branch | `health-science` | `.github/workflows/gh-pages.yml` | Hugo "latest" extended |
 | CMS backend | GitHub, commits to `main` | `static/admin/config.yml` | |
 
@@ -47,4 +51,4 @@ Planned: Cloudflare builds the `dev` branch as the review version of the site, r
 ## Open questions
 
 - CMS edits commit straight to `main`, so they skip review on `dev` and `dev` falls behind. Point the CMS at `dev` instead? (bootstrap, 2026-11-26)
-- Pin the Hugo version used by Cloudflare and staging, so a Hugo update can't break the live build? (bootstrap, 2026-11-26)
+- Cloudflare builds with Hugo 0.157.0, older than local machines (0.163). Raise it so local and live builds match? (2026-11-27)
