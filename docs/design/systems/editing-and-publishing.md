@@ -1,7 +1,7 @@
 # Editing and publishing
 
 Serves: (how staff change the site)
-Code: `static/admin/config.yml`, `.github/workflows/gh-pages.yml`, `hugo.toml`, `CLAUDE.md`
+Code: `static/admin/config.yml`, `.github/workflows/`, `hugo.toml`, `CLAUDE.md`
 Owner: Douglas Kelly
 
 <!--
@@ -30,7 +30,6 @@ Cloudflare builds the `dev` branch as the review version of the site at https://
 - Live: Cloudflare Pages builds every push to `main` with `hugo --minify` and serves https://unusualtechnologies.com.
 - Review site: Cloudflare Pages (project `ut-hugo-site`) builds every non-`main` branch as a preview. `dev` is always at https://dev.ut-hugo-site.pages.dev; other branches at `https://<branch>.ut-hugo-site.pages.dev`. Cloudflare sends `X-Robots-Tag: noindex` on all preview addresses.
 - Preview builds use the live base URL, so canonical and social-preview links on the review site point at unusualtechnologies.com; in-site links stay on the preview.
-- Old staging: pushes to `health-science` also deploy to GitHub Pages at https://unusualtechnologies.github.io/UT-Website/, which carries a noindex tag (see [search-and-ai-visibility](search-and-ai-visibility.md)). Due to be switched off.
 - Branches: work merges into `dev`, the review version; Douglas pushes `dev` to `main` when happy, which makes it live (Douglas Kelly, 2026-11-26).
 - CMS saves bypass `dev` and go straight to `main`.
 
@@ -43,10 +42,11 @@ Cloudflare builds the `dev` branch as the review version of the site at https://
 | Live build command | `hugo --minify` | Cloudflare Pages settings | Output folder `public` |
 | Hugo version (Cloudflare) | 0.157.0 | Cloudflare Pages env var `HUGO_VERSION` (production and preview) | Local machines may run newer, e.g. 0.163 |
 | Preview branches | all except `main` | Cloudflare Pages project settings | |
-| Staging branch | `health-science` | `.github/workflows/gh-pages.yml` | Hugo "latest" extended |
 | CMS backend | GitHub, commits to `main` | `static/admin/config.yml` | |
 
 ## Tried & rejected
+
+- GitHub Pages staging site (`health-science` branch, unusualtechnologies.github.io/UT-Website): replaced by Cloudflare previews of `dev`, which use the same host and build as the live site; switched off and its workflow removed (Douglas Kelly, 2026-11-27)
 
 ## Open questions
 

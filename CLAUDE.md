@@ -32,10 +32,10 @@ Hugo static site for [Unusual Technologies](https://unusualtechnologies.com/). N
 
 **CMS:** Sveltia CMS (`static/admin/`). Config in `static/admin/config.yml` defines the editable collections and maps them to content/data files. On the live site the CMS authenticates via GitHub and commits directly to `main`.
 
-**Deployment (two targets):**
+**Deployment:**
 - **Production (Cloudflare Pages):** Builds automatically on every push to `main` using `hugo --minify` with output directory `public`. Serves from `https://unusualtechnologies.com/`.
 - **Review site (Cloudflare Pages preview):** Every push to a non-`main` branch builds a preview. `dev` is always at `https://dev.ut-hugo-site.pages.dev`; Cloudflare marks previews `noindex`. Cloudflare's Hugo version is pinned by the `HUGO_VERSION` env var (0.157.0).
-- **Old staging (GitHub Pages):** The `health-science` branch also deploys to `https://unusualtechnologies.github.io/UT-Website/` via `.github/workflows/gh-pages.yml`. Due to be switched off. Any build not on the live domain gets a `noindex` meta tag.
+- The old GitHub Pages staging site was switched off on 2026-11-27. Any build whose base URL isn't the live domain still gets a `noindex` meta tag.
 
 **Branch workflow:** All work goes to the `dev` branch (feature branches merge into `dev`). `dev` is the review version of the site. Only a person pushes `dev` to `main`, which goes live. Never push or merge to `main` yourself. Note that Sveltia CMS still commits straight to `main`.
 

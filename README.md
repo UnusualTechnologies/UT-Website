@@ -293,39 +293,15 @@ This generates the complete website in the `public/` directory. Upload the conte
 
 ## Deployment
 
-This is a static site — Hugo generates plain HTML/CSS/JS files that can be hosted anywhere. There is no permanently hosted CMS server. The CMS editor is just an HTML page (`/admin/`) that's part of the site itself.
+This is a static site: Hugo generates plain HTML/CSS/JS files. It is hosted on **Cloudflare Pages** (project `ut-hugo-site`), which builds the site from this repository with `hugo --minify` into `public/`. Cloudflare's Hugo version is set by the `HUGO_VERSION` environment variable in the Cloudflare project settings.
 
-### GitHub Pages (recommended)
+| Branch | Where it appears | Who sees it |
+|---|---|---|
+| `main` | https://unusualtechnologies.com (live) | Everyone; indexed by search engines |
+| `dev` | https://dev.ut-hugo-site.pages.dev (review site) | Anyone with the link; hidden from search engines |
+| any other branch | `https://<branch>.ut-hugo-site.pages.dev` | Anyone with the link; hidden from search engines |
 
-The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys the site whenever you push to `main`. This is free for public repositories.
-
-**First-time setup:**
-
-1. Push the repository to GitHub at `UnusualTechnologies/UT-Website`
-2. Go to the repository on GitHub > **Settings** > **Pages**
-3. Under "Build and deployment", set Source to **GitHub Actions**
-4. That's it — the next push to `main` will trigger a build and deploy
-
-The site will be live at `https://unusualtechnologies.github.io/UT-Website/` (or your custom domain — see below).
-
-Every push to `main` triggers an automatic rebuild. This means CMS edits (which create Git commits via the GitHub API) automatically publish within a minute or two.
-
-### Alternative: Netlify or Cloudflare Pages
-
-If you prefer a different host:
-
-**Netlify:**
-1. Go to [netlify.com](https://www.netlify.com/) and sign in with GitHub
-2. Click "Add new site" > "Import an existing project"
-3. Select the `UnusualTechnologies/UT-Website` repository
-4. Set the build command to `hugo` and the publish directory to `public`
-5. Deploy
-
-**Cloudflare Pages:**
-1. Go to [pages.cloudflare.com](https://pages.cloudflare.com/) and sign in
-2. Create a new project and connect the GitHub repository
-3. Set framework preset to "Hugo", build command to `hugo`, output directory to `public`
-4. Deploy
+**Workflow:** work goes to `dev` (or a feature branch merged into `dev`), gets checked on the review site, and a person pushes `dev` to `main` to put it live.
 
 ### How the CMS works with deployment
 
@@ -335,21 +311,11 @@ The CMS is **not** a separate running service. It's a single HTML page (`static/
 2. The user signs in with GitHub
 3. The CMS reads and writes files via the GitHub API
 4. When the user saves, the CMS creates a commit on the `main` branch
-5. GitHub Pages (or whichever host) detects the new commit and rebuilds the site
+5. Cloudflare Pages detects the new commit and rebuilds the live site within a minute or two
 
-No server is running for the CMS. It's entirely browser-based. You don't need to "spin up" anything — the CMS is always available at `/admin/` on the live site.
+Because CMS saves go straight to `main`, they skip the review site.
 
-### Custom domain
-
-To use `www.unusualtechnologies.com` instead of the GitHub Pages URL:
-
-1. Go to the repository on GitHub > **Settings** > **Pages** > **Custom domain**
-2. Enter `www.unusualtechnologies.com` and click Save
-3. In your DNS provider, add a CNAME record: `www` pointing to `unusualtechnologies.github.io`
-4. Check "Enforce HTTPS" once the DNS has propagated (can take up to 24 hours)
-
-The `baseURL` in `hugo.toml` is already set to `https://www.unusualtechnologies.com/`.
-
+No server is running for the CMS. It's entirely browser-based, and always available at `/admin/` on the live site.
 
 ## Quick reference
 
